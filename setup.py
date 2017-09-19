@@ -15,6 +15,6 @@ setup(
     author_email='lavrenko.a@gmail.com',
     url='https://stepik.org/',
     packages=[find_packages(exclude=['test', '*.test', '*.test.*'])],
-    install_requires={'javalang', 'radon'}
+    install_requires=['javalang', 'radon']
     # install_requires=requirements
 )
