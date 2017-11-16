@@ -1,4 +1,4 @@
-# Generated from /home/meanmail/StepikProjects/submission-complexity/complexity/grammars/CPP14.g4 by ANTLR 4.7
+# Generated from complexity/grammars/CPP14.g4 by ANTLR 4.7
 # encoding: utf-8
 import sys
 from io import StringIO
