@@ -1,5 +1,3 @@
-from datetime import datetime, timedelta
-
 from antlr4 import *
 
 from complexity.base_visitor import BaseVisitor
@@ -44,8 +42,7 @@ CONDITIONALS = (
 # This class defines a complete listener for a parse tree produced by CPP14Parser.
 class Visitor(CPP14Visitor, BaseVisitor):
     def process(self, ctx: ParserRuleContext):
-        if self.time_limit and datetime.now() - self.start_time > timedelta(seconds=self.time_limit):
-            self.success = False
+        if self.check_time_over():
             return
         rule = ctx.getRuleIndex()
         if rule in ASSIGNMENTS:

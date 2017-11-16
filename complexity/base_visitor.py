@@ -1,5 +1,5 @@
 import math
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class BaseVisitor(object):
@@ -7,8 +7,8 @@ class BaseVisitor(object):
         self.a = 0
         self.b = 0
         self.c = 0
-        self.start_time = start_time or datetime.now()
-        self.time_limit = time_limit
+        if start_time and time_limit:
+            self.max_datetime = start_time + timedelta(seconds=time_limit)
         self.success = True
 
     @property
@@ -18,3 +18,7 @@ class BaseVisitor(object):
     @property
     def abc_vector(self):
         return self.a, self.b, self.c
+
+    def check_time_over(self):
+        if self.max_datetime and datetime.now() > self.max_datetime:
+            self.success = False
