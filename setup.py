@@ -7,12 +7,11 @@ with open('requirements.txt') as r:
 
 setup(
     name='submission-complexity',
-    packages=find_packages(exclude=['test', '*.test', '*.test.*']),
-    version='0.1',
+    packages=find_packages(exclude=['test', '*.test', '*.test.*', 'grammars', 'scripts']),
+    version='0.2',
     description='Tools for build complexity score for Stepik code submissions',
     author='Anastasia Lavrenko',
     author_email='lavrenko.a@gmail.com',
     url='https://github.com/StepicOrg/submission-complexity',
     install_requires=requirements,
 )
-
