@@ -87,10 +87,17 @@ lambdadeclarator
 
 postoperation
 :
-    ('.' | '->') (Template? (nestednamespecifier Template?)? unqualifiedid | pseudodestructorname)
+    ('.' | '->') (
+        Template? (nestednamespecifier Template?)? unqualifiedid
+        | (
+            nestednamespecifier? (Identifier ('<' (templateargument '...'?    (',' templateargument '...'?)*)? '>')? '::')?
+            | nestednamespecifier Template Identifier '<' (templateargument '...'?    (',' templateargument '...'?)*)? '>' '::'
+        ) '~' Identifier ('<' (templateargument '...'?    (',' templateargument '...'?)*)? '>')?
+        | '~' Decltype '(' (assignmentexpression (',' assignmentexpression)* | Auto) ')'
+    )
     | ('[' (
         assignmentexpression (',' assignmentexpression)*
-          | bracedinitlist
+        | bracedinitlist
     ) ']'
     | '(' ((assignmentexpression | bracedinitlist) '...'? (',' (assignmentexpression | bracedinitlist) '...'?)*)? ')')
 ;
@@ -126,15 +133,6 @@ postfixexpression
 call
 :
     unqualifiedid '(' (assignmentexpression (',' assignmentexpression)*)? ')'
-;
-
-pseudodestructorname
-:
-    (
-        nestednamespecifier? (Identifier ('<' (templateargument '...'?    (',' templateargument '...'?)*)? '>')? '::')?
-        | nestednamespecifier Template Identifier '<' (templateargument '...'?    (',' templateargument '...'?)*)? '>' '::'
-    ) '~' Identifier ('<' (templateargument '...'?    (',' templateargument '...'?)*)? '>')?
-    | '~' Decltype '(' (assignmentexpression (',' assignmentexpression)* | Auto) ')'
 ;
 
 unaryexpression
@@ -173,13 +171,8 @@ newexpression
 newdeclarator
 :
     (nestednamespecifier? '*' attributespecifier* ConstOrVolatile* | ('&' | '&&') attributespecifier*) newdeclarator?
-    | noptrnewdeclarator
-;
-
-noptrnewdeclarator
-:
-    '[' assignmentexpression (',' assignmentexpression)* ']' attributespecifier*
-    ('[' conditionalexpression ']' attributespecifier*)*
+    | '[' assignmentexpression (',' assignmentexpression)* ']' attributespecifier*
+        ('[' conditionalexpression ']' attributespecifier*)*
 ;
 
 // used in BRANCHES
@@ -188,18 +181,18 @@ deleteexpression
     '::'? Delete ('[' ']')? ('(' typespecifier+ attributespecifier* abstractdeclarator? ')')* unaryexpression
 ;
 
-shiftexpression
+// used in CONDITIONALS
+relationalexpression
 :
     ('(' typespecifier+ attributespecifier* abstractdeclarator? ')')* unaryexpression (
         ('.*' | '->*' | '*' | '/' | '%' | '+' | '-' | '<<' | Greater Greater )
         ('(' typespecifier+ attributespecifier* abstractdeclarator? ')')* unaryexpression
     )*
-;
-
-// used in CONDITIONALS
-relationalexpression
-:
-    shiftexpression | relationalexpression ('<' | '>' | '<=' | '>=') shiftexpression
+    | relationalexpression ('<' | '>' | '<=' | '>=')
+        ('(' typespecifier+ attributespecifier* abstractdeclarator? ')')* unaryexpression (
+            ('.*' | '->*' | '*' | '/' | '%' | '+' | '-' | '<<' | Greater Greater )
+            ('(' typespecifier+ attributespecifier* abstractdeclarator? ')')* unaryexpression
+        )*
 ;
 
 // used in CONDITIONALS
@@ -229,11 +222,12 @@ conditionalexpression
 :
     logicalorexpression
     | ternaryconditionalexpression
+    | unaryconditionalexpression
 ;
 
 assignmentexpression
 :
-    (logicalorexpression assignmentoperator | Throw)* (
+    (Throw | logicalorexpression assignmentoperator)* (
         conditionalexpression
         | logicalorexpression assignmentoperator bracedinitlist
         | Throw
@@ -428,8 +422,14 @@ ptrdeclarator
     (
         '...'? (nestednamespecifier Template?)? unqualifiedid attributespecifier*
         | '(' ptrdeclarator ')'
-    ) (parametersandqualifiers | '[' conditionalexpression? ']' attributespecifier*)*
-    | (nestednamespecifier? '*' attributespecifier* ConstOrVolatile* | ('&' | '&&') attributespecifier*) ptrdeclarator
+    ) (
+        parametersandqualifiers
+        | '[' conditionalexpression? ']' attributespecifier*
+    )*
+    | (
+        nestednamespecifier? '*' attributespecifier* ConstOrVolatile*
+        | ('&' | '&&') attributespecifier*
+    ) ptrdeclarator
 ;
 
 parametersandqualifiers
@@ -442,7 +442,10 @@ abstractdeclarator
 :
     ptrabstractdeclarator
     | noptrabstractdeclarator? parametersandqualifiers '->' trailingtypespecifier+ attributespecifier* abstractdeclarator?
-    | abstractpackdeclarator
+    | (
+        nestednamespecifier? '*' attributespecifier* ConstOrVolatile*
+        | ('&' | '&&') attributespecifier*
+    )* '...' (parametersandqualifiers | '[' conditionalexpression? ']' attributespecifier*)*
 ;
 
 ptrabstractdeclarator
@@ -457,18 +460,6 @@ noptrabstractdeclarator
     | parametersandqualifiers
     | '[' conditionalexpression? ']' attributespecifier*
     | '(' ptrabstractdeclarator ')'
-;
-
-abstractpackdeclarator
-:
-    noptrabstractpackdeclarator
-    | (nestednamespecifier? '*' attributespecifier* ConstOrVolatile* | ('&' | '&&') attributespecifier*) abstractpackdeclarator
-;
-
-noptrabstractpackdeclarator
-:
-    noptrabstractpackdeclarator (parametersandqualifiers | '[' conditionalexpression? ']' attributespecifier*)
-    | '...'
 ;
 
 parameterdeclaration
@@ -499,23 +490,20 @@ bracedinitlist
 /*Classes*/
 memberspecification
 :
-    memberdeclaration memberspecification?
-    | PrivateProtectedPublic ':' memberspecification?
-;
-
-memberdeclaration
-:
-    attributespecifier* (declspecifier+ attributespecifier*)? (
-        (memberdeclarator (',' memberdeclarator))? ';'
-        | declarator (Override | Final)* functionbody
-    )
-    | Static_assert '(' conditionalexpression ',' Stringliteral ')' ';'
-    | Template '<' templateparameter (',' templateparameter)* '>' declaration
-    | Using (
-        (Typename? nestednamespecifier | '::') unqualifiedid
-        | Identifier attributespecifier* '=' typespecifier+ attributespecifier* abstractdeclarator?
-    ) ';'
-    | ';'
+    (
+        attributespecifier* (declspecifier+ attributespecifier*)? (
+            (memberdeclarator (',' memberdeclarator))? ';'
+            | declarator (Override | Final)* functionbody
+        )
+        | Static_assert '(' conditionalexpression ',' Stringliteral ')' ';'
+        | Template '<' templateparameter (',' templateparameter)* '>' declaration
+        | Using (
+            (Typename? nestednamespecifier | '::') unqualifiedid
+            | Identifier attributespecifier* '=' typespecifier+ attributespecifier* abstractdeclarator?
+        ) ';'
+        | ';'
+        | PrivateProtectedPublic ':'
+    ) memberspecification?
 ;
 
 memberdeclarator
@@ -558,17 +546,12 @@ meminitializer
 /*Templates*/
 templateparameter
 :
-    typeparameter
-    | parameterdeclaration
-;
-
-typeparameter
-:
     (Class | Typename) ('...'? Identifier? | Identifier? '=' typespecifier+ attributespecifier* abstractdeclarator?)
     | Template '<' templateparameter (',' templateparameter)* '>' Class (
         '...'? Identifier?
         | Identifier? '=' (nestednamespecifier Template?)? unqualifiedid
     )
+    | parameterdeclaration
 ;
 
 templateargument

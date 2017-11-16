@@ -65,14 +65,6 @@ class CPP14Listener(ParseTreeListener):
     def exitCall(self, ctx: CPP14Parser.CallContext):
         pass
 
-    # Enter a parse tree produced by CPP14Parser#pseudodestructorname.
-    def enterPseudodestructorname(self, ctx: CPP14Parser.PseudodestructornameContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#pseudodestructorname.
-    def exitPseudodestructorname(self, ctx: CPP14Parser.PseudodestructornameContext):
-        pass
-
     # Enter a parse tree produced by CPP14Parser#unaryexpression.
     def enterUnaryexpression(self, ctx: CPP14Parser.UnaryexpressionContext):
         pass
@@ -113,28 +105,12 @@ class CPP14Listener(ParseTreeListener):
     def exitNewdeclarator(self, ctx: CPP14Parser.NewdeclaratorContext):
         pass
 
-    # Enter a parse tree produced by CPP14Parser#noptrnewdeclarator.
-    def enterNoptrnewdeclarator(self, ctx: CPP14Parser.NoptrnewdeclaratorContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#noptrnewdeclarator.
-    def exitNoptrnewdeclarator(self, ctx: CPP14Parser.NoptrnewdeclaratorContext):
-        pass
-
     # Enter a parse tree produced by CPP14Parser#deleteexpression.
     def enterDeleteexpression(self, ctx: CPP14Parser.DeleteexpressionContext):
         pass
 
     # Exit a parse tree produced by CPP14Parser#deleteexpression.
     def exitDeleteexpression(self, ctx: CPP14Parser.DeleteexpressionContext):
-        pass
-
-    # Enter a parse tree produced by CPP14Parser#shiftexpression.
-    def enterShiftexpression(self, ctx: CPP14Parser.ShiftexpressionContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#shiftexpression.
-    def exitShiftexpression(self, ctx: CPP14Parser.ShiftexpressionContext):
         pass
 
     # Enter a parse tree produced by CPP14Parser#relationalexpression.
@@ -361,22 +337,6 @@ class CPP14Listener(ParseTreeListener):
     def exitNoptrabstractdeclarator(self, ctx: CPP14Parser.NoptrabstractdeclaratorContext):
         pass
 
-    # Enter a parse tree produced by CPP14Parser#abstractpackdeclarator.
-    def enterAbstractpackdeclarator(self, ctx: CPP14Parser.AbstractpackdeclaratorContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#abstractpackdeclarator.
-    def exitAbstractpackdeclarator(self, ctx: CPP14Parser.AbstractpackdeclaratorContext):
-        pass
-
-    # Enter a parse tree produced by CPP14Parser#noptrabstractpackdeclarator.
-    def enterNoptrabstractpackdeclarator(self, ctx: CPP14Parser.NoptrabstractpackdeclaratorContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#noptrabstractpackdeclarator.
-    def exitNoptrabstractpackdeclarator(self, ctx: CPP14Parser.NoptrabstractpackdeclaratorContext):
-        pass
-
     # Enter a parse tree produced by CPP14Parser#parameterdeclaration.
     def enterParameterdeclaration(self, ctx: CPP14Parser.ParameterdeclarationContext):
         pass
@@ -415,14 +375,6 @@ class CPP14Listener(ParseTreeListener):
 
     # Exit a parse tree produced by CPP14Parser#memberspecification.
     def exitMemberspecification(self, ctx: CPP14Parser.MemberspecificationContext):
-        pass
-
-    # Enter a parse tree produced by CPP14Parser#memberdeclaration.
-    def enterMemberdeclaration(self, ctx: CPP14Parser.MemberdeclarationContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#memberdeclaration.
-    def exitMemberdeclaration(self, ctx: CPP14Parser.MemberdeclarationContext):
         pass
 
     # Enter a parse tree produced by CPP14Parser#memberdeclarator.
@@ -471,14 +423,6 @@ class CPP14Listener(ParseTreeListener):
 
     # Exit a parse tree produced by CPP14Parser#templateparameter.
     def exitTemplateparameter(self, ctx: CPP14Parser.TemplateparameterContext):
-        pass
-
-    # Enter a parse tree produced by CPP14Parser#typeparameter.
-    def enterTypeparameter(self, ctx: CPP14Parser.TypeparameterContext):
-        pass
-
-    # Exit a parse tree produced by CPP14Parser#typeparameter.
-    def exitTypeparameter(self, ctx: CPP14Parser.TypeparameterContext):
         pass
 
     # Enter a parse tree produced by CPP14Parser#templateargument.
