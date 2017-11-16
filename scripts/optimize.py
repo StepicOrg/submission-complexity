@@ -31,6 +31,7 @@ def optimize(parsers_path):
         file_name = f'{parsers_path}/{language}/{parser_file}'
         with open(file_name, 'r') as file:
             data = file.read()
+            # Optimize listener
             data = re.sub(r'(def exitRule\(self, listener:\s*ParseTreeListener\):\s*)'
                           r'if hasattr\(\s*listener, "[a-zA-Z][a-zA-Z0-9]*"\s*\):\s*'
                           r'listener\.exit[a-zA-Z][a-zA-Z0-9]*\(self\)',
@@ -41,6 +42,15 @@ def optimize(parsers_path):
                           r'listener\.enter[a-zA-Z][a-zA-Z0-9]*\(self\)'.format("|".join(RULES[language])),
                           r'\g<1>pass', data, flags=re.IGNORECASE)
 
+            # Optimize visitor
+            data = re.sub(r'(def accept\(self, visitor:\s*ParseTreeVisitor\):\s*)'
+                          r'if hasattr\(\s*visitor, "visit(?!({})")[a-zA-Z0-9]*"\s*\):\s*'
+                          r'return visitor\.visit[a-zA-Z][a-zA-Z0-9]*\(self\)\s*'
+                          r'else:\s*'
+                          r'return visitor\.visitChildren\(self\)'.format("|".join(RULES[language])),
+                          r'\g<1>return visitor.visitChildren(self)', data, flags=re.IGNORECASE)
+
+            # Common optimize
             data = re.sub(r'(if .*) in \[(\w*\.\w*)\]', r'\g<1> == \g<2>', data)
 
         with open(file_name, 'w') as file:

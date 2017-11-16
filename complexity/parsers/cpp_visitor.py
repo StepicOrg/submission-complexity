@@ -1,9 +1,10 @@
-import math
+from datetime import datetime, timedelta
 
 from antlr4 import *
 
-from complexity.parsers.cpp.CPP14Listener import CPP14Listener
+from complexity.base_visitor import BaseVisitor
 from complexity.parsers.cpp.CPP14Parser import CPP14Parser
+from complexity.parsers.cpp.CPP14Visitor import CPP14Visitor
 
 # ABC rules for C++
 
@@ -41,21 +42,11 @@ CONDITIONALS = (
 
 
 # This class defines a complete listener for a parse tree produced by CPP14Parser.
-class Listener(CPP14Listener):
-    def __init__(self):
-        self.a = 0
-        self.b = 0
-        self.c = 0
-
-    @property
-    def abc_score(self):
-        return round(math.sqrt(self.a ** 2 + self.b ** 2 + self.c ** 2), 2)
-
-    @property
-    def abc_vector(self):
-        return self.a, self.b, self.c
-
-    def enter(self, ctx: ParserRuleContext):
+class Visitor(CPP14Visitor, BaseVisitor):
+    def process(self, ctx: ParserRuleContext):
+        if self.time_limit and datetime.now() - self.start_time > timedelta(seconds=self.time_limit):
+            self.success = False
+            return
         rule = ctx.getRuleIndex()
         if rule in ASSIGNMENTS:
             self.a += 1
@@ -64,58 +55,60 @@ class Listener(CPP14Listener):
         elif rule in CONDITIONALS:
             self.c += 1
 
+        return self.visitChildren(ctx)
+
     # Enter a parse tree produced by CPP14Parser#newexpression.
-    def enterNewexpression(self, ctx: CPP14Parser.NewexpressionContext):
-        self.enter(ctx)
+    def visitNewexpression(self, ctx: CPP14Parser.NewexpressionContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#deleteexpression.
-    def enterDeleteexpression(self, ctx: CPP14Parser.DeleteexpressionContext):
-        self.enter(ctx)
+    def visitDeleteexpression(self, ctx: CPP14Parser.DeleteexpressionContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#equalityexpression.
-    def enterEqualityexpression(self, ctx: CPP14Parser.EqualityexpressionContext):
-        self.enter(ctx)
+    def visitEqualityexpression(self, ctx: CPP14Parser.EqualityexpressionContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#ternaryconditionalexpression.
-    def enterTernaryconditionalexpression(self, ctx: CPP14Parser.TernaryconditionalexpressionContext):
-        self.enter(ctx)
+    def visitTernaryconditionalexpression(self, ctx: CPP14Parser.TernaryconditionalexpressionContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#unaryconditionalexpression.
-    def enterUnaryconditionalexpression(self, ctx: CPP14Parser.UnaryconditionalexpressionContext):
-        self.enter(ctx)
+    def visitUnaryconditionalexpression(self, ctx: CPP14Parser.UnaryconditionalexpressionContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#assignmentoperator.
-    def enterAssignmentoperator(self, ctx: CPP14Parser.AssignmentoperatorContext):
-        self.enter(ctx)
+    def visitAssignmentoperator(self, ctx: CPP14Parser.AssignmentoperatorContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#casestatement.
-    def enterCasestatement(self, ctx: CPP14Parser.CasestatementContext):
-        self.enter(ctx)
+    def visitCasestatement(self, ctx: CPP14Parser.CasestatementContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#elsestatement.
-    def enterElsestatement(self, ctx: CPP14Parser.ElsestatementContext):
-        self.enter(ctx)
+    def visitElsestatement(self, ctx: CPP14Parser.ElsestatementContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#call.
-    def enterCall(self, ctx: CPP14Parser.CallContext):
-        self.enter(ctx)
+    def visitCall(self, ctx: CPP14Parser.CallContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#gotostatement.
-    def enterGotostatement(self, ctx: CPP14Parser.GotostatementContext):
-        self.enter(ctx)
+    def visitGotostatement(self, ctx: CPP14Parser.GotostatementContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#initializer.
-    def enterInitializer(self, ctx: CPP14Parser.InitializerContext):
-        self.enter(ctx)
+    def visitInitializer(self, ctx: CPP14Parser.InitializerContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#tryblock.
-    def enterTryblock(self, ctx: CPP14Parser.TryblockContext):
-        self.enter(ctx)
+    def visitTryblock(self, ctx: CPP14Parser.TryblockContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#handler.
-    def enterHandler(self, ctx: CPP14Parser.HandlerContext):
-        self.enter(ctx)
+    def visitHandler(self, ctx: CPP14Parser.HandlerContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#relationalexpression.
-    def enterRelationalexpression(self, ctx: CPP14Parser.RelationalexpressionContext):
-        self.enter(ctx)
+    def visitRelationalexpression(self, ctx: CPP14Parser.RelationalexpressionContext):
+        return self.process(ctx)
