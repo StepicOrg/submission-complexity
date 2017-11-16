@@ -1,8 +1,8 @@
 from antlr4 import CommonTokenStream, ParseTreeWalker, PredictionMode, InputStream
 
-from .cpp.listener import Listener
-from .cpp.parsers.CPP14Lexer import CPP14Lexer
-from .cpp.parsers.CPP14Parser import CPP14Parser
+from complexity.parsers.cpp.CPP14Lexer import CPP14Lexer
+from complexity.parsers.cpp.CPP14Parser import CPP14Parser
+from complexity.parsers.cpp_listener import Listener
 
 
 class ANTLRVisitor(object):

@@ -1,14 +1,9 @@
-# Generated from /home/meanmail/MyProjects/antlr/grammars/CPP14.g4 by ANTLR 4.7
 import math
 
 from antlr4 import *
 
-from .parsers.CPP14Listener import CPP14Listener
-
-if __name__ is not None and "." in __name__:
-    from .parsers.CPP14Parser import CPP14Parser
-else:
-    from .parsers.CPP14Parser import CPP14Parser
+from complexity.parsers.cpp.CPP14Listener import CPP14Listener
+from complexity.parsers.cpp.CPP14Parser import CPP14Parser
 
 # ABC rules for C++
 
@@ -23,7 +18,7 @@ ASSIGNMENTS = (
 
 BRANCHES = (
     # Occurrence of a function call or a class method call.
-
+    CPP14Parser.RULE_call,
     # Occurrence of any goto statement which has a target at a deeper level of nesting than the level to the goto.
     CPP14Parser.RULE_gotostatement,
     # Occurrence of ‘new’ or ‘delete’ operators.
@@ -99,6 +94,10 @@ class Listener(CPP14Listener):
 
     # Enter a parse tree produced by CPP14Parser#elsestatement.
     def enterElsestatement(self, ctx: CPP14Parser.ElsestatementContext):
+        self.enter(ctx)
+
+    # Enter a parse tree produced by CPP14Parser#call.
+    def enterCall(self, ctx: CPP14Parser.CallContext):
         self.enter(ctx)
 
     # Enter a parse tree produced by CPP14Parser#gotostatement.

@@ -6,7 +6,7 @@ from complexity.antlr_visitors import CPPABCVisitor
 
 
 def profiling():
-    file_name = '../complexity/cpp/tests/positives_negatives.cpp'
+    file_name = 'code/cpp/main.cpp'
     ABCListener = CPPABCVisitor
 
     print(f'Profiling for {file_name}')
