@@ -2,7 +2,7 @@ from datetime import datetime
 
 from antlr4 import FileStream
 
-from complexity.antlr_visitors import CPPABCVisitor
+from complexity.visitors.antlr_visitors import CPPABCVisitor
 
 
 def profiling():

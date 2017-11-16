@@ -1,8 +1,8 @@
 from antlr4 import *
 
-from complexity.base_visitor import BaseVisitor
 from complexity.parsers.cpp.CPP14Parser import CPP14Parser
 from complexity.parsers.cpp.CPP14Visitor import CPP14Visitor
+from complexity.visitors.base_visitor import BaseVisitor
 
 # ABC rules for C++
 

@@ -2,10 +2,10 @@ from datetime import datetime
 
 from antlr4 import CommonTokenStream, PredictionMode, InputStream
 
-from complexity.base_visitor import BaseVisitor
 from complexity.parsers.cpp.CPP14Lexer import CPP14Lexer
 from complexity.parsers.cpp.CPP14Parser import CPP14Parser
-from complexity.parsers.cpp_visitor import Visitor
+from complexity.visitors.base_visitor import BaseVisitor
+from complexity.visitors.cpp_visitor import Visitor
 
 
 class ANTLRVisitor(object):
