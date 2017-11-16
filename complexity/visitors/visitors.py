@@ -5,25 +5,14 @@ import javalang.tree as java_ast
 from radon.visitors import CodeVisitor
 
 # TODO read carefully about Node Types
+from complexity.visitors.base_visitor import BaseVisitor
+
 CONDITIONALS = ('Compare', 'Try', 'ExceptHandler')
 BRANCHES = ('If', 'While', 'For', 'Raise', 'Break', 'cond', 'iter', 'Call', 'In')
 ASSIGNMENTS = ('Assign', 'AugAssign')
 
 
-class ABCVisitor(CodeVisitor):
-    def __init__(self):
-        self.a = 0
-        self.b = 0
-        self.c = 0
-
-    @property
-    def abc_score(self):
-        return round(math.sqrt(self.a ** 2 + self.b ** 2 + self.c ** 2), 2)
-
-    @property
-    def abc_vector(self):
-        return self.a, self.b, self.c
-
+class ABCVisitor(CodeVisitor, BaseVisitor):
     def is_assignment(self, node):
         return self.get_name(node) in ASSIGNMENTS
 
