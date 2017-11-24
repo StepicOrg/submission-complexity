@@ -13,7 +13,7 @@ class CCustomVisitor(CVisitor, BaseVisitor):
 
     BRANCHES = (
         # Occurrence of a function call.
-        # CParser.RULE_call,
+        CParser.RULE_call,
         # Occurrence of any goto statement which has a target at a deeper level of nesting than the level to the goto.
         CParser.RULE_gotoStatement,
     )
@@ -25,9 +25,9 @@ class CCustomVisitor(CVisitor, BaseVisitor):
         # Occurrence of the following keywords (‘else’, ‘case’, ‘default’, ‘?’).
         CParser.RULE_elseStatement,
         CParser.RULE_caseStatement,
-        # CParser.RULE_ternaryConditionalExpression,
+        CParser.RULE_ternaryConditionalExpression,
         # Occurrence of a unary conditional operator.
-        # CParser.RULE_unaryConditionalExpression,
+        CParser.RULE_unaryConditionalExpression,
     )
 
     # Enter a parse tree produced by CParser#assignmentOperator.
@@ -39,8 +39,8 @@ class CCustomVisitor(CVisitor, BaseVisitor):
         return self.process(ctx)
 
     # Enter a parse tree produced by CParser#call.
-    # def visitCall(self, ctx: CParser.CallContext):
-    #     return self.process(ctx)
+    def visitCall(self, ctx: CParser.CallContext):
+        return self.process(ctx)
 
     # Enter a parse tree produced by CParser#gotoStatement.
     def visitGotoStatement(self, ctx: CParser.GotoStatementContext):
@@ -62,10 +62,10 @@ class CCustomVisitor(CVisitor, BaseVisitor):
     def visitCaseStatement(self, ctx: CParser.CaseStatementContext):
         return self.process(ctx)
 
-        # Enter a parse tree produced by CParser#ternaryConditionalExpression.
-        # def visitTernaryConditionalExpression(self, ctx: CParser.TernaryconditionalexpressionContext):
-        #     return self.process(ctx)
+    # Enter a parse tree produced by CParser#ternaryConditionalExpression.
+    def visitTernaryConditionalExpression(self, ctx: CParser.TernaryConditionalExpressionContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by CParser#unaryConditionalExpression.
-        # def visitUnaryConditionalExpression(self, ctx: CParser.UnaryConditionalExpressionContext):
-        #     return self.process(ctx)
+    # Enter a parse tree produced by CParser#unaryConditionalExpression.
+    def visitUnaryConditionalExpression(self, ctx: CParser.UnaryConditionalExpressionContext):
+        return self.process(ctx)

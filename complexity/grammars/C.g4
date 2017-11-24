@@ -57,8 +57,8 @@ genericAssociation
 postOperation
 :
     '[' expression ']'
-    |    '(' argumentExpressionList? ')'
-    |    ('.' | '->') Identifier
+    | call
+    | ('.' | '->') Identifier
 ;
 
 postfixExpression
@@ -69,6 +69,12 @@ postfixExpression
         '(' typeName ')' '{' initializerList ','? '}'
         |   '__extension__' '(' typeName ')' '{' initializerList ','? '}'
     ) postOperation*
+;
+
+// used in BRANCHES
+call
+:
+    '(' argumentExpressionList? ')'
 ;
 
 // used in ASSIGNMENTS
@@ -167,8 +173,23 @@ logicalOrExpression
     ;
 
 conditionalExpression
-    :   logicalOrExpression ('?' expression ':' conditionalExpression)?
-    ;
+:
+    ternaryConditionalExpression
+    | unaryConditionalExpression
+    | logicalOrExpression
+;
+
+// used in CONDITIONALS
+ternaryConditionalExpression
+:
+    logicalOrExpression '?' expression ':' conditionalExpression
+;
+
+// used in CONDITIONALS
+unaryConditionalExpression
+:
+    logicalOrExpression '?:' conditionalExpression
+;
 
 assignmentExpression
     :   conditionalExpression
@@ -653,6 +674,7 @@ Not : '!';
 Tilde : '~';
 
 Question : '?';
+UnaryCondition: '?:';
 Colon : ':';
 Semi : ';';
 Comma : ',';

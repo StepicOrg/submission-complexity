@@ -34,6 +34,10 @@ class CVisitor(ParseTreeVisitor):
     def visitPostfixExpression(self, ctx: CParser.PostfixExpressionContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by CParser#call.
+    def visitCall(self, ctx: CParser.CallContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by CParser#unaryIncDecExpression.
     def visitUnaryIncDecExpression(self, ctx: CParser.UnaryIncDecExpressionContext):
         return self.visitChildren(ctx)
@@ -100,6 +104,14 @@ class CVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CParser#conditionalExpression.
     def visitConditionalExpression(self, ctx: CParser.ConditionalExpressionContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by CParser#ternaryConditionalExpression.
+    def visitTernaryConditionalExpression(self, ctx: CParser.TernaryConditionalExpressionContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by CParser#unaryConditionalExpression.
+    def visitUnaryConditionalExpression(self, ctx: CParser.UnaryConditionalExpressionContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by CParser#assignmentExpression.
