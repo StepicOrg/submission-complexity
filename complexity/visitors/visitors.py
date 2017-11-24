@@ -1,5 +1,3 @@
-import math
-
 import javalang
 import javalang.tree as java_ast
 from radon.visitors import CodeVisitor

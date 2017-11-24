@@ -2,12 +2,12 @@ from datetime import datetime
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import CPPABCVisitor
+from complexity.visitors.antlr_visitors import CABCVisitor
 
 
 def profiling():
-    file_name = 'code/cpp/positives_negatives.cpp'
-    ABCVisitor = CPPABCVisitor
+    file_name = 'code/c/dialog.c'
+    ABCVisitor = CABCVisitor
 
     print(f'Profiling for {file_name}')
 

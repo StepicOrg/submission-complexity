@@ -2,10 +2,13 @@ from datetime import datetime
 
 from antlr4 import CommonTokenStream, PredictionMode, InputStream
 
+from complexity.parsers.c.CLexer import CLexer
+from complexity.parsers.c.CParser import CParser
 from complexity.parsers.cpp.CPP14Lexer import CPP14Lexer
 from complexity.parsers.cpp.CPP14Parser import CPP14Parser
 from complexity.visitors.base_visitor import BaseVisitor
-from complexity.visitors.cpp_visitor import Visitor
+from complexity.visitors.c_visitor import CCustomVisitor
+from complexity.visitors.cpp_visitor import CPP14CustomVisitor
 
 
 class ANTLRVisitor(object):
@@ -48,5 +51,12 @@ class ANTLRVisitor(object):
 class CPPABCVisitor(ANTLRVisitor):
     Lexer = CPP14Lexer
     Parser = CPP14Parser
-    Visitor = Visitor
+    Visitor = CPP14CustomVisitor
     start_rule = CPP14Parser.translationunit
+
+
+class CABCVisitor(ANTLRVisitor):
+    Lexer = CLexer
+    Parser = CParser
+    Visitor = CCustomVisitor
+    start_rule = CParser.compilationUnit

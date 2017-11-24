@@ -40,7 +40,7 @@ CONDITIONALS = (
 
 
 # This class defines a complete listener for a parse tree produced by CPP14Parser.
-class Visitor(CPP14Visitor, BaseVisitor):
+class CPP14CustomVisitor(CPP14Visitor, BaseVisitor):
     def process(self, ctx: ParserRuleContext):
         if self.check_time_over():
             return
@@ -54,6 +54,26 @@ class Visitor(CPP14Visitor, BaseVisitor):
 
         return self.visitChildren(ctx)
 
+    # Enter a parse tree produced by CPP14Parser#assignmentoperator.
+    def visitAssignmentoperator(self, ctx: CPP14Parser.AssignmentoperatorContext):
+        return self.process(ctx)
+
+    # Enter a parse tree produced by CPP14Parser#unaryincdecexpression.
+    def visitUnaryincdecexpression(self, ctx: CPP14Parser.UnaryincdecexpressionContext):
+        return self.process(ctx)
+
+    # Enter a parse tree produced by CPP14Parser#initializer.
+    def visitInitializer(self, ctx: CPP14Parser.InitializerContext):
+        return self.process(ctx)
+
+    # Enter a parse tree produced by CPP14Parser#call.
+    def visitCall(self, ctx: CPP14Parser.CallContext):
+        return self.process(ctx)
+
+    # Enter a parse tree produced by CPP14Parser#gotostatement.
+    def visitGotostatement(self, ctx: CPP14Parser.GotostatementContext):
+        return self.process(ctx)
+
     # Enter a parse tree produced by CPP14Parser#newexpression.
     def visitNewexpression(self, ctx: CPP14Parser.NewexpressionContext):
         return self.process(ctx)
@@ -66,36 +86,20 @@ class Visitor(CPP14Visitor, BaseVisitor):
     def visitEqualityexpression(self, ctx: CPP14Parser.EqualityexpressionContext):
         return self.process(ctx)
 
-    # Enter a parse tree produced by CPP14Parser#ternaryconditionalexpression.
-    def visitTernaryconditionalexpression(self, ctx: CPP14Parser.TernaryconditionalexpressionContext):
-        return self.process(ctx)
-
-    # Enter a parse tree produced by CPP14Parser#unaryconditionalexpression.
-    def visitUnaryconditionalexpression(self, ctx: CPP14Parser.UnaryconditionalexpressionContext):
-        return self.process(ctx)
-
-    # Enter a parse tree produced by CPP14Parser#assignmentoperator.
-    def visitAssignmentoperator(self, ctx: CPP14Parser.AssignmentoperatorContext):
-        return self.process(ctx)
-
-    # Enter a parse tree produced by CPP14Parser#casestatement.
-    def visitCasestatement(self, ctx: CPP14Parser.CasestatementContext):
+    # Enter a parse tree produced by CPP14Parser#relationalexpression.
+    def visitRelationalexpression(self, ctx: CPP14Parser.RelationalexpressionContext):
         return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#elsestatement.
     def visitElsestatement(self, ctx: CPP14Parser.ElsestatementContext):
         return self.process(ctx)
 
-    # Enter a parse tree produced by CPP14Parser#call.
-    def visitCall(self, ctx: CPP14Parser.CallContext):
+    # Enter a parse tree produced by CPP14Parser#casestatement.
+    def visitCasestatement(self, ctx: CPP14Parser.CasestatementContext):
         return self.process(ctx)
 
-    # Enter a parse tree produced by CPP14Parser#gotostatement.
-    def visitGotostatement(self, ctx: CPP14Parser.GotostatementContext):
-        return self.process(ctx)
-
-    # Enter a parse tree produced by CPP14Parser#initializer.
-    def visitInitializer(self, ctx: CPP14Parser.InitializerContext):
+    # Enter a parse tree produced by CPP14Parser#ternaryconditionalexpression.
+    def visitTernaryconditionalexpression(self, ctx: CPP14Parser.TernaryconditionalexpressionContext):
         return self.process(ctx)
 
     # Enter a parse tree produced by CPP14Parser#tryblock.
@@ -106,6 +110,6 @@ class Visitor(CPP14Visitor, BaseVisitor):
     def visitHandler(self, ctx: CPP14Parser.HandlerContext):
         return self.process(ctx)
 
-    # Enter a parse tree produced by CPP14Parser#relationalexpression.
-    def visitRelationalexpression(self, ctx: CPP14Parser.RelationalexpressionContext):
+    # Enter a parse tree produced by CPP14Parser#unaryconditionalexpression.
+    def visitUnaryconditionalexpression(self, ctx: CPP14Parser.UnaryconditionalexpressionContext):
         return self.process(ctx)
