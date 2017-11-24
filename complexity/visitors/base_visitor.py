@@ -1,8 +1,14 @@
 import math
 from datetime import datetime, timedelta
 
+from antlr4 import ParserRuleContext, ParseTreeVisitor
 
-class BaseVisitor(object):
+
+class BaseVisitor(ParseTreeVisitor):
+    ASSIGNMENTS = []
+    BRANCHES = []
+    CONDITIONALS = []
+
     def __init__(self, start_time=None, time_limit=None):
         self.a = 0
         self.b = 0
@@ -22,3 +28,16 @@ class BaseVisitor(object):
     def check_time_over(self):
         if self.max_datetime and datetime.now() > self.max_datetime:
             self.success = False
+
+    def process(self, ctx: ParserRuleContext):
+        if self.check_time_over():
+            return
+        rule = ctx.getRuleIndex()
+        if rule in self.ASSIGNMENTS:
+            self.a += 1
+        elif rule in self.BRANCHES:
+            self.b += 1
+        elif rule in self.CONDITIONALS:
+            self.c += 1
+
+        return self.visitChildren(ctx)

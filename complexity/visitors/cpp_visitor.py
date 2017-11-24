@@ -1,58 +1,40 @@
-from antlr4 import *
-
 from complexity.parsers.cpp.CPP14Parser import CPP14Parser
 from complexity.parsers.cpp.CPP14Visitor import CPP14Visitor
 from complexity.visitors.base_visitor import BaseVisitor
 
-# ABC rules for C++
 
-ASSIGNMENTS = (
-    # Occurrence of an assignment operator (exclude constant declarations and default parameter assignments)
-    #       (=, *=, /=, %=, +=, <<=, >>=, &=, !=, ^=).
-    CPP14Parser.RULE_assignmentoperator,
-    # (prefix or postfix) (++, --)
-    CPP14Parser.RULE_unaryincdecexpression,
-    # Initialization of a variable or a nonconstant class member.
-    CPP14Parser.RULE_initializer)
-
-BRANCHES = (
-    # Occurrence of a function call or a class method call.
-    CPP14Parser.RULE_call,
-    # Occurrence of any goto statement which has a target at a deeper level of nesting than the level to the goto.
-    CPP14Parser.RULE_gotostatement,
-    # Occurrence of ‘new’ or ‘delete’ operators.
-    CPP14Parser.RULE_newexpression,
-    CPP14Parser.RULE_deleteexpression)
-
-CONDITIONALS = (
-    # Occurrence of a conditional operator (<, >, <=, >=, ==, !=).
-    CPP14Parser.RULE_equalityexpression,
-    CPP14Parser.RULE_relationalexpression,
-    # Occurrence of the following keywords (‘else’, ‘case’, ‘default’, ‘?’, ‘try’, ‘catch’).
-    CPP14Parser.RULE_elsestatement,
-    CPP14Parser.RULE_casestatement,
-    CPP14Parser.RULE_ternaryconditionalexpression,
-    CPP14Parser.RULE_tryblock,
-    CPP14Parser.RULE_handler,
-    # Occurrence of a unary conditional operator.
-    CPP14Parser.RULE_unaryconditionalexpression
-)
-
-
-# This class defines a complete listener for a parse tree produced by CPP14Parser.
 class CPP14CustomVisitor(CPP14Visitor, BaseVisitor):
-    def process(self, ctx: ParserRuleContext):
-        if self.check_time_over():
-            return
-        rule = ctx.getRuleIndex()
-        if rule in ASSIGNMENTS:
-            self.a += 1
-        elif rule in BRANCHES:
-            self.b += 1
-        elif rule in CONDITIONALS:
-            self.c += 1
+    ASSIGNMENTS = (
+        # Occurrence of an assignment operator (exclude constant declarations and default parameter assignments)
+        #       (=, *=, /=, %=, +=, <<=, >>=, &=, !=, ^=).
+        CPP14Parser.RULE_assignmentoperator,
+        # (prefix or postfix) (++, --)
+        CPP14Parser.RULE_unaryincdecexpression,
+        # Initialization of a variable or a nonconstant class member.
+        CPP14Parser.RULE_initializer)
 
-        return self.visitChildren(ctx)
+    BRANCHES = (
+        # Occurrence of a function call or a class method call.
+        CPP14Parser.RULE_call,
+        # Occurrence of any goto statement which has a target at a deeper level of nesting than the level to the goto.
+        CPP14Parser.RULE_gotostatement,
+        # Occurrence of ‘new’ or ‘delete’ operators.
+        CPP14Parser.RULE_newexpression,
+        CPP14Parser.RULE_deleteexpression)
+
+    CONDITIONALS = (
+        # Occurrence of a conditional operator (<, >, <=, >=, ==, !=).
+        CPP14Parser.RULE_equalityexpression,
+        CPP14Parser.RULE_relationalexpression,
+        # Occurrence of the following keywords (‘else’, ‘case’, ‘default’, ‘?’, ‘try’, ‘catch’).
+        CPP14Parser.RULE_elsestatement,
+        CPP14Parser.RULE_casestatement,
+        CPP14Parser.RULE_ternaryconditionalexpression,
+        CPP14Parser.RULE_tryblock,
+        CPP14Parser.RULE_handler,
+        # Occurrence of a unary conditional operator.
+        CPP14Parser.RULE_unaryconditionalexpression
+    )
 
     # Enter a parse tree produced by CPP14Parser#assignmentoperator.
     def visitAssignmentoperator(self, ctx: CPP14Parser.AssignmentoperatorContext):
