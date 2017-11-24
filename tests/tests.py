@@ -3,7 +3,7 @@ import unittest
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import CPPABCVisitor, CABCVisitor
+from complexity.visitors.antlr_visitors import CPPABCVisitor, CABCVisitor, Python3ABCVisitor
 
 tests = {
     CPPABCVisitor: (
@@ -80,6 +80,176 @@ tests = {
             'score': 10.2
         },
     ),
+    Python3ABCVisitor: (
+        {
+            'file': 'code/python3/base_events.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/base_futures.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/base_subprocess.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/base_tasks.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/compat.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/constants.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/coroutines.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/events.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/futures.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/locks.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/log.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/proactor_events.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/protocols.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/queues.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/selector_events.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/sslproto.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/streams.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/subprocess.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/tasks.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/test_utils.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/transports.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/unix_events.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/windows_events.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+        {
+            'file': 'code/python3/windows_utils.py',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0
+        },
+    )
 }
 
 
@@ -102,3 +272,6 @@ class TestComplexity(unittest.TestCase):
 
     def test_c(self):
         self._test(CABCVisitor, tests[CABCVisitor])
+
+    def test_python3(self):
+        self._test(Python3ABCVisitor, tests[Python3ABCVisitor])
