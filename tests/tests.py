@@ -3,7 +3,7 @@ import unittest
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import CPPABCVisitor, CABCVisitor, Python3ABCVisitor
+from complexity.visitors.antlr_visitors import CPPABCVisitor, CABCVisitor, Python3ABCVisitor, Java9ABCVisitor
 
 tests = {
     CPPABCVisitor: (
@@ -249,12 +249,36 @@ tests = {
             'c': 41,
             'score': 80.57
         },
+    ),
+    Java9ABCVisitor: (
+        {
+            'file': 'code/java9/helloworld.java',
+            'a': 0,
+            'b': 1,
+            'c': 0,
+            'score': 1.0
+        },
+        {
+            'file': 'code/java9/module-info.java',
+            'a': 0,
+            'b': 0,
+            'c': 0,
+            'score': 0.0
+        },
+        {
+            'file': 'code/java9/TryWithResourceDemo.java',
+            'a': 0,
+            'b': 4,
+            'c': 2,
+            'score': 4.47
+        },
     )
 }
 
 
 class TestComplexity(unittest.TestCase):
-    def _test(self, visitor_class, test_set):
+    def _test(self, visitor_class):
+        test_set = tests[visitor_class]
         for test in test_set:
             file = test['file']
             base_path = os.path.abspath(os.path.dirname(__file__))
@@ -272,10 +296,13 @@ class TestComplexity(unittest.TestCase):
             print('.', flush=True, end='')
 
     def test_cpp(self):
-        self._test(CPPABCVisitor, tests[CPPABCVisitor])
+        self._test(CPPABCVisitor)
 
     def test_c(self):
-        self._test(CABCVisitor, tests[CABCVisitor])
+        self._test(CABCVisitor)
 
     def test_python3(self):
-        self._test(Python3ABCVisitor, tests[Python3ABCVisitor])
+        self._test(Python3ABCVisitor)
+
+    def test_java9(self):
+        self._test(Java9ABCVisitor)

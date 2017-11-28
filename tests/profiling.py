@@ -2,12 +2,12 @@ from datetime import datetime
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import Python3ABCVisitor
+from complexity.visitors.antlr_visitors import Java9ABCVisitor
 
 
 def profiling():
-    file_name = 'code/python3/compat.py'
-    ABCVisitor = Python3ABCVisitor
+    file_name = 'code/java9/helloworld.java'
+    ABCVisitor = Java9ABCVisitor
 
     print(f'Profiling for {file_name}')
 
