@@ -779,14 +779,14 @@ class Python3Lexer(Lexer):
             tempt = Lexer.text.fget(self)
             newLine = re.sub("[^\r\n]+", "", tempt)
             spaces = re.sub("[\r\n]+", "", tempt)
-            next = self._input.LA(1)
+            next = chr(self._input.LA(1))
 
             if self.opened > 0 or next == '\r' or next == '\n' or next == '#':
-                skip()
+                self.skip()
             else:
                 self.emitToken(self.commonToken(self.NEWLINE, newLine))
                 indent = self.getIndentationCount(spaces)
-                previous = self.indents[0] if self.indents else 0
+                previous = self.indents[-1] if self.indents else 0
 
                 if indent == previous:
                     self.skip()
@@ -794,7 +794,7 @@ class Python3Lexer(Lexer):
                     self.indents.append(indent)
                     self.emitToken(self.commonToken(LanguageParser.INDENT, spaces))
                 else:
-                    while self.indents and self.indents[0] > indent:
+                    while self.indents and self.indents[-1] > indent:
                         self.emitToken(self.createDedent())
                         self.indents.pop()
 

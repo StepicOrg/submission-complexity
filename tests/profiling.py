@@ -2,12 +2,12 @@ from datetime import datetime
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import CABCVisitor
+from complexity.visitors.antlr_visitors import Python3ABCVisitor
 
 
 def profiling():
-    file_name = 'code/c/dialog.c'
-    ABCVisitor = CABCVisitor
+    file_name = 'code/python3/compat.py'
+    ABCVisitor = Python3ABCVisitor
 
     print(f'Profiling for {file_name}')
 
@@ -21,11 +21,10 @@ def profiling():
         print('.' if visitor.success else 'F', end='', flush=True)
 
     print()
-    print('a: ' + str(visitor.a))
-    print('b: ' + str(visitor.b))
-    print('c: ' + str(visitor.c))
-    print('ABC score: ' + str(visitor.abc_score))
-    print()
+    print(f'a: {visitor.a}')
+    print(f'b: {visitor.b}')
+    print(f'c: {visitor.c}')
+    print(f'ABC score: {visitor.abc_score}\n')
 
     mid = sorted(times[1:])[(len(times) - 1) // 2]
     caching_time = times[0] - mid

@@ -74,6 +74,10 @@ class Python3Visitor(ParseTreeVisitor):
     def visitExpr_stmt(self, ctx: Python3Parser.Expr_stmtContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by Python3Parser#assign.
+    def visitAssign(self, ctx: Python3Parser.AssignContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by Python3Parser#testlist_star_expr.
     def visitTestlist_star_expr(self, ctx: Python3Parser.Testlist_star_exprContext):
         return self.visitChildren(ctx)
@@ -164,6 +168,10 @@ class Python3Visitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by Python3Parser#if_stmt.
     def visitIf_stmt(self, ctx: Python3Parser.If_stmtContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Python3Parser#else_suite.
+    def visitElse_suite(self, ctx: Python3Parser.Else_suiteContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#while_stmt.
@@ -264,6 +272,10 @@ class Python3Visitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by Python3Parser#power.
     def visitPower(self, ctx: Python3Parser.PowerContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Python3Parser#call.
+    def visitCall(self, ctx: Python3Parser.CallContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#atom.

@@ -69,4 +69,4 @@ class Python3ABCVisitor(ANTLRVisitor):
     Lexer = Python3Lexer
     Parser = Python3Parser
     Visitor = Python3CustomVisitor
-    start_rule = Python3Parser.single_input
+    start_rule = Python3Parser.file_input

@@ -245,15 +245,24 @@ small_stmt
  | global_stmt
  | nonlocal_stmt
  | assert_stmt
+ | // empty
  ;
 
 /// expr_stmt: testlist_star_expr (augassign (yield_expr|testlist) |
 ///                      ('=' (yield_expr|testlist_star_expr))*)
 expr_stmt
- : testlist_star_expr ( augassign ( yield_expr | testlist)
-                      | ( '=' ( yield_expr| testlist_star_expr ) )*
-                      )
- ;
+:
+    testlist_star_expr (
+        augassign ( yield_expr | testlist)
+        | assign*
+    )
+;
+
+// used in ASSIGNMENTS
+assign
+:
+    '=' ( yield_expr| testlist_star_expr )
+;
 
 /// testlist_star_expr: (test|star_expr) (',' (test|star_expr))* [',']
 testlist_star_expr
@@ -262,6 +271,7 @@ testlist_star_expr
 
 /// augassign: ('+=' | '-=' | '*=' | '/=' | '%=' | '&=' | '|=' | '^=' |
 ///             '<<=' | '>>=' | '**=' | '//=')
+// used in ASSIGNMENTS
 augassign
  : '+='
  | '-='
@@ -298,6 +308,7 @@ flow_stmt
  ;
 
 /// break_stmt: 'break'
+// used in BRANCHES
 break_stmt
  : BREAK
  ;
@@ -318,6 +329,7 @@ yield_stmt
  ;
 
 /// raise_stmt: 'raise' [test ['from' test]]
+// used in BRANCHES
 raise_stmt
  : RAISE ( test ( FROM test )? )?
  ;
@@ -399,18 +411,27 @@ compound_stmt
  ;
 
 /// if_stmt: 'if' test ':' suite ('elif' test ':' suite)* ['else' ':' suite]
+// used in BRANCHES
 if_stmt
- : IF test ':' suite ( ELIF test ':' suite )* ( ELSE ':' suite )?
+ : IF test ':' suite ( ELIF test ':' suite )* else_suite?
  ;
 
+// used in CONDITIONALS
+else_suite
+:
+    ELSE ':' suite
+;
+
 /// while_stmt: 'while' test ':' suite ['else' ':' suite]
+// used in BRANCHES
 while_stmt
- : WHILE test ':' suite ( ELSE ':' suite )?
+ : WHILE test ':' suite else_suite?
  ;
 
 /// for_stmt: 'for' exprlist 'in' testlist ':' suite ['else' ':' suite]
+// used in BRANCHES
 for_stmt
- : FOR exprlist IN testlist ':' suite ( ELSE ':' suite )?
+ : FOR exprlist IN testlist ':' suite else_suite?
  ;
 
 /// try_stmt: ('try' ':' suite
@@ -418,9 +439,10 @@ for_stmt
 ///       ['else' ':' suite]
 ///       ['finally' ':' suite] |
 ///      'finally' ':' suite))
+// used in CONDITIONALS
 try_stmt
  : TRY ':' suite ( ( except_clause ':' suite )+
-                   ( ELSE ':' suite )?
+                   else_suite?
                    ( FINALLY ':' suite )?
                  | FINALLY ':' suite
                  )
@@ -438,6 +460,7 @@ with_item
 
 /// # NB compile.c makes sure that the default except clause is last
 /// except_clause: 'except' [test ['as' NAME]]
+// used in CONDITIONALS
 except_clause
  : EXCEPT ( test ( AS NAME )? )?
  ;
@@ -494,6 +517,7 @@ comparison
 /// # <> isn't actually a valid comparison operator in Python. It's here for the
 /// # sake of a __future__ import described in PEP 401
 /// comp_op: '<'|'>'|'=='|'>='|'<='|'<>'|'!='|'in'|'not' 'in'|'is'|'is' 'not'
+// used in CONDITIONALS
 comp_op
  : '<'
  | '>'
@@ -562,8 +586,16 @@ factor
 
 /// power: atom trailer* ['**' factor]
 power
- : atom trailer* ( '**' factor )?
- ;
+:
+    call
+    | atom trailer* ( '**' factor )?
+;
+
+// used in BRANCHES
+call
+:
+    NAME ('(' arglist? ')') | call ('(' arglist? ')')
+;
 
 /// atom: ('(' [yield_expr|testlist_comp] ')' |
 ///        '[' [testlist_comp] ']' |
@@ -657,6 +689,7 @@ argument
  ;
 
 /// comp_iter: comp_for | comp_if
+// used in BRANCHES
 comp_iter
  : comp_for
  | comp_if
@@ -748,14 +781,14 @@ NEWLINE
 tempt = Lexer.text.fget(self)
 newLine = re.sub("[^\r\n]+", "", tempt)
 spaces = re.sub("[\r\n]+", "", tempt)
-next = self._input.LA(1)
+next = chr(self._input.LA(1))
 
 if self.opened > 0 or next == '\r' or next == '\n' or next == '#':
-    skip()
+    self.skip()
 else:
     self.emitToken(self.commonToken(self.NEWLINE, newLine))
     indent = self.getIndentationCount(spaces)
-    previous = self.indents[0] if self.indents else 0
+    previous = self.indents[-1] if self.indents else 0
 
     if indent == previous:
         self.skip()
@@ -763,7 +796,7 @@ else:
         self.indents.append(indent)
         self.emitToken(self.commonToken(LanguageParser.INDENT, spaces))
     else:
-        while self.indents and self.indents[0] > indent:
+        while self.indents and self.indents[-1] > indent:
             self.emitToken(self.createDedent())
             self.indents.pop()
     }

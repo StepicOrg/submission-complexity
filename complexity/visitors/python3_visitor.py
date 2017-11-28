@@ -3,78 +3,72 @@ from complexity.parsers.python3.Python3Visitor import Python3Visitor
 from complexity.visitors.base_visitor import BaseVisitor
 
 
-# CONDITIONALS = ('Compare', 'Try', 'ExceptHandler')
-# BRANCHES = ('If', 'While', 'For', 'Raise', 'Break', 'cond', 'iter', 'Call', 'In')
-
-
 class Python3CustomVisitor(Python3Visitor, BaseVisitor):
     ASSIGNMENTS = (
         # Occurrence of an assignment operator (=, +=, -=, *=, @=, /=, %=, &=, |=, ^=, <<=, >>=, **=, //=).
-        # Python3Parser.RULE_assign,
+        Python3Parser.RULE_assign,
         Python3Parser.RULE_augassign,
-        # Occurrence of an increment or a decrement operator (++, --).
-        # Python3Parser.RULE_unaryIncDecExpression,
     )
 
     BRANCHES = (
         # Occurrence of a function call.
-        # Python3Parser.RULE_call,
-        # Occurrence of any goto statement which has a target at a deeper level of nesting than the level to the goto.
-        # Python3Parser.RULE_gotoStatement,
+        Python3Parser.RULE_call,
+        # ('If', 'While', 'For', 'Raise', 'Break', 'cond', 'iter', 'In')
+        Python3Parser.RULE_if_stmt,
+        Python3Parser.RULE_while_stmt,
+        Python3Parser.RULE_for_stmt,
+        Python3Parser.RULE_raise_stmt,
+        Python3Parser.RULE_break_stmt,
+        Python3Parser.RULE_comp_iter,
     )
 
     CONDITIONALS = (
-        # Occurrence of a conditional operator (<, >, <=, >=, ==, !=).
-        # Python3Parser.RULE_equalityExpression,
-        # Python3Parser.RULE_relationalExpression,
-        # Occurrence of the following keywords (‘else’, ‘case’, ‘default’, ‘?’).
-        # Python3Parser.RULE_elseStatement,
-        # Python3Parser.RULE_caseStatement,
-        # Python3Parser.RULE_ternaryConditionalExpression,
-        # Occurrence of a unary conditional operator.
-        # Python3Parser.RULE_unaryConditionalExpression,
+        # Occurrence of a conditional operator ('<'|'>'|'=='|'>='|'<='|'<>'|'!='|'in'|'not' 'in'|'is'|'is' 'not').
+        Python3Parser.RULE_comp_op,
+        # Occurrence of the following keywords ('else', 'Try', 'ExceptHandler').
+        Python3Parser.RULE_else_suite,
+        Python3Parser.RULE_try_stmt,
+        Python3Parser.RULE_except_clause,
     )
 
-    # Enter a parse tree produced by Python3Parser#assign.
-    # def visitAssignOperator(self, ctx: Python3Parser.AssignContext):
-    #     return self.process(ctx)
-
-    # Enter a parse tree produced by Python3Parser#augassign.
-    def visitAugassignOperator(self, ctx: Python3Parser.AugassignContext):
+    def visitAssign(self, ctx: Python3Parser.AssignContext):
         return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#unaryIncDecExpression.
-        # def visitUnaryIncDecExpression(self, ctx: Python3Parser.UnaryIncDecExpressionContext):
-        #     return self.process(ctx)
+    def visitAugassign(self, ctx: Python3Parser.AugassignContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#call.
-        # def visitCall(self, ctx: Python3Parser.CallContext):
-        #     return self.process(ctx)
+    def visitCall(self, ctx: Python3Parser.CallContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#gotoStatement.
-        # def visitGotoStatement(self, ctx: Python3Parser.GotoStatementContext):
-        #     return self.process(ctx)
+    def visitIf_stmt(self, ctx: Python3Parser.If_stmtContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#equalityExpression.
-        # def visitEqualityExpression(self, ctx: Python3Parser.EqualityExpressionContext):
-        #     return self.process(ctx)
+    def visitWhile_stmt(self, ctx: Python3Parser.While_stmtContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#relationalExpression.
-        # def visitRelationalExpression(self, ctx: Python3Parser.RelationalExpressionContext):
-        #     return self.process(ctx)
+    def visitFor_stmt(self, ctx: Python3Parser.For_stmtContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#elseStatement.
-        # def visitElseStatement(self, ctx: Python3Parser.ElseStatementContext):
-        #     return self.process(ctx)
+    def visitRaise_stmt(self, ctx: Python3Parser.Raise_stmtContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#caseStatement.
-        # def visitCaseStatement(self, ctx: Python3Parser.CaseStatementContext):
-        #     return self.process(ctx)
+    def visitBreak_stmt(self, ctx: Python3Parser.Break_stmtContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#ternaryConditionalExpression.
-        # def visitTernaryConditionalExpression(self, ctx: Python3Parser.TernaryConditionalExpressionContext):
-        #     return self.process(ctx)
+    def visitComp_iter(self, ctx: Python3Parser.Comp_iterContext):
+        return self.process(ctx)
 
-        # Enter a parse tree produced by Python3Parser#unaryConditionalExpression.
-        # def visitUnaryConditionalExpression(self, ctx: Python3Parser.UnaryConditionalExpressionContext):
-        #     return self.process(ctx)
+    def visitComp_op(self, ctx: Python3Parser.Comp_opContext):
+        return self.process(ctx)
+
+    def visitOr_test(self, ctx: Python3Parser.Or_testContext):
+        return self.process(ctx)
+
+    def visitElse_suite(self, ctx: Python3Parser.Else_suiteContext):
+        return self.process(ctx)
+
+    def visitTry_stmt(self, ctx: Python3Parser.Try_stmtContext):
+        return self.process(ctx)
+
+    def visitExcept_clause(self, ctx: Python3Parser.Except_clauseContext):
+        return self.process(ctx)

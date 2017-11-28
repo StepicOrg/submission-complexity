@@ -83,189 +83,193 @@ tests = {
     Python3ABCVisitor: (
         {
             'file': 'code/python3/base_events.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 206,
+            'b': 361,
+            'c': 171,
+            'score': 449.44
         },
         {
             'file': 'code/python3/base_futures.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 15,
+            'b': 14,
+            'c': 7,
+            'score': 21.68
         },
         {
             'file': 'code/python3/base_subprocess.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 47,
+            'b': 44,
+            'c': 43,
+            'score': 77.42
         },
         {
             'file': 'code/python3/base_tasks.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 19,
+            'b': 21,
+            'c': 15,
+            'score': 32.05
         },
         {
             'file': 'code/python3/compat.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 4,
+            'b': 3,
+            'c': 3,
+            'score': 5.83
         },
         {
             'file': 'code/python3/constants.py',
-            'a': 0,
+            'a': 2,
             'b': 0,
             'c': 0,
-            'score': 0
+            'score': 2.0
         },
         {
             'file': 'code/python3/coroutines.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 77,
+            'b': 62,
+            'c': 43,
+            'score': 107.81
         },
         {
             'file': 'code/python3/events.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 54,
+            'b': 108,
+            'c': 23,
+            'score': 122.92
         },
         {
             'file': 'code/python3/futures.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 70,
+            'b': 79,
+            'c': 36,
+            'score': 111.52
         },
         {
             'file': 'code/python3/locks.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 52,
+            'b': 60,
+            'c': 26,
+            'score': 83.55
         },
         {
             'file': 'code/python3/log.py',
-            'a': 0,
+            'a': 1,
             'b': 0,
             'c': 0,
-            'score': 0
+            'score': 1.0
         },
         {
             'file': 'code/python3/proactor_events.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 71,
+            'b': 100,
+            'c': 61,
+            'score': 136.97
         },
         {
             'file': 'code/python3/protocols.py',
-            'a': 0,
+            'a': 1,
             'b': 0,
             'c': 0,
-            'score': 0
+            'score': 1.0
         },
         {
             'file': 'code/python3/queues.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 23,
+            'b': 33,
+            'c': 12,
+            'score': 41.98
         },
         {
             'file': 'code/python3/selector_events.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 135,
+            'b': 208,
+            'c': 156,
+            'score': 292.96
         },
         {
             'file': 'code/python3/sslproto.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 98,
+            'b': 115,
+            'c': 64,
+            'score': 164.09
         },
         {
             'file': 'code/python3/streams.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 91,
+            'b': 126,
+            'c': 56,
+            'score': 165.21
         },
         {
             'file': 'code/python3/subprocess.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 52,
+            'b': 29,
+            'c': 33,
+            'score': 68.07
         },
         {
             'file': 'code/python3/tasks.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 84,
+            'b': 123,
+            'c': 67,
+            'score': 163.32
         },
         {
             'file': 'code/python3/test_utils.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 63,
+            'b': 45,
+            'c': 36,
+            'score': 85.38
         },
         {
             'file': 'code/python3/transports.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 14,
+            'b': 31,
+            'c': 14,
+            'score': 36.78
         },
         {
             'file': 'code/python3/unix_events.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 110,
+            'b': 196,
+            'c': 137,
+            'score': 263.22
         },
         {
             'file': 'code/python3/windows_events.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 124,
+            'b': 97,
+            'c': 75,
+            'score': 174.38
         },
         {
             'file': 'code/python3/windows_utils.py',
-            'a': 0,
-            'b': 0,
-            'c': 0,
-            'score': 0
+            'a': 51,
+            'b': 47,
+            'c': 41,
+            'score': 80.57
         },
     )
 }
 
 
 class TestComplexity(unittest.TestCase):
-    def _test(self, Visitor, test_set):
+    def _test(self, visitor_class, test_set):
         for test in test_set:
             file = test['file']
             base_path = os.path.abspath(os.path.dirname(__file__))
             file_name = os.path.join(base_path, file)
             input = FileStream(file_name, encoding='utf8').strdata
-            visitor = Visitor.from_code(input, time_limit=1)
+            visitor = visitor_class.from_code(input, time_limit=1)
 
-            self.assertEqual(visitor.a, test['a'], f'a in {file}')
-            self.assertEqual(visitor.b, test['b'], f'b in {file}')
-            self.assertEqual(visitor.c, test['c'], f'c in {file}')
-            self.assertEqual(visitor.abc_score, test['score'], f'score in {file}')
+            self.assertDictEqual({
+                'file': file,
+                'a': visitor.a,
+                'b': visitor.b,
+                'c': visitor.c,
+                'score': visitor.abc_score
+            }, test, file)
+            print('.', flush=True, end='')
 
     def test_cpp(self):
         self._test(CPPABCVisitor, tests[CPPABCVisitor])
