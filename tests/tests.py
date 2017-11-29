@@ -255,8 +255,8 @@ tests = {
             'file': 'code/java9/helloworld.java',
             'a': 0,
             'b': 1,
-            'c': 0,
-            'score': 1.0
+            'c': 1,
+            'score': 1.41
         },
         {
             'file': 'code/java9/module-info.java',
@@ -269,8 +269,8 @@ tests = {
             'file': 'code/java9/TryWithResourceDemo.java',
             'a': 0,
             'b': 4,
-            'c': 2,
-            'score': 4.47
+            'c': 4,
+            'score': 5.66
         },
     )
 }

@@ -79,4 +79,4 @@ class Java9ABCVisitor(ANTLRVisitor):
     Lexer = Java9Lexer
     Parser = Java9Parser
     Visitor = Java9CustomVisitor
-    start_rule = Java9Parser.ordinaryCompilation
+    start_rule = Java9Parser.compilationUnit

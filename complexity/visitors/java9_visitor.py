@@ -11,10 +11,8 @@ class Java9CustomVisitor(Java9Visitor, BaseVisitor):
         # (=, *=, /=, %=, +=, -=, <<=, >>=, &=, |=, ^=, >>>=).
         Java9Parser.RULE_assignmentOperator,
         # Occurrence of an increment or a decrement operator (prefix or postfix) (++, --).
-        Java9Parser.RULE_preIncrementExpression,
-        Java9Parser.RULE_preDecrementExpression,
-        Java9Parser.RULE_postIncrementExpression,
-        Java9Parser.RULE_postDecrementExpression,
+        Java9Parser.RULE_preIncrementDecrementExpression,
+        Java9Parser.RULE_postIncrementDecrementExpression,
     )
 
     BRANCHES = (
@@ -46,16 +44,10 @@ class Java9CustomVisitor(Java9Visitor, BaseVisitor):
     def visitAssignmentOperator(self, ctx: Java9Parser.AssignmentOperatorContext):
         return self.process(ctx)
 
-    def visitPreIncrementExpression(self, ctx: Java9Parser.PreIncrementExpressionContext):
+    def visitPreIncrementDecrementExpression(self, ctx: Java9Parser.PreIncrementDecrementExpressionContext):
         return self.process(ctx)
 
-    def visitPreDecrementExpression(self, ctx: Java9Parser.PreDecrementExpressionContext):
-        return self.process(ctx)
-
-    def visitPostIncrementExpression(self, ctx: Java9Parser.PostIncrementExpressionContext):
-        return self.process(ctx)
-
-    def visitPostDecrementExpression(self, ctx: Java9Parser.PostDecrementExpressionContext):
+    def visitPostIncrementDecrementExpression(self, ctx: Java9Parser.PostIncrementDecrementExpressionContext):
         return self.process(ctx)
 
     def visitMethodInvocation(self, ctx: Java9Parser.MethodInvocationContext):
