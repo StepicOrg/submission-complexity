@@ -28,10 +28,15 @@ class BaseVisitor(ParseTreeVisitor):
     def check_time_over(self):
         if self.max_datetime and datetime.now() > self.max_datetime:
             self.success = False
+            return False
+        return True
+
+    def visitChildren(self, node):
+        if not self.check_time_over():
+            return
+        return super(BaseVisitor, self).visitChildren(node)
 
     def process(self, ctx: ParserRuleContext):
-        if self.check_time_over():
-            return
         rule = ctx.getRuleIndex()
         if rule in self.ASSIGNMENTS:
             self.a += 1

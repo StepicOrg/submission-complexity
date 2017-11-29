@@ -8,14 +8,16 @@ from complexity.visitors.antlr_visitors import Java9ABCVisitor
 def profiling():
     file_name = 'code/java9/helloworld.java'
     ABCVisitor = Java9ABCVisitor
+    time_limit = 0.5  # seconds
 
     print(f'Profiling for {file_name}')
+    print(f'Time limit is {time_limit}s')
 
     times = list()
     for i in range(10):
         input = FileStream(file_name, encoding='utf8').strdata
         start_time = datetime.now()
-        visitor = ABCVisitor.from_code(input, time_limit=1)
+        visitor = ABCVisitor.from_code(input, time_limit=time_limit)
         delta_time = datetime.now() - start_time
         times.append(delta_time.total_seconds() * 1000)
         print('.' if visitor.success else 'F', end='', flush=True)
