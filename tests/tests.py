@@ -284,7 +284,7 @@ class TestComplexity(unittest.TestCase):
             base_path = os.path.abspath(os.path.dirname(__file__))
             file_name = os.path.join(base_path, file)
             input = FileStream(file_name, encoding='utf8').strdata
-            visitor = visitor_class.from_code(input, time_limit=1)
+            visitor = visitor_class.from_code(input)
 
             self.assertDictEqual({
                 'file': file,

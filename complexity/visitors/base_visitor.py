@@ -15,6 +15,8 @@ class BaseVisitor(ParseTreeVisitor):
         self.c = 0
         if start_time and time_limit:
             self.max_datetime = start_time + timedelta(seconds=time_limit)
+        else:
+            self.max_datetime = None
         self.success = True
 
     @property
