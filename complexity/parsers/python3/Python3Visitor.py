@@ -10,6 +10,7 @@ else:
 # This class defines a complete generic visitor for a parse tree produced by Python3Parser.
 
 class Python3Visitor(ParseTreeVisitor):
+
     # Visit a parse tree produced by Python3Parser#file_input.
     def visitFile_input(self, ctx: Python3Parser.File_inputContext):
         return self.visitChildren(ctx)
@@ -120,10 +121,6 @@ class Python3Visitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by Python3Parser#subscript.
     def visitSubscript(self, ctx: Python3Parser.SubscriptContext):
-        return self.visitChildren(ctx)
-
-    # Visit a parse tree produced by Python3Parser#exprlist.
-    def visitExprlist(self, ctx: Python3Parser.ExprlistContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#testlist.

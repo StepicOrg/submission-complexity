@@ -999,10 +999,7 @@ class CParser(Parser):
             return CParser.RULE_primaryExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPrimaryExpression"):
-                return visitor.visitPrimaryExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def primaryExpression(self):
 
@@ -1133,10 +1130,7 @@ class CParser(Parser):
             return CParser.RULE_genericSelection
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGenericSelection"):
-                return visitor.visitGenericSelection(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def genericSelection(self):
 
@@ -1180,10 +1174,7 @@ class CParser(Parser):
             return CParser.RULE_genericAssocList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGenericAssocList"):
-                return visitor.visitGenericAssocList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def genericAssocList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -1243,10 +1234,7 @@ class CParser(Parser):
             return CParser.RULE_genericAssociation
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGenericAssociation"):
-                return visitor.visitGenericAssociation(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def genericAssociation(self):
 
@@ -1269,7 +1257,7 @@ class CParser(Parser):
                 self.state = 247
                 self.assignmentExpression()
                 pass
-            elif token in [CParser.Default]:
+            elif token == CParser.Default:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 249
                 self.match(CParser.Default)
@@ -1308,10 +1296,7 @@ class CParser(Parser):
             return CParser.RULE_postOperation
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPostOperation"):
-                return visitor.visitPostOperation(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def postOperation(self):
 
@@ -1322,7 +1307,7 @@ class CParser(Parser):
             self.state = 261
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.LeftBracket]:
+            if token == CParser.LeftBracket:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 254
                 self.match(CParser.LeftBracket)
@@ -1331,7 +1316,7 @@ class CParser(Parser):
                 self.state = 256
                 self.match(CParser.RightBracket)
                 pass
-            elif token in [CParser.LeftParen]:
+            elif token == CParser.LeftParen:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 258
                 self.call()
@@ -1384,10 +1369,7 @@ class CParser(Parser):
             return CParser.RULE_postfixExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPostfixExpression"):
-                return visitor.visitPostfixExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def postfixExpression(self):
 
@@ -1500,17 +1482,19 @@ class CParser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                            1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                            (1 << (CParser.Plus - 71)) | (
-                                                            1 << (CParser.PlusPlus - 71)) | (
-                                                        1 << (CParser.Minus - 71)) | (
-                                                    1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                            1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                    1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                    (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                    1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
+                            1 << CParser.LeftParen))) != 0) or (
+                    (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                    (1 << (CParser.Plus - 71)) | (
+                    1 << (CParser.PlusPlus - 71)) | (
+                            1 << (CParser.Minus - 71)) | (
+                            1 << (CParser.MinusMinus - 71)) | (
+                            1 << (CParser.Star - 71)) | (
+                            1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
+                            1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                             1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                    1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                            1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
                 self.state = 294
                 self.argumentExpressionList(0)
 
@@ -1605,10 +1589,7 @@ class CParser(Parser):
             return CParser.RULE_postfixUnaryIncDecExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPostfixUnaryIncDecExpression"):
-                return visitor.visitPostfixUnaryIncDecExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def postfixUnaryIncDecExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -1648,7 +1629,7 @@ class CParser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while ((((_la - 59)) & ~0x3f) == 0 and ((1 << (_la - 59)) & (
-                                (1 << (CParser.LeftParen - 59)) | (1 << (CParser.LeftBracket - 59)) | (
+                            (1 << (CParser.LeftParen - 59)) | (1 << (CParser.LeftBracket - 59)) | (
                             1 << (CParser.Arrow - 59)) | (1 << (CParser.Dot - 59)))) != 0):
                         self.state = 309
                         self.postOperation()
@@ -1691,10 +1672,7 @@ class CParser(Parser):
             return CParser.RULE_argumentExpressionList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitArgumentExpressionList"):
-                return visitor.visitArgumentExpressionList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def argumentExpressionList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -1769,10 +1747,7 @@ class CParser(Parser):
             return CParser.RULE_unaryExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnaryExpression"):
-                return visitor.visitUnaryExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def unaryExpression(self):
 
@@ -1861,10 +1836,7 @@ class CParser(Parser):
             return CParser.RULE_unaryOperator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnaryOperator"):
-                return visitor.visitUnaryOperator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def unaryOperator(self):
 
@@ -1876,9 +1848,10 @@ class CParser(Parser):
             self.state = 353
             _la = self._input.LA(1)
             if not (((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                (1 << (CParser.Plus - 71)) | (1 << (CParser.Minus - 71)) | (
-                            1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (1 << (CParser.Not - 71)) | (
-                1 << (CParser.Tilde - 71)))) != 0)):
+                    (1 << (CParser.Plus - 71)) | (1 << (CParser.Minus - 71)) | (
+                    1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (
+                            1 << (CParser.Not - 71)) | (
+                            1 << (CParser.Tilde - 71)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1913,10 +1886,7 @@ class CParser(Parser):
             return CParser.RULE_castExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCastExpression"):
-                return visitor.visitCastExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def castExpression(self):
 
@@ -1989,10 +1959,7 @@ class CParser(Parser):
             return CParser.RULE_multiplicativeExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitMultiplicativeExpression"):
-                return visitor.visitMultiplicativeExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def multiplicativeExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2084,10 +2051,7 @@ class CParser(Parser):
             return CParser.RULE_additiveExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAdditiveExpression"):
-                return visitor.visitAdditiveExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def additiveExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2166,10 +2130,7 @@ class CParser(Parser):
             return CParser.RULE_shiftExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitShiftExpression"):
-                return visitor.visitShiftExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def shiftExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2283,7 +2244,7 @@ class CParser(Parser):
                     self.state = 419
                     _la = self._input.LA(1)
                     if not (((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & (
-                                (1 << (CParser.Less - 65)) | (1 << (CParser.LessEqual - 65)) | (
+                            (1 << (CParser.Less - 65)) | (1 << (CParser.LessEqual - 65)) | (
                             1 << (CParser.Greater - 65)) | (1 << (CParser.GreaterEqual - 65)))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
@@ -2388,10 +2349,7 @@ class CParser(Parser):
             return CParser.RULE_andExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAndExpression"):
-                return visitor.visitAndExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def andExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2451,10 +2409,7 @@ class CParser(Parser):
             return CParser.RULE_exclusiveOrExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExclusiveOrExpression"):
-                return visitor.visitExclusiveOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def exclusiveOrExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2514,10 +2469,7 @@ class CParser(Parser):
             return CParser.RULE_inclusiveOrExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInclusiveOrExpression"):
-                return visitor.visitInclusiveOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def inclusiveOrExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2577,10 +2529,7 @@ class CParser(Parser):
             return CParser.RULE_logicalAndExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLogicalAndExpression"):
-                return visitor.visitLogicalAndExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def logicalAndExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2640,10 +2589,7 @@ class CParser(Parser):
             return CParser.RULE_logicalOrExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLogicalOrExpression"):
-                return visitor.visitLogicalOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def logicalOrExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -2706,10 +2652,7 @@ class CParser(Parser):
             return CParser.RULE_conditionalExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConditionalExpression"):
-                return visitor.visitConditionalExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def conditionalExpression(self):
 
@@ -2860,10 +2803,7 @@ class CParser(Parser):
             return CParser.RULE_assignmentExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAssignmentExpression"):
-                return visitor.visitAssignmentExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def assignmentExpression(self):
 
@@ -2929,12 +2869,16 @@ class CParser(Parser):
             self.state = 515
             _la = self._input.LA(1)
             if not (((((_la - 90)) & ~0x3f) == 0 and ((1 << (_la - 90)) & (
-                                                    (1 << (CParser.Assign - 90)) | (1 << (CParser.StarAssign - 90)) | (
-                                                1 << (CParser.DivAssign - 90)) | (1 << (CParser.ModAssign - 90)) | (
-                                        1 << (CParser.PlusAssign - 90)) | (1 << (CParser.MinusAssign - 90)) | (
-                                1 << (CParser.LeftShiftAssign - 90)) | (1 << (CParser.RightShiftAssign - 90)) | (
-                        1 << (CParser.AndAssign - 90)) | (1 << (CParser.XorAssign - 90)) | (
-                1 << (CParser.OrAssign - 90)))) != 0)):
+                    (1 << (CParser.Assign - 90)) | (
+                    1 << (CParser.StarAssign - 90)) | (
+                            1 << (CParser.DivAssign - 90)) | (
+                            1 << (CParser.ModAssign - 90)) | (
+                            1 << (CParser.PlusAssign - 90)) | (
+                            1 << (CParser.MinusAssign - 90)) | (
+                            1 << (CParser.LeftShiftAssign - 90)) | (
+                            1 << (CParser.RightShiftAssign - 90)) | (
+                            1 << (CParser.AndAssign - 90)) | (1 << (CParser.XorAssign - 90)) | (
+                            1 << (CParser.OrAssign - 90)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2963,10 +2907,7 @@ class CParser(Parser):
             return CParser.RULE_expression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExpression"):
-                return visitor.visitExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def expression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -3023,10 +2964,7 @@ class CParser(Parser):
             return CParser.RULE_constantExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConstantExpression"):
-                return visitor.visitConstantExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def constantExpression(self):
 
@@ -3063,10 +3001,7 @@ class CParser(Parser):
             return CParser.RULE_declaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclaration"):
-                return visitor.visitDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def declaration(self):
 
@@ -3125,10 +3060,7 @@ class CParser(Parser):
             return CParser.RULE_declarationSpecifiers
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclarationSpecifiers"):
-                return visitor.visitDeclarationSpecifiers(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def declarationSpecifiers(self):
 
@@ -3174,10 +3106,7 @@ class CParser(Parser):
             return CParser.RULE_declarationSpecifiers2
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclarationSpecifiers2"):
-                return visitor.visitDeclarationSpecifiers2(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def declarationSpecifiers2(self):
 
@@ -3232,10 +3161,7 @@ class CParser(Parser):
             return CParser.RULE_declarationSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclarationSpecifier"):
-                return visitor.visitDeclarationSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def declarationSpecifier(self):
 
@@ -3300,10 +3226,7 @@ class CParser(Parser):
             return CParser.RULE_initDeclaratorList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInitDeclaratorList"):
-                return visitor.visitInitDeclaratorList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def initDeclaratorList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -3363,10 +3286,7 @@ class CParser(Parser):
             return CParser.RULE_initDeclarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInitDeclarator"):
-                return visitor.visitInitDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def initDeclarator(self):
 
@@ -3411,10 +3331,7 @@ class CParser(Parser):
             return CParser.RULE_storageClassSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStorageClassSpecifier"):
-                return visitor.visitStorageClassSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def storageClassSpecifier(self):
 
@@ -3426,8 +3343,9 @@ class CParser(Parser):
             self.state = 575
             _la = self._input.LA(1)
             if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CParser.Auto) | (1 << CParser.Extern) | (1 << CParser.Register) | (
-                        1 << CParser.Static) | (1 << CParser.Typedef) | (1 << CParser.ThreadLocal))) != 0)):
+                    (1 << CParser.Auto) | (1 << CParser.Extern) | (1 << CParser.Register) | (
+                    1 << CParser.Static) | (1 << CParser.Typedef) | (
+                            1 << CParser.ThreadLocal))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3465,10 +3383,7 @@ class CParser(Parser):
             return CParser.RULE_typeSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeSpecifier"):
-                return visitor.visitTypeSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeSpecifier(self):
 
@@ -3486,16 +3401,18 @@ class CParser(Parser):
                 self.state = 577
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__3) | (1 << CParser.T__4) | (
-                    1 << CParser.T__5) | (1 << CParser.Char) | (1 << CParser.Double) | (1 << CParser.Float) | (
-                    1 << CParser.Int) | (1 << CParser.Long) | (1 << CParser.Short) | (1 << CParser.Signed) | (
-                    1 << CParser.Unsigned) | (1 << CParser.Void) | (1 << CParser.Bool) | (
-                    1 << CParser.Complex))) != 0)):
+                        1 << CParser.T__5) | (1 << CParser.Char) | (1 << CParser.Double) | (1 << CParser.Float) | (
+                                                                         1 << CParser.Int) | (1 << CParser.Long) | (
+                                                                         1 << CParser.Short) | (1 << CParser.Signed) | (
+                                                                         1 << CParser.Unsigned) | (
+                                                                         1 << CParser.Void) | (1 << CParser.Bool) | (
+                                                                         1 << CParser.Complex))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [CParser.T__0]:
+            elif token == CParser.T__0:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 578
                 self.match(CParser.T__0)
@@ -3504,7 +3421,7 @@ class CParser(Parser):
                 self.state = 580
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and (
-                    (1 << _la) & ((1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5))) != 0)):
+                        (1 << _la) & ((1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -3512,7 +3429,7 @@ class CParser(Parser):
                 self.state = 581
                 self.match(CParser.RightParen)
                 pass
-            elif token in [CParser.Atomic]:
+            elif token == CParser.Atomic:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 582
                 self.atomicTypeSpecifier()
@@ -3522,17 +3439,17 @@ class CParser(Parser):
                 self.state = 583
                 self.structOrUnionSpecifier()
                 pass
-            elif token in [CParser.Enum]:
+            elif token == CParser.Enum:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 584
                 self.enumSpecifier()
                 pass
-            elif token in [CParser.Identifier]:
+            elif token == CParser.Identifier:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 585
                 self.typedefName()
                 pass
-            elif token in [CParser.T__6]:
+            elif token == CParser.T__6:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 586
                 self.match(CParser.T__6)
@@ -3573,10 +3490,7 @@ class CParser(Parser):
             return CParser.RULE_structOrUnionSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructOrUnionSpecifier"):
-                return visitor.visitStructOrUnionSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def structOrUnionSpecifier(self):
 
@@ -3633,10 +3547,7 @@ class CParser(Parser):
             return CParser.RULE_structOrUnion
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructOrUnion"):
-                return visitor.visitStructOrUnion(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def structOrUnion(self):
 
@@ -3676,10 +3587,7 @@ class CParser(Parser):
             return CParser.RULE_structDeclarationList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructDeclarationList"):
-                return visitor.visitStructDeclarationList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def structDeclarationList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -3740,10 +3648,7 @@ class CParser(Parser):
             return CParser.RULE_structDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructDeclaration"):
-                return visitor.visitStructDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def structDeclaration(self):
 
@@ -3766,16 +3671,16 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if ((((_la - 59)) & ~0x3f) == 0 and ((1 << (_la - 59)) & (
-                                (1 << (CParser.LeftParen - 59)) | (1 << (CParser.Star - 59)) | (
-                            1 << (CParser.Caret - 59)) | (1 << (CParser.Colon - 59)) | (
-                    1 << (CParser.Identifier - 59)))) != 0):
+                        (1 << (CParser.LeftParen - 59)) | (1 << (CParser.Star - 59)) | (
+                        1 << (CParser.Caret - 59)) | (1 << (CParser.Colon - 59)) | (
+                                1 << (CParser.Identifier - 59)))) != 0):
                     self.state = 619
                     self.structDeclaratorList(0)
 
                 self.state = 622
                 self.match(CParser.Semi)
                 pass
-            elif token in [CParser.StaticAssert]:
+            elif token == CParser.StaticAssert:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 624
                 self.staticAssertDeclaration()
@@ -3810,10 +3715,7 @@ class CParser(Parser):
             return CParser.RULE_specifierQualifierList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSpecifierQualifierList"):
-                return visitor.visitSpecifierQualifierList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def specifierQualifierList(self):
 
@@ -3874,10 +3776,7 @@ class CParser(Parser):
             return CParser.RULE_structDeclaratorList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructDeclaratorList"):
-                return visitor.visitStructDeclaratorList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def structDeclaratorList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -3937,10 +3836,7 @@ class CParser(Parser):
             return CParser.RULE_structDeclarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStructDeclarator"):
-                return visitor.visitStructDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def structDeclarator(self):
 
@@ -3963,7 +3859,7 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if ((((_la - 59)) & ~0x3f) == 0 and ((1 << (_la - 59)) & (
-                            (1 << (CParser.LeftParen - 59)) | (1 << (CParser.Star - 59)) | (
+                        (1 << (CParser.LeftParen - 59)) | (1 << (CParser.Star - 59)) | (
                         1 << (CParser.Caret - 59)) | (1 << (CParser.Identifier - 59)))) != 0):
                     self.state = 649
                     self.declarator()
@@ -3999,10 +3895,7 @@ class CParser(Parser):
             return CParser.RULE_enumSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEnumSpecifier"):
-                return visitor.visitEnumSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def enumSpecifier(self):
 
@@ -4086,10 +3979,7 @@ class CParser(Parser):
             return CParser.RULE_enumeratorList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEnumeratorList"):
-                return visitor.visitEnumeratorList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def enumeratorList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -4149,10 +4039,7 @@ class CParser(Parser):
             return CParser.RULE_enumerator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEnumerator"):
-                return visitor.visitEnumerator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def enumerator(self):
 
@@ -4200,10 +4087,7 @@ class CParser(Parser):
             return CParser.RULE_enumerationConstant
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEnumerationConstant"):
-                return visitor.visitEnumerationConstant(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def enumerationConstant(self):
 
@@ -4234,10 +4118,7 @@ class CParser(Parser):
             return CParser.RULE_atomicTypeSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAtomicTypeSpecifier"):
-                return visitor.visitAtomicTypeSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def atomicTypeSpecifier(self):
 
@@ -4271,10 +4152,7 @@ class CParser(Parser):
             return CParser.RULE_typeQualifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeQualifier"):
-                return visitor.visitTypeQualifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeQualifier(self):
 
@@ -4286,8 +4164,8 @@ class CParser(Parser):
             self.state = 702
             _la = self._input.LA(1)
             if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                        (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                1 << CParser.Atomic))) != 0)):
+                    (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                    1 << CParser.Atomic))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -4316,10 +4194,7 @@ class CParser(Parser):
             return CParser.RULE_functionSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFunctionSpecifier"):
-                return visitor.visitFunctionSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def functionSpecifier(self):
 
@@ -4335,19 +4210,19 @@ class CParser(Parser):
                 self.state = 704
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.Inline) | (
-                    1 << CParser.Noreturn))) != 0)):
+                        (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.Inline) | (
+                        1 << CParser.Noreturn))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-            elif token in [CParser.T__11]:
+            elif token == CParser.T__11:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 705
                 self.gccAttributeSpecifier()
                 pass
-            elif token in [CParser.T__9]:
+            elif token == CParser.T__9:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 706
                 self.match(CParser.T__9)
@@ -4385,10 +4260,7 @@ class CParser(Parser):
             return CParser.RULE_alignmentSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAlignmentSpecifier"):
-                return visitor.visitAlignmentSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def alignmentSpecifier(self):
 
@@ -4398,7 +4270,7 @@ class CParser(Parser):
             self.state = 718
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.Alignas]:
+            if token == CParser.Alignas:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 712
                 self.match(CParser.Alignas)
@@ -4450,10 +4322,7 @@ class CParser(Parser):
             return CParser.RULE_declarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclarator"):
-                return visitor.visitDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def declarator(self):
 
@@ -4524,10 +4393,7 @@ class CParser(Parser):
             return CParser.RULE_directDeclarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDirectDeclarator"):
-                return visitor.visitDirectDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def directDeclarator(self, _p: int = 0):
         _parentctx = self._ctx
@@ -4590,8 +4456,8 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                            1 << CParser.Atomic))) != 0):
+                                (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                                1 << CParser.Atomic))) != 0):
                             self.state = 743
                             self.typeQualifierList(0)
 
@@ -4599,18 +4465,26 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                            1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                        (1 << (CParser.Plus - 71)) | (
-                                                                        1 << (CParser.PlusPlus - 71)) | (
-                                                                    1 << (CParser.Minus - 71)) | (
-                                                                1 << (CParser.MinusMinus - 71)) | (
-                                                            1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (
-                                                    1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (
-                                            1 << (CParser.Tilde - 71)) | (1 << (CParser.Identifier - 71)) | (
-                                    1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
-                            1 << (CParser.StringLiteral - 71)))) != 0):
+                                (1 << CParser.T__0) | (1 << CParser.T__1) | (
+                                1 << CParser.T__2) | (
+                                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                        1 << CParser.Generic) | (
+                                        1 << CParser.LeftParen))) != 0) or (
+                                (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                                (1 << (CParser.Plus - 71)) | (
+                                1 << (
+                                CParser.PlusPlus - 71)) | (
+                                        1 << (CParser.Minus - 71)) | (
+                                        1 << (CParser.MinusMinus - 71)) | (
+                                        1 << (CParser.Star - 71)) | (
+                                        1 << (CParser.And - 71)) | (
+                                        1 << (CParser.AndAnd - 71)) | (
+                                        1 << (CParser.Not - 71)) | (
+                                        1 << (CParser.Tilde - 71)) | (
+                                        1 << (CParser.Identifier - 71)) | (
+                                        1 << (CParser.Constant - 71)) | (
+                                        1 << (CParser.DigitSequence - 71)) | (
+                                        1 << (CParser.StringLiteral - 71)))) != 0):
                             self.state = 746
                             self.assignmentExpression()
 
@@ -4633,8 +4507,8 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                            1 << CParser.Atomic))) != 0):
+                                (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                                1 << CParser.Atomic))) != 0):
                             self.state = 753
                             self.typeQualifierList(0)
 
@@ -4676,8 +4550,8 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                            1 << CParser.Atomic))) != 0):
+                                (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                                1 << CParser.Atomic))) != 0):
                             self.state = 768
                             self.typeQualifierList(0)
 
@@ -4753,10 +4627,7 @@ class CParser(Parser):
             return CParser.RULE_gccDeclaratorExtension
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGccDeclaratorExtension"):
-                return visitor.visitGccDeclaratorExtension(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def gccDeclaratorExtension(self):
 
@@ -4767,7 +4638,7 @@ class CParser(Parser):
             self.state = 798
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.T__10]:
+            if token == CParser.T__10:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 789
                 self.match(CParser.T__10)
@@ -4788,7 +4659,7 @@ class CParser(Parser):
                 self.state = 796
                 self.match(CParser.RightParen)
                 pass
-            elif token in [CParser.T__11]:
+            elif token == CParser.T__11:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 797
                 self.gccAttributeSpecifier()
@@ -4817,10 +4688,7 @@ class CParser(Parser):
             return CParser.RULE_gccAttributeSpecifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGccAttributeSpecifier"):
-                return visitor.visitGccAttributeSpecifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def gccAttributeSpecifier(self):
 
@@ -4864,10 +4732,7 @@ class CParser(Parser):
             return CParser.RULE_gccAttributeList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGccAttributeList"):
-                return visitor.visitGccAttributeList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def gccAttributeList(self):
 
@@ -4923,10 +4788,7 @@ class CParser(Parser):
             return CParser.RULE_gccAttribute
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitGccAttribute"):
-                return visitor.visitGccAttribute(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def gccAttribute(self):
 
@@ -4965,7 +4827,7 @@ class CParser(Parser):
                 _la = self._input.LA(1)
                 if _la <= 0 or ((((_la - 59)) & ~0x3f) == 0 and ((1 << (_la - 59)) & (
                         (1 << (CParser.LeftParen - 59)) | (1 << (CParser.RightParen - 59)) | (
-                    1 << (CParser.Comma - 59)))) != 0):
+                        1 << (CParser.Comma - 59)))) != 0):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -4980,18 +4842,23 @@ class CParser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                            (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                    1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                        1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                    (1 << (CParser.Plus - 71)) | (
-                                                                    1 << (CParser.PlusPlus - 71)) | (
-                                                                1 << (CParser.Minus - 71)) | (
-                                                            1 << (CParser.MinusMinus - 71)) | (
-                                                        1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (
-                                                1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (
-                                        1 << (CParser.Tilde - 71)) | (1 << (CParser.Identifier - 71)) | (
-                                1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
-                        1 << (CParser.StringLiteral - 71)))) != 0):
+                            (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                            1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                    1 << CParser.Generic) | (
+                                    1 << CParser.LeftParen))) != 0) or (
+                            (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                            (1 << (CParser.Plus - 71)) | (
+                            1 << (CParser.PlusPlus - 71)) | (
+                                    1 << (CParser.Minus - 71)) | (
+                                    1 << (CParser.MinusMinus - 71)) | (
+                                    1 << (CParser.Star - 71)) | (
+                                    1 << (CParser.And - 71)) | (
+                                    1 << (CParser.AndAnd - 71)) | (
+                                    1 << (CParser.Not - 71)) | (
+                                    1 << (CParser.Tilde - 71)) | (
+                                    1 << (CParser.Identifier - 71)) | (
+                                    1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
+                                    1 << (CParser.StringLiteral - 71)))) != 0):
                         self.state = 820
                         self.argumentExpressionList(0)
 
@@ -5030,10 +4897,7 @@ class CParser(Parser):
             return CParser.RULE_nestedParenthesesBlock
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitNestedParenthesesBlock"):
-                return visitor.visitNestedParenthesesBlock(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def nestedParenthesesBlock(self):
 
@@ -5046,44 +4910,80 @@ class CParser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__0) | (1 << CParser.T__1) | (
-                1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
-                1 << CParser.T__6) | (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.T__9) | (
-                1 << CParser.T__10) | (1 << CParser.T__11) | (1 << CParser.T__12) | (1 << CParser.T__13) | (
-                1 << CParser.Auto) | (1 << CParser.Break) | (1 << CParser.Case) | (1 << CParser.Char) | (
-                1 << CParser.Const) | (1 << CParser.Continue) | (1 << CParser.Default) | (1 << CParser.Do) | (
-                1 << CParser.Double) | (1 << CParser.Else) | (1 << CParser.Enum) | (1 << CParser.Extern) | (
-                1 << CParser.Float) | (1 << CParser.For) | (1 << CParser.Goto) | (1 << CParser.If) | (
-                1 << CParser.Inline) | (1 << CParser.Int) | (1 << CParser.Long) | (1 << CParser.Register) | (
-                1 << CParser.Restrict) | (1 << CParser.Return) | (1 << CParser.Short) | (1 << CParser.Signed) | (
-                1 << CParser.Sizeof) | (1 << CParser.Static) | (1 << CParser.Struct) | (1 << CParser.Switch) | (
-                1 << CParser.Typedef) | (1 << CParser.Union) | (1 << CParser.Unsigned) | (1 << CParser.Void) | (
-                1 << CParser.Volatile) | (1 << CParser.While) | (1 << CParser.Alignas) | (1 << CParser.Alignof) | (
-                1 << CParser.Atomic) | (1 << CParser.Bool) | (1 << CParser.Complex) | (1 << CParser.Generic) | (
-                1 << CParser.Imaginary) | (1 << CParser.Noreturn) | (1 << CParser.StaticAssert) | (
-                1 << CParser.ThreadLocal) | (1 << CParser.LeftParen) | (1 << CParser.LeftBracket) | (
-                1 << CParser.RightBracket) | (1 << CParser.LeftBrace))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and (
-                (1 << (_la - 64)) & ((1 << (CParser.RightBrace - 64)) | (1 << (CParser.Less - 64)) | (
-                1 << (CParser.LessEqual - 64)) | (1 << (CParser.Greater - 64)) | (1 << (CParser.GreaterEqual - 64)) | (
-                1 << (CParser.LeftShift - 64)) | (1 << (CParser.RightShift - 64)) | (1 << (CParser.Plus - 64)) | (
-                1 << (CParser.PlusPlus - 64)) | (1 << (CParser.Minus - 64)) | (1 << (CParser.MinusMinus - 64)) | (
-                1 << (CParser.Star - 64)) | (1 << (CParser.Div - 64)) | (1 << (CParser.Mod - 64)) | (
-                1 << (CParser.And - 64)) | (1 << (CParser.Or - 64)) | (1 << (CParser.AndAnd - 64)) | (
-                1 << (CParser.OrOr - 64)) | (1 << (CParser.Caret - 64)) | (1 << (CParser.Not - 64)) | (
-                1 << (CParser.Tilde - 64)) | (1 << (CParser.Question - 64)) | (1 << (CParser.UnaryCondition - 64)) | (
-                1 << (CParser.Colon - 64)) | (1 << (CParser.Semi - 64)) | (1 << (CParser.Comma - 64)) | (
-                1 << (CParser.Assign - 64)) | (1 << (CParser.StarAssign - 64)) | (1 << (CParser.DivAssign - 64)) | (
-                1 << (CParser.ModAssign - 64)) | (1 << (CParser.PlusAssign - 64)) | (
-                1 << (CParser.MinusAssign - 64)) | (1 << (CParser.LeftShiftAssign - 64)) | (
-                1 << (CParser.RightShiftAssign - 64)) | (1 << (CParser.AndAssign - 64)) | (
-                1 << (CParser.XorAssign - 64)) | (1 << (CParser.OrAssign - 64)) | (1 << (CParser.Equal - 64)) | (
-                1 << (CParser.NotEqual - 64)) | (1 << (CParser.Arrow - 64)) | (1 << (CParser.Dot - 64)) | (
-                1 << (CParser.Ellipsis - 64)) | (1 << (CParser.Identifier - 64)) | (1 << (CParser.Constant - 64)) | (
-                1 << (CParser.DigitSequence - 64)) | (1 << (CParser.StringLiteral - 64)) | (
-                1 << (CParser.ComplexDefine - 64)) | (1 << (CParser.AsmBlock - 64)) | (
-                1 << (CParser.LineAfterPreprocessing - 64)) | (1 << (CParser.LineDirective - 64)) | (
-                1 << (CParser.PragmaDirective - 64)) | (1 << (CParser.Whitespace - 64)) | (
-                1 << (CParser.Newline - 64)) | (1 << (CParser.BlockComment - 64)) | (
-                1 << (CParser.LineComment - 64)))) != 0):
+                    1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
+                                                                   1 << CParser.T__6) | (1 << CParser.T__7) | (
+                                                                   1 << CParser.T__8) | (1 << CParser.T__9) | (
+                                                                   1 << CParser.T__10) | (1 << CParser.T__11) | (
+                                                                   1 << CParser.T__12) | (1 << CParser.T__13) | (
+                                                                   1 << CParser.Auto) | (1 << CParser.Break) | (
+                                                                   1 << CParser.Case) | (1 << CParser.Char) | (
+                                                                   1 << CParser.Const) | (1 << CParser.Continue) | (
+                                                                   1 << CParser.Default) | (1 << CParser.Do) | (
+                                                                   1 << CParser.Double) | (1 << CParser.Else) | (
+                                                                   1 << CParser.Enum) | (1 << CParser.Extern) | (
+                                                                   1 << CParser.Float) | (1 << CParser.For) | (
+                                                                   1 << CParser.Goto) | (1 << CParser.If) | (
+                                                                   1 << CParser.Inline) | (1 << CParser.Int) | (
+                                                                   1 << CParser.Long) | (1 << CParser.Register) | (
+                                                                   1 << CParser.Restrict) | (1 << CParser.Return) | (
+                                                                   1 << CParser.Short) | (
+                                                                   1 << CParser.Signed) | (
+                                                                   1 << CParser.Sizeof) | (1 << CParser.Static) | (
+                                                                   1 << CParser.Struct) | (1 << CParser.Switch) | (
+                                                                   1 << CParser.Typedef) | (1 << CParser.Union) | (
+                                                                   1 << CParser.Unsigned) | (1 << CParser.Void) | (
+                                                                   1 << CParser.Volatile) | (1 << CParser.While) | (
+                                                                   1 << CParser.Alignas) | (
+                                                                   1 << CParser.Alignof) | (
+                                                                   1 << CParser.Atomic) | (1 << CParser.Bool) | (
+                                                                   1 << CParser.Complex) | (1 << CParser.Generic) | (
+                                                                   1 << CParser.Imaginary) | (1 << CParser.Noreturn) | (
+                                                                   1 << CParser.StaticAssert) | (
+                                                                   1 << CParser.ThreadLocal) | (
+                                                                   1 << CParser.LeftParen) | (
+                                                                   1 << CParser.LeftBracket) | (
+                                                                   1 << CParser.RightBracket) | (
+                                                                   1 << CParser.LeftBrace))) != 0) or (
+                    (((_la - 64)) & ~0x3f) == 0 and (
+                    (1 << (_la - 64)) & ((1 << (CParser.RightBrace - 64)) | (1 << (CParser.Less - 64)) | (
+                    1 << (CParser.LessEqual - 64)) | (1 << (CParser.Greater - 64)) | (
+                                                 1 << (CParser.GreaterEqual - 64)) | (
+                                                 1 << (CParser.LeftShift - 64)) | (1 << (CParser.RightShift - 64)) | (
+                                                 1 << (CParser.Plus - 64)) | (
+                                                 1 << (CParser.PlusPlus - 64)) | (1 << (CParser.Minus - 64)) | (
+                                                 1 << (CParser.MinusMinus - 64)) | (
+                                                 1 << (CParser.Star - 64)) | (1 << (CParser.Div - 64)) | (
+                                                 1 << (CParser.Mod - 64)) | (
+                                                 1 << (CParser.And - 64)) | (1 << (CParser.Or - 64)) | (
+                                                 1 << (CParser.AndAnd - 64)) | (
+                                                 1 << (CParser.OrOr - 64)) | (1 << (CParser.Caret - 64)) | (
+                                                 1 << (CParser.Not - 64)) | (
+                                                 1 << (CParser.Tilde - 64)) | (1 << (CParser.Question - 64)) | (
+                                                 1 << (CParser.UnaryCondition - 64)) | (
+                                                 1 << (CParser.Colon - 64)) | (1 << (CParser.Semi - 64)) | (
+                                                 1 << (CParser.Comma - 64)) | (
+                                                 1 << (CParser.Assign - 64)) | (1 << (CParser.StarAssign - 64)) | (
+                                                 1 << (CParser.DivAssign - 64)) | (
+                                                 1 << (CParser.ModAssign - 64)) | (1 << (CParser.PlusAssign - 64)) | (
+                                                 1 << (CParser.MinusAssign - 64)) | (
+                                                 1 << (CParser.LeftShiftAssign - 64)) | (
+                                                 1 << (CParser.RightShiftAssign - 64)) | (
+                                                 1 << (CParser.AndAssign - 64)) | (
+                                                 1 << (CParser.XorAssign - 64)) | (1 << (CParser.OrAssign - 64)) | (
+                                                 1 << (CParser.Equal - 64)) | (
+                                                 1 << (CParser.NotEqual - 64)) | (1 << (CParser.Arrow - 64)) | (
+                                                 1 << (CParser.Dot - 64)) | (
+                                                 1 << (CParser.Ellipsis - 64)) | (1 << (CParser.Identifier - 64)) | (
+                                                 1 << (CParser.Constant - 64)) | (
+                                                 1 << (CParser.DigitSequence - 64)) | (
+                                                 1 << (CParser.StringLiteral - 64)) | (
+                                                 1 << (CParser.ComplexDefine - 64)) | (1 << (CParser.AsmBlock - 64)) | (
+                                                 1 << (CParser.LineAfterPreprocessing - 64)) | (
+                                                 1 << (CParser.LineDirective - 64)) | (
+                                                 1 << (CParser.PragmaDirective - 64)) | (
+                                                 1 << (CParser.Whitespace - 64)) | (
+                                                 1 << (CParser.Newline - 64)) | (1 << (CParser.BlockComment - 64)) | (
+                                                 1 << (CParser.LineComment - 64)))) != 0):
                 self.state = 834
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -5119,7 +5019,7 @@ class CParser(Parser):
                         self._errHandler.reportMatch(self)
                         self.consume()
                     pass
-                elif token in [CParser.LeftParen]:
+                elif token == CParser.LeftParen:
                     self.state = 830
                     self.match(CParser.LeftParen)
                     self.state = 831
@@ -5158,10 +5058,7 @@ class CParser(Parser):
             return CParser.RULE_pointer
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPointer"):
-                return visitor.visitPointer(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def pointer(self):
 
@@ -5193,8 +5090,8 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                    1 << CParser.Atomic))) != 0):
+                        (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                        1 << CParser.Atomic))) != 0):
                     self.state = 844
                     self.typeQualifierList(0)
 
@@ -5223,8 +5120,8 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                    1 << CParser.Atomic))) != 0):
+                        (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                        1 << CParser.Atomic))) != 0):
                     self.state = 853
                     self.typeQualifierList(0)
 
@@ -5257,10 +5154,7 @@ class CParser(Parser):
             return CParser.RULE_typeQualifierList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeQualifierList"):
-                return visitor.visitTypeQualifierList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeQualifierList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -5315,10 +5209,7 @@ class CParser(Parser):
             return CParser.RULE_parameterTypeList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitParameterTypeList"):
-                return visitor.visitParameterTypeList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def parameterTypeList(self):
 
@@ -5363,10 +5254,7 @@ class CParser(Parser):
             return CParser.RULE_parameterList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitParameterList"):
-                return visitor.visitParameterList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def parameterList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -5432,10 +5320,7 @@ class CParser(Parser):
             return CParser.RULE_parameterDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitParameterDeclaration"):
-                return visitor.visitParameterDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def parameterDeclaration(self):
 
@@ -5491,10 +5376,7 @@ class CParser(Parser):
             return CParser.RULE_identifierList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitIdentifierList"):
-                return visitor.visitIdentifierList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def identifierList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -5554,10 +5436,7 @@ class CParser(Parser):
             return CParser.RULE_typeName
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeName"):
-                return visitor.visitTypeName(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeName(self):
 
@@ -5605,10 +5484,7 @@ class CParser(Parser):
             return CParser.RULE_abstractDeclarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAbstractDeclarator"):
-                return visitor.visitAbstractDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def abstractDeclarator(self):
 
@@ -5689,10 +5565,7 @@ class CParser(Parser):
             return CParser.RULE_directAbstractDeclarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDirectAbstractDeclarator"):
-                return visitor.visitDirectAbstractDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def directAbstractDeclarator(self, _p: int = 0):
         _parentctx = self._ctx
@@ -5734,8 +5607,8 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                    1 << CParser.Atomic))) != 0):
+                        (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                        1 << CParser.Atomic))) != 0):
                     self.state = 933
                     self.typeQualifierList(0)
 
@@ -5743,17 +5616,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 936
                     self.assignmentExpression()
 
@@ -5770,8 +5648,8 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                    1 << CParser.Atomic))) != 0):
+                        (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                        1 << CParser.Atomic))) != 0):
                     self.state = 942
                     self.typeQualifierList(0)
 
@@ -5810,25 +5688,44 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__0) | (1 << CParser.T__1) | (
-                    1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
-                    1 << CParser.T__6) | (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.T__9) | (
-                    1 << CParser.T__11) | (1 << CParser.Auto) | (1 << CParser.Char) | (1 << CParser.Const) | (
-                    1 << CParser.Double) | (1 << CParser.Enum) | (1 << CParser.Extern) | (1 << CParser.Float) | (
-                    1 << CParser.Inline) | (1 << CParser.Int) | (1 << CParser.Long) | (1 << CParser.Register) | (
-                    1 << CParser.Restrict) | (1 << CParser.Short) | (1 << CParser.Signed) | (1 << CParser.Sizeof) | (
-                    1 << CParser.Static) | (1 << CParser.Struct) | (1 << CParser.Typedef) | (1 << CParser.Union) | (
-                    1 << CParser.Unsigned) | (1 << CParser.Void) | (1 << CParser.Volatile) | (1 << CParser.Alignas) | (
-                    1 << CParser.Alignof) | (1 << CParser.Atomic) | (1 << CParser.Bool) | (1 << CParser.Complex) | (
-                    1 << CParser.Generic) | (1 << CParser.Noreturn) | (1 << CParser.ThreadLocal) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
+                                                                    1 << CParser.T__6) | (1 << CParser.T__7) | (
+                                                                    1 << CParser.T__8) | (1 << CParser.T__9) | (
+                                                                    1 << CParser.T__11) | (1 << CParser.Auto) | (
+                                                                    1 << CParser.Char) | (1 << CParser.Const) | (
+                                                                    1 << CParser.Double) | (1 << CParser.Enum) | (
+                                                                    1 << CParser.Extern) | (
+                                                                    1 << CParser.Float) | (
+                                                                    1 << CParser.Inline) | (1 << CParser.Int) | (
+                                                                    1 << CParser.Long) | (
+                                                                    1 << CParser.Register) | (
+                                                                    1 << CParser.Restrict) | (1 << CParser.Short) | (
+                                                                    1 << CParser.Signed) | (
+                                                                    1 << CParser.Sizeof) | (
+                                                                    1 << CParser.Static) | (1 << CParser.Struct) | (
+                                                                    1 << CParser.Typedef) | (
+                                                                    1 << CParser.Union) | (
+                                                                    1 << CParser.Unsigned) | (1 << CParser.Void) | (
+                                                                    1 << CParser.Volatile) | (
+                                                                    1 << CParser.Alignas) | (
+                                                                    1 << CParser.Alignof) | (1 << CParser.Atomic) | (
+                                                                    1 << CParser.Bool) | (
+                                                                    1 << CParser.Complex) | (
+                                                                    1 << CParser.Generic) | (1 << CParser.Noreturn) | (
+                                                                    1 << CParser.ThreadLocal) | (
+                                                                    1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 958
                     self.parameterTypeList()
 
@@ -5872,8 +5769,8 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                            1 << CParser.Atomic))) != 0):
+                                (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                                1 << CParser.Atomic))) != 0):
                             self.state = 972
                             self.typeQualifierList(0)
 
@@ -5881,18 +5778,26 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                            1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                        (1 << (CParser.Plus - 71)) | (
-                                                                        1 << (CParser.PlusPlus - 71)) | (
-                                                                    1 << (CParser.Minus - 71)) | (
-                                                                1 << (CParser.MinusMinus - 71)) | (
-                                                            1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (
-                                                    1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (
-                                            1 << (CParser.Tilde - 71)) | (1 << (CParser.Identifier - 71)) | (
-                                    1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
-                            1 << (CParser.StringLiteral - 71)))) != 0):
+                                (1 << CParser.T__0) | (1 << CParser.T__1) | (
+                                1 << CParser.T__2) | (
+                                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                        1 << CParser.Generic) | (
+                                        1 << CParser.LeftParen))) != 0) or (
+                                (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                                (1 << (CParser.Plus - 71)) | (
+                                1 << (
+                                CParser.PlusPlus - 71)) | (
+                                        1 << (CParser.Minus - 71)) | (
+                                        1 << (CParser.MinusMinus - 71)) | (
+                                        1 << (CParser.Star - 71)) | (
+                                        1 << (CParser.And - 71)) | (
+                                        1 << (CParser.AndAnd - 71)) | (
+                                        1 << (CParser.Not - 71)) | (
+                                        1 << (CParser.Tilde - 71)) | (
+                                        1 << (CParser.Identifier - 71)) | (
+                                        1 << (CParser.Constant - 71)) | (
+                                        1 << (CParser.DigitSequence - 71)) | (
+                                        1 << (CParser.StringLiteral - 71)))) != 0):
                             self.state = 975
                             self.assignmentExpression()
 
@@ -5915,8 +5820,8 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
-                            1 << CParser.Atomic))) != 0):
+                                (1 << CParser.Const) | (1 << CParser.Restrict) | (1 << CParser.Volatile) | (
+                                1 << CParser.Atomic))) != 0):
                             self.state = 982
                             self.typeQualifierList(0)
 
@@ -5973,24 +5878,54 @@ class CParser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__0) | (1 << CParser.T__1) | (
-                            1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
-                            1 << CParser.T__6) | (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.T__9) | (
-                            1 << CParser.T__11) | (1 << CParser.Auto) | (1 << CParser.Char) | (1 << CParser.Const) | (
-                            1 << CParser.Double) | (1 << CParser.Enum) | (1 << CParser.Extern) | (
-                            1 << CParser.Float) | (1 << CParser.Inline) | (1 << CParser.Int) | (1 << CParser.Long) | (
-                            1 << CParser.Register) | (1 << CParser.Restrict) | (1 << CParser.Short) | (
-                            1 << CParser.Signed) | (1 << CParser.Sizeof) | (1 << CParser.Static) | (
-                            1 << CParser.Struct) | (1 << CParser.Typedef) | (1 << CParser.Union) | (
-                            1 << CParser.Unsigned) | (1 << CParser.Void) | (1 << CParser.Volatile) | (
-                            1 << CParser.Alignas) | (1 << CParser.Alignof) | (1 << CParser.Atomic) | (
-                            1 << CParser.Bool) | (1 << CParser.Complex) | (1 << CParser.Generic) | (
-                            1 << CParser.Noreturn) | (1 << CParser.ThreadLocal) | (1 << CParser.LeftParen))) != 0) or (
-                                (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & ((1 << (CParser.Plus - 71)) | (
-                            1 << (CParser.PlusPlus - 71)) | (1 << (CParser.Minus - 71)) | (
-                            1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (
-                            1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
-                            1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                            1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (
+                                                                            1 << CParser.T__5) | (
+                                                                            1 << CParser.T__6) | (1 << CParser.T__7) | (
+                                                                            1 << CParser.T__8) | (
+                                                                            1 << CParser.T__9) | (
+                                                                            1 << CParser.T__11) | (
+                                                                            1 << CParser.Auto) | (1 << CParser.Char) | (
+                                                                            1 << CParser.Const) | (
+                                                                            1 << CParser.Double) | (
+                                                                            1 << CParser.Enum) | (
+                                                                            1 << CParser.Extern) | (
+                                                                            1 << CParser.Float) | (
+                                                                            1 << CParser.Inline) | (
+                                                                            1 << CParser.Int) | (
+                                                                            1 << CParser.Long) | (
+                                                                            1 << CParser.Register) | (
+                                                                            1 << CParser.Restrict) | (
+                                                                            1 << CParser.Short) | (
+                                                                            1 << CParser.Signed) | (
+                                                                            1 << CParser.Sizeof) | (
+                                                                            1 << CParser.Static) | (
+                                                                            1 << CParser.Struct) | (
+                                                                            1 << CParser.Typedef) | (
+                                                                            1 << CParser.Union) | (
+                                                                            1 << CParser.Unsigned) | (
+                                                                            1 << CParser.Void) | (
+                                                                            1 << CParser.Volatile) | (
+                                                                            1 << CParser.Alignas) | (
+                                                                            1 << CParser.Alignof) | (
+                                                                            1 << CParser.Atomic) | (
+                                                                            1 << CParser.Bool) | (
+                                                                            1 << CParser.Complex) | (
+                                                                            1 << CParser.Generic) | (
+                                                                            1 << CParser.Noreturn) | (
+                                                                            1 << CParser.ThreadLocal) | (
+                                                                            1 << CParser.LeftParen))) != 0) or (
+                                (((_la - 71)) & ~0x3f) == 0 and (
+                                (1 << (_la - 71)) & ((1 << (CParser.Plus - 71)) | (
+                                1 << (CParser.PlusPlus - 71)) | (1 << (CParser.Minus - 71)) | (
+                                                             1 << (CParser.MinusMinus - 71)) | (
+                                                             1 << (CParser.Star - 71)) | (
+                                                             1 << (CParser.And - 71)) | (
+                                                             1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (
+                                                             1 << (CParser.Tilde - 71)) | (
+                                                             1 << (CParser.Identifier - 71)) | (
+                                                             1 << (CParser.Constant - 71)) | (
+                                                             1 << (CParser.DigitSequence - 71)) | (
+                                                             1 << (CParser.StringLiteral - 71)))) != 0):
                             self.state = 1001
                             self.parameterTypeList()
 
@@ -6034,10 +5969,7 @@ class CParser(Parser):
             return CParser.RULE_typedefName
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypedefName"):
-                return visitor.visitTypedefName(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typedefName(self):
 
@@ -6071,10 +6003,7 @@ class CParser(Parser):
             return CParser.RULE_initializer
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInitializer"):
-                return visitor.visitInitializer(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def initializer(self):
 
@@ -6093,7 +6022,7 @@ class CParser(Parser):
                 self.state = 1018
                 self.assignmentExpression()
                 pass
-            elif token in [CParser.LeftBrace]:
+            elif token == CParser.LeftBrace:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1019
                 self.match(CParser.LeftBrace)
@@ -6139,10 +6068,7 @@ class CParser(Parser):
             return CParser.RULE_initializerList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInitializerList"):
-                return visitor.visitInitializerList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def initializerList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -6214,10 +6140,7 @@ class CParser(Parser):
             return CParser.RULE_designation
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDesignation"):
-                return visitor.visitDesignation(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def designation(self):
 
@@ -6253,10 +6176,7 @@ class CParser(Parser):
             return CParser.RULE_designatorList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDesignatorList"):
-                return visitor.visitDesignatorList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def designatorList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -6314,10 +6234,7 @@ class CParser(Parser):
             return CParser.RULE_designator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDesignator"):
-                return visitor.visitDesignator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def designator(self):
 
@@ -6327,7 +6244,7 @@ class CParser(Parser):
             self.state = 1064
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.LeftBracket]:
+            if token == CParser.LeftBracket:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1058
                 self.match(CParser.LeftBracket)
@@ -6336,7 +6253,7 @@ class CParser(Parser):
                 self.state = 1060
                 self.match(CParser.RightBracket)
                 pass
-            elif token in [CParser.Dot]:
+            elif token == CParser.Dot:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1062
                 self.match(CParser.Dot)
@@ -6373,10 +6290,7 @@ class CParser(Parser):
             return CParser.RULE_staticAssertDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStaticAssertDeclaration"):
-                return visitor.visitStaticAssertDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def staticAssertDeclaration(self):
 
@@ -6451,10 +6365,7 @@ class CParser(Parser):
             return CParser.RULE_statement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatement"):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def statement(self):
 
@@ -6523,17 +6434,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1087
                     self.logicalOrExpression(0)
                     self.state = 1092
@@ -6558,18 +6474,23 @@ class CParser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                            (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                    1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                        1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                    (1 << (CParser.Plus - 71)) | (
-                                                                    1 << (CParser.PlusPlus - 71)) | (
-                                                                1 << (CParser.Minus - 71)) | (
-                                                            1 << (CParser.MinusMinus - 71)) | (
-                                                        1 << (CParser.Star - 71)) | (1 << (CParser.And - 71)) | (
-                                                1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (
-                                        1 << (CParser.Tilde - 71)) | (1 << (CParser.Identifier - 71)) | (
-                                1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
-                        1 << (CParser.StringLiteral - 71)))) != 0):
+                            (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                            1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                    1 << CParser.Generic) | (
+                                    1 << CParser.LeftParen))) != 0) or (
+                            (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                            (1 << (CParser.Plus - 71)) | (
+                            1 << (CParser.PlusPlus - 71)) | (
+                                    1 << (CParser.Minus - 71)) | (
+                                    1 << (CParser.MinusMinus - 71)) | (
+                                    1 << (CParser.Star - 71)) | (
+                                    1 << (CParser.And - 71)) | (
+                                    1 << (CParser.AndAnd - 71)) | (
+                                    1 << (CParser.Not - 71)) | (
+                                    1 << (CParser.Tilde - 71)) | (
+                                    1 << (CParser.Identifier - 71)) | (
+                                    1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
+                                    1 << (CParser.StringLiteral - 71)))) != 0):
                         self.state = 1098
                         self.logicalOrExpression(0)
                         self.state = 1103
@@ -6622,10 +6543,7 @@ class CParser(Parser):
             return CParser.RULE_labeledStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLabeledStatement"):
-                return visitor.visitLabeledStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def labeledStatement(self):
 
@@ -6635,7 +6553,7 @@ class CParser(Parser):
             self.state = 1121
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.Identifier]:
+            if token == CParser.Identifier:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1117
                 self.match(CParser.Identifier)
@@ -6689,7 +6607,7 @@ class CParser(Parser):
             self.state = 1131
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.Case]:
+            if token == CParser.Case:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1123
                 self.match(CParser.Case)
@@ -6700,7 +6618,7 @@ class CParser(Parser):
                 self.state = 1126
                 self.statement()
                 pass
-            elif token in [CParser.Default]:
+            elif token == CParser.Default:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1128
                 self.match(CParser.Default)
@@ -6733,10 +6651,7 @@ class CParser(Parser):
             return CParser.RULE_compoundStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCompoundStatement"):
-                return visitor.visitCompoundStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def compoundStatement(self):
 
@@ -6751,30 +6666,48 @@ class CParser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__0) | (1 << CParser.T__1) | (
-                1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
-                1 << CParser.T__6) | (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.T__9) | (
-                1 << CParser.T__10) | (1 << CParser.T__11) | (1 << CParser.T__12) | (1 << CParser.Auto) | (
-                1 << CParser.Break) | (1 << CParser.Case) | (1 << CParser.Char) | (1 << CParser.Const) | (
-                1 << CParser.Continue) | (1 << CParser.Default) | (1 << CParser.Do) | (1 << CParser.Double) | (
-                1 << CParser.Enum) | (1 << CParser.Extern) | (1 << CParser.Float) | (1 << CParser.For) | (
-                1 << CParser.Goto) | (1 << CParser.If) | (1 << CParser.Inline) | (1 << CParser.Int) | (
-                1 << CParser.Long) | (1 << CParser.Register) | (1 << CParser.Restrict) | (1 << CParser.Return) | (
-                1 << CParser.Short) | (1 << CParser.Signed) | (1 << CParser.Sizeof) | (1 << CParser.Static) | (
-                1 << CParser.Struct) | (1 << CParser.Switch) | (1 << CParser.Typedef) | (1 << CParser.Union) | (
-                1 << CParser.Unsigned) | (1 << CParser.Void) | (1 << CParser.Volatile) | (1 << CParser.While) | (
-                1 << CParser.Alignas) | (1 << CParser.Alignof) | (1 << CParser.Atomic) | (1 << CParser.Bool) | (
-                1 << CParser.Complex) | (1 << CParser.Generic) | (1 << CParser.Noreturn) | (
-                1 << CParser.StaticAssert) | (1 << CParser.ThreadLocal) | (1 << CParser.LeftParen) | (
-                1 << CParser.LeftBrace))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
-                                1 << (CParser.Semi - 71)) | (1 << (CParser.Identifier - 71)) | (
-                        1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
-                1 << (CParser.StringLiteral - 71)))) != 0):
+                    1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
+                                                                1 << CParser.T__6) | (1 << CParser.T__7) | (
+                                                                1 << CParser.T__8) | (1 << CParser.T__9) | (
+                                                                1 << CParser.T__10) | (1 << CParser.T__11) | (
+                                                                1 << CParser.T__12) | (1 << CParser.Auto) | (
+                                                                1 << CParser.Break) | (1 << CParser.Case) | (
+                                                                1 << CParser.Char) | (1 << CParser.Const) | (
+                                                                1 << CParser.Continue) | (1 << CParser.Default) | (
+                                                                1 << CParser.Do) | (1 << CParser.Double) | (
+                                                                1 << CParser.Enum) | (1 << CParser.Extern) | (
+                                                                1 << CParser.Float) | (1 << CParser.For) | (
+                                                                1 << CParser.Goto) | (1 << CParser.If) | (
+                                                                1 << CParser.Inline) | (1 << CParser.Int) | (
+                                                                1 << CParser.Long) | (1 << CParser.Register) | (
+                                                                1 << CParser.Restrict) | (
+                                                                1 << CParser.Return) | (
+                                                                1 << CParser.Short) | (1 << CParser.Signed) | (
+                                                                1 << CParser.Sizeof) | (1 << CParser.Static) | (
+                                                                1 << CParser.Struct) | (1 << CParser.Switch) | (
+                                                                1 << CParser.Typedef) | (1 << CParser.Union) | (
+                                                                1 << CParser.Unsigned) | (1 << CParser.Void) | (
+                                                                1 << CParser.Volatile) | (
+                                                                1 << CParser.While) | (
+                                                                1 << CParser.Alignas) | (1 << CParser.Alignof) | (
+                                                                1 << CParser.Atomic) | (1 << CParser.Bool) | (
+                                                                1 << CParser.Complex) | (1 << CParser.Generic) | (
+                                                                1 << CParser.Noreturn) | (
+                                                                1 << CParser.StaticAssert) | (
+                                                                1 << CParser.ThreadLocal) | (1 << CParser.LeftParen) | (
+                                                                1 << CParser.LeftBrace))) != 0) or (
+                    (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                    (1 << (CParser.Plus - 71)) | (
+                    1 << (CParser.PlusPlus - 71)) | (
+                            1 << (CParser.Minus - 71)) | (
+                            1 << (CParser.MinusMinus - 71)) | (
+                            1 << (CParser.Star - 71)) | (
+                            1 << (CParser.And - 71)) | (
+                            1 << (CParser.AndAnd - 71)) | (
+                            1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                            1 << (CParser.Semi - 71)) | (1 << (CParser.Identifier - 71)) | (
+                            1 << (CParser.Constant - 71)) | (1 << (CParser.DigitSequence - 71)) | (
+                            1 << (CParser.StringLiteral - 71)))) != 0):
                 self.state = 1134
                 self.blockItemList(0)
 
@@ -6804,10 +6737,7 @@ class CParser(Parser):
             return CParser.RULE_blockItemList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitBlockItemList"):
-                return visitor.visitBlockItemList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def blockItemList(self, _p: int = 0):
         _parentctx = self._ctx
@@ -6865,10 +6795,7 @@ class CParser(Parser):
             return CParser.RULE_blockItem
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitBlockItem"):
-                return visitor.visitBlockItem(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def blockItem(self):
 
@@ -6912,10 +6839,7 @@ class CParser(Parser):
             return CParser.RULE_expressionStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExpressionStatement"):
-                return visitor.visitExpressionStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def expressionStatement(self):
 
@@ -6928,17 +6852,19 @@ class CParser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                            1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                            (1 << (CParser.Plus - 71)) | (
-                                                            1 << (CParser.PlusPlus - 71)) | (
-                                                        1 << (CParser.Minus - 71)) | (
-                                                    1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                            1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                    1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                    (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                    1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
+                            1 << CParser.LeftParen))) != 0) or (
+                    (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                    (1 << (CParser.Plus - 71)) | (
+                    1 << (CParser.PlusPlus - 71)) | (
+                            1 << (CParser.Minus - 71)) | (
+                            1 << (CParser.MinusMinus - 71)) | (
+                            1 << (CParser.Star - 71)) | (
+                            1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
+                            1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                             1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                    1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                            1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
                 self.state = 1153
                 self.expression(0)
 
@@ -6971,10 +6897,7 @@ class CParser(Parser):
             return CParser.RULE_selectionStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitSelectionStatement"):
-                return visitor.visitSelectionStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def selectionStatement(self):
 
@@ -6984,7 +6907,7 @@ class CParser(Parser):
             self.state = 1172
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.If]:
+            if token == CParser.If:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1158
                 self.match(CParser.If)
@@ -7004,7 +6927,7 @@ class CParser(Parser):
                     self.elseStatement()
 
                 pass
-            elif token in [CParser.Switch]:
+            elif token == CParser.Switch:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1166
                 self.match(CParser.Switch)
@@ -7092,10 +7015,7 @@ class CParser(Parser):
             return CParser.RULE_iterationStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitIterationStatement"):
-                return visitor.visitIterationStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def iterationStatement(self):
 
@@ -7105,7 +7025,7 @@ class CParser(Parser):
             self.state = 1197
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.While]:
+            if token == CParser.While:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1177
                 self.match(CParser.While)
@@ -7118,7 +7038,7 @@ class CParser(Parser):
                 self.state = 1181
                 self.statement()
                 pass
-            elif token in [CParser.Do]:
+            elif token == CParser.Do:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1183
                 self.match(CParser.Do)
@@ -7135,7 +7055,7 @@ class CParser(Parser):
                 self.state = 1189
                 self.match(CParser.Semi)
                 pass
-            elif token in [CParser.For]:
+            elif token == CParser.For:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1191
                 self.match(CParser.For)
@@ -7181,10 +7101,7 @@ class CParser(Parser):
             return CParser.RULE_forCondition
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitForCondition"):
-                return visitor.visitForCondition(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def forCondition(self):
 
@@ -7205,17 +7122,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1201
                     self.forExpression(0)
 
@@ -7225,17 +7147,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1205
                     self.forExpression(0)
 
@@ -7247,17 +7174,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1208
                     self.expression(0)
 
@@ -7267,17 +7199,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1212
                     self.forExpression(0)
 
@@ -7287,17 +7224,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1216
                     self.forExpression(0)
 
@@ -7328,10 +7270,7 @@ class CParser(Parser):
             return CParser.RULE_forDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitForDeclaration"):
-                return visitor.visitForDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def forDeclaration(self):
 
@@ -7380,10 +7319,7 @@ class CParser(Parser):
             return CParser.RULE_forExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitForExpression"):
-                return visitor.visitForExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def forExpression(self, _p: int = 0):
         _parentctx = self._ctx
@@ -7443,10 +7379,7 @@ class CParser(Parser):
             return CParser.RULE_jumpStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitJumpStatement"):
-                return visitor.visitJumpStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def jumpStatement(self):
 
@@ -7457,26 +7390,26 @@ class CParser(Parser):
             self.state = 1248
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [CParser.Goto]:
+            if token == CParser.Goto:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1238
                 self.gotoStatement()
                 pass
-            elif token in [CParser.Continue]:
+            elif token == CParser.Continue:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1239
                 self.match(CParser.Continue)
                 self.state = 1240
                 self.match(CParser.Semi)
                 pass
-            elif token in [CParser.Break]:
+            elif token == CParser.Break:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1241
                 self.match(CParser.Break)
                 self.state = 1242
                 self.match(CParser.Semi)
                 pass
-            elif token in [CParser.Return]:
+            elif token == CParser.Return:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1243
                 self.match(CParser.Return)
@@ -7484,17 +7417,22 @@ class CParser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
-                                1 << CParser.Sizeof) | (1 << CParser.Alignof) | (1 << CParser.Generic) | (
-                    1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                                                (1 << (CParser.Plus - 71)) | (
-                                                                1 << (CParser.PlusPlus - 71)) | (
-                                                            1 << (CParser.Minus - 71)) | (
-                                                        1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                                                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
-                                        1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                        (1 << CParser.T__0) | (1 << CParser.T__1) | (1 << CParser.T__2) | (
+                        1 << CParser.Sizeof) | (1 << CParser.Alignof) | (
+                                1 << CParser.Generic) | (
+                                1 << CParser.LeftParen))) != 0) or (
+                        (((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
+                        (1 << (CParser.Plus - 71)) | (
+                        1 << (CParser.PlusPlus - 71)) | (
+                                1 << (CParser.Minus - 71)) | (
+                                1 << (CParser.MinusMinus - 71)) | (
+                                1 << (CParser.Star - 71)) | (
+                                1 << (CParser.And - 71)) | (
+                                1 << (CParser.AndAnd - 71)) | (
+                                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                        1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                                1 << (CParser.DigitSequence - 71)) | (
+                                1 << (CParser.StringLiteral - 71)))) != 0):
                     self.state = 1244
                     self.expression(0)
 
@@ -7580,10 +7518,7 @@ class CParser(Parser):
             return CParser.RULE_compilationUnit
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCompilationUnit"):
-                return visitor.visitCompilationUnit(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def compilationUnit(self):
 
@@ -7596,23 +7531,40 @@ class CParser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__0) | (1 << CParser.T__1) | (
-                1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
-                1 << CParser.T__6) | (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.T__9) | (
-                1 << CParser.T__11) | (1 << CParser.Auto) | (1 << CParser.Char) | (1 << CParser.Const) | (
-                1 << CParser.Double) | (1 << CParser.Enum) | (1 << CParser.Extern) | (1 << CParser.Float) | (
-                1 << CParser.Inline) | (1 << CParser.Int) | (1 << CParser.Long) | (1 << CParser.Register) | (
-                1 << CParser.Restrict) | (1 << CParser.Short) | (1 << CParser.Signed) | (1 << CParser.Sizeof) | (
-                1 << CParser.Static) | (1 << CParser.Struct) | (1 << CParser.Typedef) | (1 << CParser.Union) | (
-                1 << CParser.Unsigned) | (1 << CParser.Void) | (1 << CParser.Volatile) | (1 << CParser.Alignas) | (
-                1 << CParser.Alignof) | (1 << CParser.Atomic) | (1 << CParser.Bool) | (1 << CParser.Complex) | (
-                1 << CParser.Generic) | (1 << CParser.Noreturn) | (1 << CParser.StaticAssert) | (
-                1 << CParser.ThreadLocal) | (1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and (
-                (1 << (_la - 71)) & ((1 << (CParser.Plus - 71)) | (1 << (CParser.PlusPlus - 71)) | (
-                1 << (CParser.Minus - 71)) | (1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (1 << (CParser.Caret - 71)) | (
-                1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (1 << (CParser.Semi - 71)) | (
-                1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                    1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
+                                                                1 << CParser.T__6) | (1 << CParser.T__7) | (
+                                                                1 << CParser.T__8) | (1 << CParser.T__9) | (
+                                                                1 << CParser.T__11) | (1 << CParser.Auto) | (
+                                                                1 << CParser.Char) | (1 << CParser.Const) | (
+                                                                1 << CParser.Double) | (1 << CParser.Enum) | (
+                                                                1 << CParser.Extern) | (1 << CParser.Float) | (
+                                                                1 << CParser.Inline) | (1 << CParser.Int) | (
+                                                                1 << CParser.Long) | (1 << CParser.Register) | (
+                                                                1 << CParser.Restrict) | (1 << CParser.Short) | (
+                                                                1 << CParser.Signed) | (
+                                                                1 << CParser.Sizeof) | (
+                                                                1 << CParser.Static) | (1 << CParser.Struct) | (
+                                                                1 << CParser.Typedef) | (1 << CParser.Union) | (
+                                                                1 << CParser.Unsigned) | (1 << CParser.Void) | (
+                                                                1 << CParser.Volatile) | (
+                                                                1 << CParser.Alignas) | (
+                                                                1 << CParser.Alignof) | (1 << CParser.Atomic) | (
+                                                                1 << CParser.Bool) | (1 << CParser.Complex) | (
+                                                                1 << CParser.Generic) | (1 << CParser.Noreturn) | (
+                                                                1 << CParser.StaticAssert) | (
+                                                                1 << CParser.ThreadLocal) | (
+                                                                1 << CParser.LeftParen))) != 0) or (
+                    (((_la - 71)) & ~0x3f) == 0 and (
+                    (1 << (_la - 71)) & ((1 << (CParser.Plus - 71)) | (1 << (CParser.PlusPlus - 71)) | (
+                    1 << (CParser.Minus - 71)) | (1 << (CParser.MinusMinus - 71)) | (
+                                                 1 << (CParser.Star - 71)) | (
+                                                 1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
+                                                 1 << (CParser.Caret - 71)) | (
+                                                 1 << (CParser.Not - 71)) | (1 << (CParser.Tilde - 71)) | (
+                                                 1 << (CParser.Semi - 71)) | (
+                                                 1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
+                                                 1 << (CParser.DigitSequence - 71)) | (
+                                                 1 << (CParser.StringLiteral - 71)))) != 0):
                 self.state = 1257
                 self.translationUnit(0)
 
@@ -7642,10 +7594,7 @@ class CParser(Parser):
             return CParser.RULE_translationUnit
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTranslationUnit"):
-                return visitor.visitTranslationUnit(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def translationUnit(self, _p: int = 0):
         _parentctx = self._ctx
@@ -7703,10 +7652,7 @@ class CParser(Parser):
             return CParser.RULE_externalDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExternalDeclaration"):
-                return visitor.visitExternalDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def externalDeclaration(self):
 
@@ -7765,10 +7711,7 @@ class CParser(Parser):
             return CParser.RULE_functionDefinition
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFunctionDefinition"):
-                return visitor.visitFunctionDefinition(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def functionDefinition(self):
 
@@ -7790,22 +7733,39 @@ class CParser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CParser.T__0) | (1 << CParser.T__1) | (
-                1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
-                1 << CParser.T__6) | (1 << CParser.T__7) | (1 << CParser.T__8) | (1 << CParser.T__9) | (
-                1 << CParser.T__11) | (1 << CParser.Auto) | (1 << CParser.Char) | (1 << CParser.Const) | (
-                1 << CParser.Double) | (1 << CParser.Enum) | (1 << CParser.Extern) | (1 << CParser.Float) | (
-                1 << CParser.Inline) | (1 << CParser.Int) | (1 << CParser.Long) | (1 << CParser.Register) | (
-                1 << CParser.Restrict) | (1 << CParser.Short) | (1 << CParser.Signed) | (1 << CParser.Sizeof) | (
-                1 << CParser.Static) | (1 << CParser.Struct) | (1 << CParser.Typedef) | (1 << CParser.Union) | (
-                1 << CParser.Unsigned) | (1 << CParser.Void) | (1 << CParser.Volatile) | (1 << CParser.Alignas) | (
-                1 << CParser.Alignof) | (1 << CParser.Atomic) | (1 << CParser.Bool) | (1 << CParser.Complex) | (
-                1 << CParser.Generic) | (1 << CParser.Noreturn) | (1 << CParser.StaticAssert) | (
-                1 << CParser.ThreadLocal) | (1 << CParser.LeftParen))) != 0) or ((((_la - 71)) & ~0x3f) == 0 and (
-                (1 << (_la - 71)) & ((1 << (CParser.Plus - 71)) | (1 << (CParser.PlusPlus - 71)) | (
-                1 << (CParser.Minus - 71)) | (1 << (CParser.MinusMinus - 71)) | (1 << (CParser.Star - 71)) | (
-                1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (1 << (CParser.Not - 71)) | (
-                1 << (CParser.Tilde - 71)) | (1 << (CParser.Identifier - 71)) | (1 << (CParser.Constant - 71)) | (
-                1 << (CParser.DigitSequence - 71)) | (1 << (CParser.StringLiteral - 71)))) != 0):
+                    1 << CParser.T__2) | (1 << CParser.T__3) | (1 << CParser.T__4) | (1 << CParser.T__5) | (
+                                                                1 << CParser.T__6) | (1 << CParser.T__7) | (
+                                                                1 << CParser.T__8) | (1 << CParser.T__9) | (
+                                                                1 << CParser.T__11) | (1 << CParser.Auto) | (
+                                                                1 << CParser.Char) | (1 << CParser.Const) | (
+                                                                1 << CParser.Double) | (1 << CParser.Enum) | (
+                                                                1 << CParser.Extern) | (1 << CParser.Float) | (
+                                                                1 << CParser.Inline) | (1 << CParser.Int) | (
+                                                                1 << CParser.Long) | (1 << CParser.Register) | (
+                                                                1 << CParser.Restrict) | (1 << CParser.Short) | (
+                                                                1 << CParser.Signed) | (
+                                                                1 << CParser.Sizeof) | (
+                                                                1 << CParser.Static) | (1 << CParser.Struct) | (
+                                                                1 << CParser.Typedef) | (1 << CParser.Union) | (
+                                                                1 << CParser.Unsigned) | (1 << CParser.Void) | (
+                                                                1 << CParser.Volatile) | (
+                                                                1 << CParser.Alignas) | (
+                                                                1 << CParser.Alignof) | (1 << CParser.Atomic) | (
+                                                                1 << CParser.Bool) | (1 << CParser.Complex) | (
+                                                                1 << CParser.Generic) | (1 << CParser.Noreturn) | (
+                                                                1 << CParser.StaticAssert) | (
+                                                                1 << CParser.ThreadLocal) | (
+                                                                1 << CParser.LeftParen))) != 0) or (
+                    (((_la - 71)) & ~0x3f) == 0 and (
+                    (1 << (_la - 71)) & ((1 << (CParser.Plus - 71)) | (1 << (CParser.PlusPlus - 71)) | (
+                    1 << (CParser.Minus - 71)) | (1 << (CParser.MinusMinus - 71)) | (
+                                                 1 << (CParser.Star - 71)) | (
+                                                 1 << (CParser.And - 71)) | (1 << (CParser.AndAnd - 71)) | (
+                                                 1 << (CParser.Not - 71)) | (
+                                                 1 << (CParser.Tilde - 71)) | (1 << (CParser.Identifier - 71)) | (
+                                                 1 << (CParser.Constant - 71)) | (
+                                                 1 << (CParser.DigitSequence - 71)) | (
+                                                 1 << (CParser.StringLiteral - 71)))) != 0):
                 self.state = 1281
                 self.declarationList(0)
 
@@ -7835,10 +7795,7 @@ class CParser(Parser):
             return CParser.RULE_declarationList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDeclarationList"):
-                return visitor.visitDeclarationList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def declarationList(self, _p: int = 0):
         _parentctx = self._ctx

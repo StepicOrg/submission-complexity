@@ -18,16 +18,66 @@ RULES = {
         'tryblock',
         'handler',
         'unaryconditionalexpression'
-    )
+    ),
+    'c': (
+        'assignmentOperator',
+        'unaryIncDecExpression',
+        'call',
+        'gotoStatement',
+        'equalityExpression',
+        'relationalExpression',
+        'elseStatement',
+        'caseStatement',
+        'ternaryConditionalExpression',
+        'unaryConditionalExpression',
+    ),
+    'java9': (
+        'assignmentOperator',
+        'preIncrementDecrementExpression',
+        'postIncrementDecrementExpression',
+        'methodInvocation',
+        'methodInvocation_lf_primary',
+        'methodInvocation_lfno_primary',
+        'arrayCreationExpression',
+        'classInstanceCreationExpression',
+        'classInstanceCreationExpression_lf_primary',
+        'classInstanceCreationExpression_lfno_primary',
+        'comparision',
+        'equalityExpression',
+        'elseStatement',
+        'elseStatementNoShortIf',
+        'switchLabel',
+        'ternaryConditionalExpression',
+        'tryStatement',
+        'catchClause',
+    ),
+    'python3': (
+        'assign',
+        'augassign',
+        'call',
+        'if_stmt',
+        'while_stmt',
+        'for_stmt',
+        'raise_stmt',
+        'break_stmt',
+        'comp_iter',
+        'comp_op',
+        'else_suite',
+        'try_stmt',
+        'except_clause',
+    ),
 }
 
-FILE_NAMES = {
-    'cpp': 'CPP14Parser.py',
-}
+FILE_NAMES = (
+    ('cpp', 'CPP14Parser.py'),
+    ('c', 'CParser.py'),
+    ('java9', 'Java9Parser.py'),
+    ('python3', 'Python3Parser.py'),
+)
 
 
 def optimize(parsers_path):
-    for language, parser_file in FILE_NAMES.items():
+    for language, parser_file in FILE_NAMES:
         file_name = f'{parsers_path}/{language}/{parser_file}'
         with open(file_name, 'r') as file:
             data = file.read()
@@ -56,12 +106,12 @@ def optimize(parsers_path):
         with open(file_name, 'w') as file:
             file.write(data)
 
-        print(f"{file_name} optimized")
+        print(f"{language}: {file_name} optimized")
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--parsers_path", help="Path to parsers", default='../complexity/parsers')
     args = parser.parse_args()
-    print(f"Optimize parsers {args.parsers_path}...")
+    print(f"Optimize parsers from {args.parsers_path}")
     optimize(args.parsers_path)

@@ -55,27 +55,21 @@ LanguageParser = getattr(importlib.import_module('{}Parser'.format(module_path))
 @lexer::members {
 @property
 def tokens(self):
-    try:
-        return self._tokens
-    except AttributeError:
+    if not hasattr(self, "_tokens"):
         self._tokens = []
-        return self._tokens
+    return self._tokens
 
 @property
 def indents(self):
-    try:
-        return self._indents
-    except AttributeError:
+    if not hasattr(self, "_indents"):
         self._indents = []
-        return self._indents
+    return self._indents
 
 @property
 def opened(self):
-    try:
-        return self._opened
-    except AttributeError:
+    if not hasattr(self, "_opened"):
         self._opened = 0
-        return self._opened
+    return self._opened
 
 @opened.setter
 def opened(self, value):
@@ -83,11 +77,9 @@ def opened(self, value):
 
 @property
 def lastToken(self):
-    try:
-        return self._lastToken
-    except AttributeError:
+    if not hasattr(self, "_lastToken"):
         self._lastToken = None
-        return self._lastToken
+    return self._lastToken
 
 @lastToken.setter
 def lastToken(self, value):
@@ -142,7 +134,7 @@ def getIndentationCount(spaces):
     return count
 
 def atStartOfInput(self):
-    return Lexer.column.fget(self) == 0 and Lexer.line.fget(self) == 1
+    return self.column == 0 and self.line == 1
 }
 
 /*
@@ -195,7 +187,7 @@ small_stmt
         augassign (YIELD (FROM test | testlist)? | testlist)
         | assign*
     )
-    | DEL exprlist
+    | DEL '*'? expr (',' '*'? expr)* ','?
     | (PASS | CONTINUE)
     | break_stmt
     | RETURN testlist?
@@ -272,7 +264,7 @@ while_stmt
 // used in BRANCHES
 for_stmt
 :
-    FOR exprlist IN testlist ':' suite else_suite?
+    FOR '*'? expr (',' '*'? expr)* ','? IN testlist ':' suite else_suite?
 ;
 
 // used in CONDITIONALS
@@ -367,7 +359,7 @@ atom
         | BIN_INTEGER
         | FLOAT_NUMBER
         | IMAG_NUMBER
-        | (STRING_LITERAL | BYTES_LITERAL)+
+        | STRING_BYTES_LITERAL+
         | '...'
         | NONE
         | TRUE
@@ -394,11 +386,6 @@ subscript
 :
     test
     | test? ':' test? (':' test?)?
-;
-
-exprlist
-:
-    '*'? expr (',' '*'? expr)* ','?
 ;
 
 testlist
@@ -433,7 +420,7 @@ comp_iter
 
 comp_for
 :
-    FOR exprlist IN or_test comp_iter?
+    FOR '*'? expr (',' '*'? expr)* ','? IN or_test comp_iter?
 ;
 
 /*
@@ -514,12 +501,12 @@ NEWLINE
         | ('\r'? '\n' | '\r') SPACES?
     )
 {
-tempt = Lexer.text.fget(self)
+tempt = self.text
 newLine = re.sub("[^\r\n]+", "", tempt)
 spaces = re.sub("[\r\n]+", "", tempt)
 next = chr(self._input.LA(1))
 
-if self.opened > 0 or next == '\r' or next == '\n' or next == '#':
+if self.opened > 0 or next in ['\r', '\n', '#']:
     self.skip()
 else:
     self.emitToken(self.commonToken(self.NEWLINE, newLine))
@@ -544,14 +531,10 @@ NAME
     ID_START ID_CONTINUE*
 ;
 
-STRING_LITERAL
+STRING_BYTES_LITERAL
 :
     [uU]? [rR]? (SHORT_STRING | LONG_STRING)
-;
-
-BYTES_LITERAL
-:
-    [bB] [rR]? (SHORT_BYTES | LONG_BYTES)
+    | [bB] [rR]? (SHORT_BYTES | LONG_BYTES)
 ;
 
 DECIMAL_INTEGER

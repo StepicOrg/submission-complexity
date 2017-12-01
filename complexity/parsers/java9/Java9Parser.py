@@ -1556,10 +1556,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_referenceType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitReferenceType"):
-                return visitor.visitReferenceType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def referenceType(self):
 
@@ -1635,10 +1632,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_classOrInterfaceType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitClassOrInterfaceType"):
-                return visitor.visitClassOrInterfaceType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def classOrInterfaceType(self):
 
@@ -1729,10 +1723,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_classType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitClassType"):
-                return visitor.visitClassType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def classType(self):
 
@@ -1806,10 +1797,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_arrayType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitArrayType"):
-                return visitor.visitArrayType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def arrayType(self):
 
@@ -1882,10 +1870,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_dims
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitDims"):
-                return visitor.visitDims(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def dims(self):
 
@@ -1959,10 +1944,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_typeParameter
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeParameter"):
-                return visitor.visitTypeParameter(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeParameter(self):
 
@@ -2051,10 +2033,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_typeArguments
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeArguments"):
-                return visitor.visitTypeArguments(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeArguments(self):
 
@@ -2108,10 +2087,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_typeArgument
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeArgument"):
-                return visitor.visitTypeArgument(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeArgument(self):
 
@@ -2213,10 +2189,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_compilationUnit
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitCompilationUnit"):
-                return visitor.visitCompilationUnit(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def compilationUnit(self):
 
@@ -2250,11 +2223,12 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                    (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (
-                                                1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                                        1 << Java9Parser.INTERFACE) | (1 << Java9Parser.PRIVATE) | (
-                                1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (1 << Java9Parser.STATIC) | (
-                    1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.SEMI or _la == Java9Parser.AT:
+                        (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (
+                        1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
+                                1 << Java9Parser.INTERFACE) | (1 << Java9Parser.PRIVATE) | (
+                                1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
+                                1 << Java9Parser.STATIC) | (
+                                1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.SEMI or _la == Java9Parser.AT:
                     self.state = 316
                     self.typeDeclaration()
                     self.state = 321
@@ -2316,7 +2290,7 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.T__2) | (1 << Java9Parser.T__4) | (1 << Java9Parser.T__5) | (
+                        (1 << Java9Parser.T__2) | (1 << Java9Parser.T__4) | (1 << Java9Parser.T__5) | (
                         1 << Java9Parser.T__6) | (1 << Java9Parser.T__8))) != 0):
                     self.state = 348
                     self.moduleDirective()
@@ -2359,10 +2333,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_packageDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPackageDeclaration"):
-                return visitor.visitPackageDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def packageDeclaration(self):
 
@@ -2423,10 +2394,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_importDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitImportDeclaration"):
-                return visitor.visitImportDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def importDeclaration(self):
 
@@ -2536,10 +2504,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_typeDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeDeclaration"):
-                return visitor.visitTypeDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeDeclaration(self):
 
@@ -2604,10 +2569,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_moduleDirective
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitModuleDirective"):
-                return visitor.visitModuleDirective(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def moduleDirective(self):
 
@@ -2623,7 +2585,7 @@ class Java9Parser(Parser):
                 self.state = 417
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [Java9Parser.T__2]:
+                if token == Java9Parser.T__2:
                     self.state = 409
                     self.match(Java9Parser.T__2)
                     self.state = 413
@@ -2642,7 +2604,7 @@ class Java9Parser(Parser):
                         _la = self._input.LA(1)
 
                     pass
-                elif token in [Java9Parser.T__4]:
+                elif token == Java9Parser.T__4:
                     self.state = 416
                     self.match(Java9Parser.T__4)
                     pass
@@ -2731,7 +2693,7 @@ class Java9Parser(Parser):
                         _la = self._input.LA(1)
 
                 pass
-            elif token in [Java9Parser.T__8]:
+            elif token == Java9Parser.T__8:
                 self.state = 461
                 self.match(Java9Parser.T__8)
                 self.state = 462
@@ -2833,10 +2795,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_normalClassDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitNormalClassDeclaration"):
-                return visitor.visitNormalClassDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def normalClassDeclaration(self):
 
@@ -2849,8 +2808,9 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.FINAL) | (
-                1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
+                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
+                                                                   1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
                 self.state = 497
                 self.classModifier()
                 self.state = 502
@@ -2920,10 +2880,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_classModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitClassModifier"):
-                return visitor.visitClassModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def classModifier(self):
 
@@ -2933,42 +2890,42 @@ class Java9Parser(Parser):
             self.state = 533
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 525
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 526
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.PROTECTED]:
+            elif token == Java9Parser.PROTECTED:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 527
                 self.match(Java9Parser.PROTECTED)
                 pass
-            elif token in [Java9Parser.PRIVATE]:
+            elif token == Java9Parser.PRIVATE:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 528
                 self.match(Java9Parser.PRIVATE)
                 pass
-            elif token in [Java9Parser.ABSTRACT]:
+            elif token == Java9Parser.ABSTRACT:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 529
                 self.match(Java9Parser.ABSTRACT)
                 pass
-            elif token in [Java9Parser.STATIC]:
+            elif token == Java9Parser.STATIC:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 530
                 self.match(Java9Parser.STATIC)
                 pass
-            elif token in [Java9Parser.FINAL]:
+            elif token == Java9Parser.FINAL:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 531
                 self.match(Java9Parser.FINAL)
                 pass
-            elif token in [Java9Parser.STRICTFP]:
+            elif token == Java9Parser.STRICTFP:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 532
                 self.match(Java9Parser.STRICTFP)
@@ -3000,10 +2957,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_typeParameters
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeParameters"):
-                return visitor.visitTypeParameters(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeParameters(self):
 
@@ -3054,10 +3008,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_classBody
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitClassBody"):
-                return visitor.visitClassBody(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def classBody(self):
 
@@ -3072,15 +3023,23 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.UnannPrimitiveType) | (
-                1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.ENUM) | (
-                1 << Java9Parser.FINAL) | (1 << Java9Parser.INTERFACE) | (1 << Java9Parser.NATIVE) | (
-                1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SYNCHRONIZED) | (
-                1 << Java9Parser.TRANSIENT) | (1 << Java9Parser.VOID) | (1 << Java9Parser.VOLATILE))) != 0) or (
+                    1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.ENUM) | (
+                                                                   1 << Java9Parser.FINAL) | (
+                                                                   1 << Java9Parser.INTERFACE) | (
+                                                                   1 << Java9Parser.NATIVE) | (
+                                                                   1 << Java9Parser.PRIVATE) | (
+                                                                   1 << Java9Parser.PROTECTED) | (
+                                                                   1 << Java9Parser.PUBLIC) | (
+                                                                   1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP) | (
+                                                                   1 << Java9Parser.SYNCHRONIZED) | (
+                                                                   1 << Java9Parser.TRANSIENT) | (
+                                                                   1 << Java9Parser.VOID) | (
+                                                                   1 << Java9Parser.VOLATILE))) != 0) or (
                     (((_la - 72)) & ~0x3f) == 0 and ((1 << (_la - 72)) & (
-                            (1 << (Java9Parser.LBRACE - 72)) | (1 << (Java9Parser.SEMI - 72)) | (
-                        1 << (Java9Parser.AT - 72)) | (1 << (Java9Parser.LT - 72)) | (
-                1 << (Java9Parser.Identifier - 72)))) != 0):
+                    (1 << (Java9Parser.LBRACE - 72)) | (1 << (Java9Parser.SEMI - 72)) | (
+                    1 << (Java9Parser.AT - 72)) | (1 << (Java9Parser.LT - 72)) | (
+                            1 << (Java9Parser.Identifier - 72)))) != 0):
                 self.state = 547
                 self.classBodyDeclaration()
                 self.state = 552
@@ -3173,10 +3132,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_classBodyDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitClassBodyDeclaration"):
-                return visitor.visitClassBodyDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def classBodyDeclaration(self):
 
@@ -3193,10 +3149,13 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while ((((_la - 30)) & ~0x3f) == 0 and ((1 << (_la - 30)) & (
-                                            (1 << (Java9Parser.FINAL - 30)) | (1 << (Java9Parser.PRIVATE - 30)) | (
-                                        1 << (Java9Parser.PROTECTED - 30)) | (1 << (Java9Parser.PUBLIC - 30)) | (
-                                1 << (Java9Parser.STATIC - 30)) | (1 << (Java9Parser.TRANSIENT - 30)) | (
-                        1 << (Java9Parser.VOLATILE - 30)) | (1 << (Java9Parser.AT - 30)))) != 0):
+                        (1 << (Java9Parser.FINAL - 30)) | (
+                        1 << (Java9Parser.PRIVATE - 30)) | (
+                                1 << (Java9Parser.PROTECTED - 30)) | (
+                                1 << (Java9Parser.PUBLIC - 30)) | (
+                                1 << (Java9Parser.STATIC - 30)) | (
+                                1 << (Java9Parser.TRANSIENT - 30)) | (
+                                1 << (Java9Parser.VOLATILE - 30)) | (1 << (Java9Parser.AT - 30)))) != 0):
                     self.state = 555
                     self.fieldModifier()
                     self.state = 560
@@ -3217,11 +3176,11 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.FINAL) | (
-                                            1 << Java9Parser.NATIVE) | (1 << Java9Parser.PRIVATE) | (
-                                    1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                            1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SYNCHRONIZED))) != 0) or _la == Java9Parser.AT:
+                        (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.FINAL) | (
+                        1 << Java9Parser.NATIVE) | (1 << Java9Parser.PRIVATE) | (
+                                1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
+                                1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
+                                1 << Java9Parser.SYNCHRONIZED))) != 0) or _la == Java9Parser.AT:
                     self.state = 565
                     self.methodModifier()
                     self.state = 570
@@ -3251,7 +3210,7 @@ class Java9Parser(Parser):
                     self.state = 580
                     self.unannType()
                     pass
-                elif token in [Java9Parser.VOID]:
+                elif token == Java9Parser.VOID:
                     self.state = 581
                     self.match(Java9Parser.VOID)
                     pass
@@ -3288,27 +3247,45 @@ class Java9Parser(Parser):
                 self.state = 605
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [Java9Parser.LBRACE]:
+                if token == Java9Parser.LBRACE:
                     self.state = 596
                     self.match(Java9Parser.LBRACE)
                     self.state = 600
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
-                        1 << Java9Parser.ASSERT) | (1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (
-                        1 << Java9Parser.CONTINUE) | (1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (
-                        1 << Java9Parser.FINAL) | (1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
-                        1 << Java9Parser.NEW) | (1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (
-                        1 << Java9Parser.PUBLIC) | (1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (
-                        1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (
-                        1 << Java9Parser.SYNCHRONIZED) | (1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (
-                        1 << Java9Parser.TRY) | (1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or (
+                            1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                           1 << Java9Parser.ASSERT) | (
+                                                                           1 << Java9Parser.BREAK) | (
+                                                                           1 << Java9Parser.CLASS) | (
+                                                                           1 << Java9Parser.CONTINUE) | (
+                                                                           1 << Java9Parser.DO) | (
+                                                                           1 << Java9Parser.ENUM) | (
+                                                                           1 << Java9Parser.FINAL) | (
+                                                                           1 << Java9Parser.FOR) | (
+                                                                           1 << Java9Parser.IF) | (
+                                                                           1 << Java9Parser.NEW) | (
+                                                                           1 << Java9Parser.PRIVATE) | (
+                                                                           1 << Java9Parser.PROTECTED) | (
+                                                                           1 << Java9Parser.PUBLIC) | (
+                                                                           1 << Java9Parser.RETURN) | (
+                                                                           1 << Java9Parser.STATIC) | (
+                                                                           1 << Java9Parser.STRICTFP) | (
+                                                                           1 << Java9Parser.SUPER) | (
+                                                                           1 << Java9Parser.SWITCH) | (
+                                                                           1 << Java9Parser.SYNCHRONIZED) | (
+                                                                           1 << Java9Parser.THIS) | (
+                                                                           1 << Java9Parser.THROW) | (
+                                                                           1 << Java9Parser.TRY) | (
+                                                                           1 << Java9Parser.VOID) | (
+                                                                           1 << Java9Parser.WHILE))) != 0) or (
                             (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << (Java9Parser.LPAREN - 70)) | (
+                            1 << (Java9Parser.LBRACE - 70)) | (
+                                    1 << (Java9Parser.SEMI - 70)) | (
+                                    1 << (Java9Parser.AT - 70)) | (
+                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 597
                         self.blockStatement()
                         self.state = 602
@@ -3318,7 +3295,7 @@ class Java9Parser(Parser):
                     self.state = 603
                     self.match(Java9Parser.RBRACE)
                     pass
-                elif token in [Java9Parser.SEMI]:
+                elif token == Java9Parser.SEMI:
                     self.state = 604
                     self.match(Java9Parser.SEMI)
                     pass
@@ -3372,18 +3349,36 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                    1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                    1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                    1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
-                    1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and (
-                    (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0):
+                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                       1 << Java9Parser.ASSERT) | (
+                                                                       1 << Java9Parser.BREAK) | (
+                                                                       1 << Java9Parser.CLASS) | (
+                                                                       1 << Java9Parser.CONTINUE) | (
+                                                                       1 << Java9Parser.DO) | (
+                                                                       1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
+                                                                       1 << Java9Parser.NEW) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.RETURN) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SUPER) | (
+                                                                       1 << Java9Parser.SWITCH) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.THIS) | (
+                                                                       1 << Java9Parser.THROW) | (
+                                                                       1 << Java9Parser.TRY) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.WHILE))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and (
+                        (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                                                     1 << (Java9Parser.INC - 70)) | (
+                                                     1 << (Java9Parser.DEC - 70)) | (
+                                                     1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 616
                     self.blockStatement()
                     self.state = 621
@@ -3400,7 +3395,7 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while ((((_la - 45)) & ~0x3f) == 0 and ((1 << (_la - 45)) & (
-                            (1 << (Java9Parser.PRIVATE - 45)) | (1 << (Java9Parser.PROTECTED - 45)) | (
+                        (1 << (Java9Parser.PRIVATE - 45)) | (1 << (Java9Parser.PROTECTED - 45)) | (
                         1 << (Java9Parser.PUBLIC - 45)) | (1 << (Java9Parser.AT - 45)))) != 0):
                     self.state = 623
                     self.constructorModifier()
@@ -3448,18 +3443,36 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                    1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                    1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                    1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
-                    1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and (
-                    (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0):
+                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                       1 << Java9Parser.ASSERT) | (
+                                                                       1 << Java9Parser.BREAK) | (
+                                                                       1 << Java9Parser.CLASS) | (
+                                                                       1 << Java9Parser.CONTINUE) | (
+                                                                       1 << Java9Parser.DO) | (
+                                                                       1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
+                                                                       1 << Java9Parser.NEW) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.RETURN) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SUPER) | (
+                                                                       1 << Java9Parser.SWITCH) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.THIS) | (
+                                                                       1 << Java9Parser.THROW) | (
+                                                                       1 << Java9Parser.TRY) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.WHILE))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and (
+                        (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                                                     1 << (Java9Parser.INC - 70)) | (
+                                                     1 << (Java9Parser.DEC - 70)) | (
+                                                     1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 645
                     self.blockStatement()
                     self.state = 650
@@ -3492,10 +3505,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_fieldModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFieldModifier"):
-                return visitor.visitFieldModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def fieldModifier(self):
 
@@ -3505,42 +3515,42 @@ class Java9Parser(Parser):
             self.state = 662
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 654
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 655
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.PROTECTED]:
+            elif token == Java9Parser.PROTECTED:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 656
                 self.match(Java9Parser.PROTECTED)
                 pass
-            elif token in [Java9Parser.PRIVATE]:
+            elif token == Java9Parser.PRIVATE:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 657
                 self.match(Java9Parser.PRIVATE)
                 pass
-            elif token in [Java9Parser.STATIC]:
+            elif token == Java9Parser.STATIC:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 658
                 self.match(Java9Parser.STATIC)
                 pass
-            elif token in [Java9Parser.FINAL]:
+            elif token == Java9Parser.FINAL:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 659
                 self.match(Java9Parser.FINAL)
                 pass
-            elif token in [Java9Parser.TRANSIENT]:
+            elif token == Java9Parser.TRANSIENT:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 660
                 self.match(Java9Parser.TRANSIENT)
                 pass
-            elif token in [Java9Parser.VOLATILE]:
+            elif token == Java9Parser.VOLATILE:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 661
                 self.match(Java9Parser.VOLATILE)
@@ -3572,10 +3582,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_variableDeclaratorList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVariableDeclaratorList"):
-                return visitor.visitVariableDeclaratorList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def variableDeclaratorList(self):
 
@@ -3625,10 +3632,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_variableDeclarator
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVariableDeclarator"):
-                return visitor.visitVariableDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def variableDeclarator(self):
 
@@ -3680,10 +3684,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_variableInitializer
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVariableInitializer"):
-                return visitor.visitVariableInitializer(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def variableInitializer(self):
 
@@ -3702,7 +3703,7 @@ class Java9Parser(Parser):
                 self.state = 680
                 self.expression()
                 pass
-            elif token in [Java9Parser.LBRACE]:
+            elif token == Java9Parser.LBRACE:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 681
                 self.match(Java9Parser.LBRACE)
@@ -3710,15 +3711,19 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                    1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                    (1 << (Java9Parser.LPAREN - 70)) | (
-                                                    1 << (Java9Parser.LBRACE - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                            1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                    1 << (Java9Parser.Identifier - 70)))) != 0):
+                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                        1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                1 << Java9Parser.THIS) | (
+                                1 << Java9Parser.VOID))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                        (1 << (Java9Parser.LPAREN - 70)) | (
+                        1 << (Java9Parser.LBRACE - 70)) | (
+                                1 << (Java9Parser.AT - 70)) | (
+                                1 << (Java9Parser.BANG - 70)) | (
+                                1 << (Java9Parser.TILDE - 70)) | (
+                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 682
                     self.variableInitializerList()
 
@@ -3777,10 +3782,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_unannType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnannType"):
-                return visitor.visitUnannType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def unannType(self):
 
@@ -3792,11 +3794,11 @@ class Java9Parser(Parser):
             self.state = 712
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.UnannPrimitiveType]:
+            if token == Java9Parser.UnannPrimitiveType:
                 self.state = 691
                 self.match(Java9Parser.UnannPrimitiveType)
                 pass
-            elif token in [Java9Parser.Identifier]:
+            elif token == Java9Parser.Identifier:
                 self.state = 692
                 self.match(Java9Parser.Identifier)
                 self.state = 694
@@ -3883,10 +3885,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_unannClassType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnannClassType"):
-                return visitor.visitUnannClassType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def unannClassType(self):
 
@@ -3954,10 +3953,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_methodModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitMethodModifier"):
-                return visitor.visitMethodModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def methodModifier(self):
 
@@ -3967,52 +3963,52 @@ class Java9Parser(Parser):
             self.state = 747
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 737
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 738
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.PROTECTED]:
+            elif token == Java9Parser.PROTECTED:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 739
                 self.match(Java9Parser.PROTECTED)
                 pass
-            elif token in [Java9Parser.PRIVATE]:
+            elif token == Java9Parser.PRIVATE:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 740
                 self.match(Java9Parser.PRIVATE)
                 pass
-            elif token in [Java9Parser.ABSTRACT]:
+            elif token == Java9Parser.ABSTRACT:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 741
                 self.match(Java9Parser.ABSTRACT)
                 pass
-            elif token in [Java9Parser.STATIC]:
+            elif token == Java9Parser.STATIC:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 742
                 self.match(Java9Parser.STATIC)
                 pass
-            elif token in [Java9Parser.FINAL]:
+            elif token == Java9Parser.FINAL:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 743
                 self.match(Java9Parser.FINAL)
                 pass
-            elif token in [Java9Parser.SYNCHRONIZED]:
+            elif token == Java9Parser.SYNCHRONIZED:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 744
                 self.match(Java9Parser.SYNCHRONIZED)
                 pass
-            elif token in [Java9Parser.NATIVE]:
+            elif token == Java9Parser.NATIVE:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 745
                 self.match(Java9Parser.NATIVE)
                 pass
-            elif token in [Java9Parser.STRICTFP]:
+            elif token == Java9Parser.STRICTFP:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 746
                 self.match(Java9Parser.STRICTFP)
@@ -4056,10 +4052,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_formalParameterList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFormalParameterList"):
-                return visitor.visitFormalParameterList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def formalParameterList(self):
 
@@ -4149,10 +4142,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_formalParameters
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFormalParameters"):
-                return visitor.visitFormalParameters(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def formalParameters(self):
 
@@ -4241,10 +4231,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_formalParameter
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitFormalParameter"):
-                return visitor.visitFormalParameter(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def formalParameter(self):
 
@@ -4296,10 +4283,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_variableModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVariableModifier"):
-                return visitor.visitVariableModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def variableModifier(self):
 
@@ -4309,12 +4293,12 @@ class Java9Parser(Parser):
             self.state = 806
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 804
                 self.annotation()
                 pass
-            elif token in [Java9Parser.FINAL]:
+            elif token == Java9Parser.FINAL:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 805
                 self.match(Java9Parser.FINAL)
@@ -4364,10 +4348,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_lastFormalParameter
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLastFormalParameter"):
-                return visitor.visitLastFormalParameter(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def lastFormalParameter(self):
 
@@ -4504,10 +4485,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_exceptionType
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExceptionType"):
-                return visitor.visitExceptionType(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def exceptionType(self):
 
@@ -4562,10 +4540,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_constructorModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConstructorModifier"):
-                return visitor.visitConstructorModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def constructorModifier(self):
 
@@ -4575,22 +4550,22 @@ class Java9Parser(Parser):
             self.state = 852
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 848
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 849
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.PROTECTED]:
+            elif token == Java9Parser.PROTECTED:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 850
                 self.match(Java9Parser.PROTECTED)
                 pass
-            elif token in [Java9Parser.PRIVATE]:
+            elif token == Java9Parser.PRIVATE:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 851
                 self.match(Java9Parser.PRIVATE)
@@ -4631,10 +4606,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_explicitConstructorInvocation
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExplicitConstructorInvocation"):
-                return visitor.visitExplicitConstructorInvocation(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def explicitConstructorInvocation(self):
 
@@ -4708,14 +4680,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 876
                 self.argumentList()
 
@@ -4768,10 +4743,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_enumDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEnumDeclaration"):
-                return visitor.visitEnumDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def enumDeclaration(self):
 
@@ -4784,8 +4756,9 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.FINAL) | (
-                1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
+                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
+                                                                   1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
                 self.state = 882
                 self.classModifier()
                 self.state = 887
@@ -4854,15 +4827,23 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.UnannPrimitiveType) | (
-                    1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.ENUM) | (
-                    1 << Java9Parser.FINAL) | (1 << Java9Parser.INTERFACE) | (1 << Java9Parser.NATIVE) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.TRANSIENT) | (1 << Java9Parser.VOID) | (1 << Java9Parser.VOLATILE))) != 0) or (
+                        1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.INTERFACE) | (
+                                                                       1 << Java9Parser.NATIVE) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.TRANSIENT) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.VOLATILE))) != 0) or (
                         (((_la - 72)) & ~0x3f) == 0 and ((1 << (_la - 72)) & (
-                                (1 << (Java9Parser.LBRACE - 72)) | (1 << (Java9Parser.SEMI - 72)) | (
-                            1 << (Java9Parser.AT - 72)) | (1 << (Java9Parser.LT - 72)) | (
-                    1 << (Java9Parser.Identifier - 72)))) != 0):
+                        (1 << (Java9Parser.LBRACE - 72)) | (1 << (Java9Parser.SEMI - 72)) | (
+                        1 << (Java9Parser.AT - 72)) | (1 << (Java9Parser.LT - 72)) | (
+                                1 << (Java9Parser.Identifier - 72)))) != 0):
                     self.state = 916
                     self.classBodyDeclaration()
                     self.state = 921
@@ -4904,10 +4885,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_enumConstant
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitEnumConstant"):
-                return visitor.visitEnumConstant(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def enumConstant(self):
 
@@ -4938,14 +4916,18 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                    1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                            1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                    1 << (Java9Parser.Identifier - 70)))) != 0):
+                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                        1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                1 << Java9Parser.THIS) | (
+                                1 << Java9Parser.VOID))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                        (1 << (Java9Parser.LPAREN - 70)) | (
+                        1 << (Java9Parser.AT - 70)) | (
+                                1 << (Java9Parser.BANG - 70)) | (
+                                1 << (Java9Parser.TILDE - 70)) | (
+                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 934
                     self.argumentList()
 
@@ -5002,10 +4984,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_normalInterfaceDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitNormalInterfaceDeclaration"):
-                return visitor.visitNormalInterfaceDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def normalInterfaceDeclaration(self):
 
@@ -5018,8 +4997,8 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.PRIVATE) | (
-                1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (1 << Java9Parser.STATIC) | (
-                1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
+                    1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
                 self.state = 943
                 self.interfaceModifier()
                 self.state = 948
@@ -5063,13 +5042,19 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.UnannPrimitiveType) | (
-                1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.DEFAULT) | (
-                1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (1 << Java9Parser.INTERFACE) | (
-                1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (1 << Java9Parser.VOID))) != 0) or (
+                    1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.DEFAULT) | (
+                                                                   1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
+                                                                   1 << Java9Parser.INTERFACE) | (
+                                                                   1 << Java9Parser.PRIVATE) | (
+                                                                   1 << Java9Parser.PROTECTED) | (
+                                                                   1 << Java9Parser.PUBLIC) | (
+                                                                   1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP) | (
+                                                                   1 << Java9Parser.VOID))) != 0) or (
                     (((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & (
-                        (1 << (Java9Parser.SEMI - 76)) | (1 << (Java9Parser.AT - 76)) | (1 << (Java9Parser.LT - 76)) | (
-                1 << (Java9Parser.Identifier - 76)))) != 0):
+                    (1 << (Java9Parser.SEMI - 76)) | (1 << (Java9Parser.AT - 76)) | (
+                    1 << (Java9Parser.LT - 76)) | (
+                            1 << (Java9Parser.Identifier - 76)))) != 0):
                 self.state = 966
                 self.interfaceMemberDeclaration()
                 self.state = 971
@@ -5099,10 +5084,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_interfaceModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInterfaceModifier"):
-                return visitor.visitInterfaceModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def interfaceModifier(self):
 
@@ -5112,37 +5094,37 @@ class Java9Parser(Parser):
             self.state = 981
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 974
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 975
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.PROTECTED]:
+            elif token == Java9Parser.PROTECTED:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 976
                 self.match(Java9Parser.PROTECTED)
                 pass
-            elif token in [Java9Parser.PRIVATE]:
+            elif token == Java9Parser.PRIVATE:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 977
                 self.match(Java9Parser.PRIVATE)
                 pass
-            elif token in [Java9Parser.ABSTRACT]:
+            elif token == Java9Parser.ABSTRACT:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 978
                 self.match(Java9Parser.ABSTRACT)
                 pass
-            elif token in [Java9Parser.STATIC]:
+            elif token == Java9Parser.STATIC:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 979
                 self.match(Java9Parser.STATIC)
                 pass
-            elif token in [Java9Parser.STRICTFP]:
+            elif token == Java9Parser.STRICTFP:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 980
                 self.match(Java9Parser.STRICTFP)
@@ -5225,10 +5207,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_interfaceMemberDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInterfaceMemberDeclaration"):
-                return visitor.visitInterfaceMemberDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def interfaceMemberDeclaration(self):
 
@@ -5245,7 +5224,7 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while ((((_la - 30)) & ~0x3f) == 0 and ((1 << (_la - 30)) & (
-                            (1 << (Java9Parser.FINAL - 30)) | (1 << (Java9Parser.PUBLIC - 30)) | (
+                        (1 << (Java9Parser.FINAL - 30)) | (1 << (Java9Parser.PUBLIC - 30)) | (
                         1 << (Java9Parser.STATIC - 30)) | (1 << (Java9Parser.AT - 30)))) != 0):
                     self.state = 983
                     self.constantModifier()
@@ -5267,9 +5246,10 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.DEFAULT) | (
-                                1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PUBLIC) | (1 << Java9Parser.STATIC) | (
-                    1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
+                        (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.DEFAULT) | (
+                        1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PUBLIC) | (
+                                1 << Java9Parser.STATIC) | (
+                                1 << Java9Parser.STRICTFP))) != 0) or _la == Java9Parser.AT:
                     self.state = 993
                     self.interfaceMethodModifier()
                     self.state = 998
@@ -5299,7 +5279,7 @@ class Java9Parser(Parser):
                     self.state = 1008
                     self.unannType()
                     pass
-                elif token in [Java9Parser.VOID]:
+                elif token == Java9Parser.VOID:
                     self.state = 1009
                     self.match(Java9Parser.VOID)
                     pass
@@ -5336,27 +5316,45 @@ class Java9Parser(Parser):
                 self.state = 1033
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [Java9Parser.LBRACE]:
+                if token == Java9Parser.LBRACE:
                     self.state = 1024
                     self.match(Java9Parser.LBRACE)
                     self.state = 1028
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
-                        1 << Java9Parser.ASSERT) | (1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (
-                        1 << Java9Parser.CONTINUE) | (1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (
-                        1 << Java9Parser.FINAL) | (1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
-                        1 << Java9Parser.NEW) | (1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (
-                        1 << Java9Parser.PUBLIC) | (1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (
-                        1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (
-                        1 << Java9Parser.SYNCHRONIZED) | (1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (
-                        1 << Java9Parser.TRY) | (1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or (
+                            1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                           1 << Java9Parser.ASSERT) | (
+                                                                           1 << Java9Parser.BREAK) | (
+                                                                           1 << Java9Parser.CLASS) | (
+                                                                           1 << Java9Parser.CONTINUE) | (
+                                                                           1 << Java9Parser.DO) | (
+                                                                           1 << Java9Parser.ENUM) | (
+                                                                           1 << Java9Parser.FINAL) | (
+                                                                           1 << Java9Parser.FOR) | (
+                                                                           1 << Java9Parser.IF) | (
+                                                                           1 << Java9Parser.NEW) | (
+                                                                           1 << Java9Parser.PRIVATE) | (
+                                                                           1 << Java9Parser.PROTECTED) | (
+                                                                           1 << Java9Parser.PUBLIC) | (
+                                                                           1 << Java9Parser.RETURN) | (
+                                                                           1 << Java9Parser.STATIC) | (
+                                                                           1 << Java9Parser.STRICTFP) | (
+                                                                           1 << Java9Parser.SUPER) | (
+                                                                           1 << Java9Parser.SWITCH) | (
+                                                                           1 << Java9Parser.SYNCHRONIZED) | (
+                                                                           1 << Java9Parser.THIS) | (
+                                                                           1 << Java9Parser.THROW) | (
+                                                                           1 << Java9Parser.TRY) | (
+                                                                           1 << Java9Parser.VOID) | (
+                                                                           1 << Java9Parser.WHILE))) != 0) or (
                             (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << (Java9Parser.LPAREN - 70)) | (
+                            1 << (Java9Parser.LBRACE - 70)) | (
+                                    1 << (Java9Parser.SEMI - 70)) | (
+                                    1 << (Java9Parser.AT - 70)) | (
+                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1025
                         self.blockStatement()
                         self.state = 1030
@@ -5366,7 +5364,7 @@ class Java9Parser(Parser):
                     self.state = 1031
                     self.match(Java9Parser.RBRACE)
                     pass
-                elif token in [Java9Parser.SEMI]:
+                elif token == Java9Parser.SEMI:
                     self.state = 1032
                     self.match(Java9Parser.SEMI)
                     pass
@@ -5427,10 +5425,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_constantModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConstantModifier"):
-                return visitor.visitConstantModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def constantModifier(self):
 
@@ -5440,22 +5435,22 @@ class Java9Parser(Parser):
             self.state = 1046
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1042
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1043
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.STATIC]:
+            elif token == Java9Parser.STATIC:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1044
                 self.match(Java9Parser.STATIC)
                 pass
-            elif token in [Java9Parser.FINAL]:
+            elif token == Java9Parser.FINAL:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1045
                 self.match(Java9Parser.FINAL)
@@ -5484,10 +5479,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_interfaceMethodModifier
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitInterfaceMethodModifier"):
-                return visitor.visitInterfaceMethodModifier(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def interfaceMethodModifier(self):
 
@@ -5497,37 +5489,37 @@ class Java9Parser(Parser):
             self.state = 1055
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.AT]:
+            if token == Java9Parser.AT:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1048
                 self.annotation()
                 pass
-            elif token in [Java9Parser.PUBLIC]:
+            elif token == Java9Parser.PUBLIC:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1049
                 self.match(Java9Parser.PUBLIC)
                 pass
-            elif token in [Java9Parser.PRIVATE]:
+            elif token == Java9Parser.PRIVATE:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1050
                 self.match(Java9Parser.PRIVATE)
                 pass
-            elif token in [Java9Parser.ABSTRACT]:
+            elif token == Java9Parser.ABSTRACT:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1051
                 self.match(Java9Parser.ABSTRACT)
                 pass
-            elif token in [Java9Parser.DEFAULT]:
+            elif token == Java9Parser.DEFAULT:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1052
                 self.match(Java9Parser.DEFAULT)
                 pass
-            elif token in [Java9Parser.STATIC]:
+            elif token == Java9Parser.STATIC:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 1053
                 self.match(Java9Parser.STATIC)
                 pass
-            elif token in [Java9Parser.STRICTFP]:
+            elif token == Java9Parser.STRICTFP:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 1054
                 self.match(Java9Parser.STRICTFP)
@@ -5568,10 +5560,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_annotationTypeDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAnnotationTypeDeclaration"):
-                return visitor.visitAnnotationTypeDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def annotationTypeDeclaration(self):
 
@@ -5603,12 +5592,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.UnannPrimitiveType) | (
-                1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.ENUM) | (
-                1 << Java9Parser.FINAL) | (1 << Java9Parser.INTERFACE) | (1 << Java9Parser.PRIVATE) | (
-                1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (1 << Java9Parser.STATIC) | (
-                1 << Java9Parser.STRICTFP))) != 0) or ((((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & (
+                    1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.ENUM) | (
+                                                                   1 << Java9Parser.FINAL) | (
+                                                                   1 << Java9Parser.INTERFACE) | (
+                                                                   1 << Java9Parser.PRIVATE) | (
+                                                                   1 << Java9Parser.PROTECTED) | (
+                                                                   1 << Java9Parser.PUBLIC) | (
+                                                                   1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP))) != 0) or (
+                    (((_la - 76)) & ~0x3f) == 0 and ((1 << (_la - 76)) & (
                     (1 << (Java9Parser.SEMI - 76)) | (1 << (Java9Parser.AT - 76)) | (
-                1 << (Java9Parser.Identifier - 76)))) != 0):
+                    1 << (Java9Parser.Identifier - 76)))) != 0):
                 self.state = 1067
                 self.annotationTypeMemberDeclaration()
                 self.state = 1072
@@ -5674,10 +5668,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_annotationTypeMemberDeclaration
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAnnotationTypeMemberDeclaration"):
-                return visitor.visitAnnotationTypeMemberDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def annotationTypeMemberDeclaration(self):
 
@@ -5697,15 +5688,15 @@ class Java9Parser(Parser):
                     self.state = 1078
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [Java9Parser.AT]:
+                    if token == Java9Parser.AT:
                         self.state = 1075
                         self.annotation()
                         pass
-                    elif token in [Java9Parser.PUBLIC]:
+                    elif token == Java9Parser.PUBLIC:
                         self.state = 1076
                         self.match(Java9Parser.PUBLIC)
                         pass
-                    elif token in [Java9Parser.ABSTRACT]:
+                    elif token == Java9Parser.ABSTRACT:
                         self.state = 1077
                         self.match(Java9Parser.ABSTRACT)
                         pass
@@ -5750,7 +5741,7 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while ((((_la - 30)) & ~0x3f) == 0 and ((1 << (_la - 30)) & (
-                            (1 << (Java9Parser.FINAL - 30)) | (1 << (Java9Parser.PUBLIC - 30)) | (
+                        (1 << (Java9Parser.FINAL - 30)) | (1 << (Java9Parser.PUBLIC - 30)) | (
                         1 << (Java9Parser.STATIC - 30)) | (1 << (Java9Parser.AT - 30)))) != 0):
                     self.state = 1096
                     self.constantModifier()
@@ -5827,10 +5818,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_annotation
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAnnotation"):
-                return visitor.visitAnnotation(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def annotation(self):
 
@@ -5928,10 +5916,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_elementValue
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitElementValue"):
-                return visitor.visitElementValue(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def elementValue(self):
 
@@ -5956,15 +5941,19 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                    1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                    (1 << (Java9Parser.LPAREN - 70)) | (
-                                                    1 << (Java9Parser.LBRACE - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                            1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                    1 << (Java9Parser.Identifier - 70)))) != 0):
+                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                        1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                1 << Java9Parser.THIS) | (
+                                1 << Java9Parser.VOID))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                        (1 << (Java9Parser.LPAREN - 70)) | (
+                        1 << (Java9Parser.LBRACE - 70)) | (
+                                1 << (Java9Parser.AT - 70)) | (
+                                1 << (Java9Parser.BANG - 70)) | (
+                                1 << (Java9Parser.TILDE - 70)) | (
+                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 1144
                     self.elementValue()
                     self.state = 1149
@@ -6022,10 +6011,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_variableInitializerList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitVariableInitializerList"):
-                return visitor.visitVariableInitializerList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def variableInitializerList(self):
 
@@ -6087,10 +6073,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_blockStatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitBlockStatement"):
-                return visitor.visitBlockStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def blockStatement(self):
 
@@ -6194,10 +6177,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_statement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatement"):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def statement(self):
 
@@ -6282,13 +6262,15 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                            (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                        1 << Java9Parser.FINAL) | (1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
-                            1 << Java9Parser.THIS) | (1 << Java9Parser.VOID))) != 0) or (
+                            (1 << Java9Parser.Literal) | (
+                            1 << Java9Parser.UnannPrimitiveType) | (
+                                    1 << Java9Parser.FINAL) | (1 << Java9Parser.NEW) | (
+                                    1 << Java9Parser.SUPER) | (
+                                    1 << Java9Parser.THIS) | (1 << Java9Parser.VOID))) != 0) or (
                             (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1209
                         self.forInit()
 
@@ -6298,14 +6280,18 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                        1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                                1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                        1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                    1 << Java9Parser.THIS) | (
+                                    1 << Java9Parser.VOID))) != 0) or (
+                            (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                            (1 << (Java9Parser.LPAREN - 70)) | (
+                            1 << (Java9Parser.AT - 70)) | (
+                                    1 << (Java9Parser.BANG - 70)) | (
+                                    1 << (Java9Parser.TILDE - 70)) | (
+                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1213
                         self.expression()
 
@@ -6315,12 +6301,14 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                        1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                    1 << Java9Parser.THIS) | (
+                                    1 << Java9Parser.VOID))) != 0) or (
+                            (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1217
                         self.statementExpressionList()
 
@@ -6412,10 +6400,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_statementNoShortIf
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatementNoShortIf"):
-                return visitor.visitStatementNoShortIf(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def statementNoShortIf(self):
 
@@ -6486,13 +6471,15 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                            (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                        1 << Java9Parser.FINAL) | (1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
-                            1 << Java9Parser.THIS) | (1 << Java9Parser.VOID))) != 0) or (
+                            (1 << Java9Parser.Literal) | (
+                            1 << Java9Parser.UnannPrimitiveType) | (
+                                    1 << Java9Parser.FINAL) | (1 << Java9Parser.NEW) | (
+                                    1 << Java9Parser.SUPER) | (
+                                    1 << Java9Parser.THIS) | (1 << Java9Parser.VOID))) != 0) or (
                             (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1259
                         self.forInit()
 
@@ -6502,14 +6489,18 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                        1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                                1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                        1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                    1 << Java9Parser.THIS) | (
+                                    1 << Java9Parser.VOID))) != 0) or (
+                            (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                            (1 << (Java9Parser.LPAREN - 70)) | (
+                            1 << (Java9Parser.AT - 70)) | (
+                                    1 << (Java9Parser.BANG - 70)) | (
+                                    1 << (Java9Parser.TILDE - 70)) | (
+                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1263
                         self.expression()
 
@@ -6519,12 +6510,14 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                        1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                    1 << Java9Parser.THIS) | (
+                                    1 << Java9Parser.VOID))) != 0) or (
+                            (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1267
                         self.statementExpressionList()
 
@@ -6615,10 +6608,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_statementWithoutTrailingSubstatement
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatementWithoutTrailingSubstatement"):
-                return visitor.visitStatementWithoutTrailingSubstatement(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def statementWithoutTrailingSubstatement(self):
 
@@ -6650,18 +6640,36 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                    1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                    1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                    1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
-                    1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and (
-                    (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0):
+                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                       1 << Java9Parser.ASSERT) | (
+                                                                       1 << Java9Parser.BREAK) | (
+                                                                       1 << Java9Parser.CLASS) | (
+                                                                       1 << Java9Parser.CONTINUE) | (
+                                                                       1 << Java9Parser.DO) | (
+                                                                       1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
+                                                                       1 << Java9Parser.NEW) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.RETURN) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SUPER) | (
+                                                                       1 << Java9Parser.SWITCH) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.THIS) | (
+                                                                       1 << Java9Parser.THROW) | (
+                                                                       1 << Java9Parser.TRY) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.WHILE))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and (
+                        (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                                                     1 << (Java9Parser.INC - 70)) | (
+                                                     1 << (Java9Parser.DEC - 70)) | (
+                                                     1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 1299
                     self.blockStatement()
                     self.state = 1304
@@ -6671,7 +6679,7 @@ class Java9Parser(Parser):
                 self.state = 1305
                 self.match(Java9Parser.RBRACE)
                 pass
-            elif token in [Java9Parser.SEMI]:
+            elif token == Java9Parser.SEMI:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1306
                 self.match(Java9Parser.SEMI)
@@ -6685,7 +6693,7 @@ class Java9Parser(Parser):
                 self.state = 1308
                 self.match(Java9Parser.SEMI)
                 pass
-            elif token in [Java9Parser.ASSERT]:
+            elif token == Java9Parser.ASSERT:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1310
                 self.match(Java9Parser.ASSERT)
@@ -6703,7 +6711,7 @@ class Java9Parser(Parser):
                 self.state = 1316
                 self.match(Java9Parser.SEMI)
                 pass
-            elif token in [Java9Parser.SWITCH]:
+            elif token == Java9Parser.SWITCH:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1318
                 self.match(Java9Parser.SWITCH)
@@ -6742,20 +6750,39 @@ class Java9Parser(Parser):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                                1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
-                                1 << Java9Parser.ASSERT) | (1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (
-                                1 << Java9Parser.CONTINUE) | (1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (
-                                1 << Java9Parser.FINAL) | (1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
-                                1 << Java9Parser.NEW) | (1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (
-                                1 << Java9Parser.PUBLIC) | (1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (
-                                1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (
-                                1 << Java9Parser.SYNCHRONIZED) | (1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (
-                                1 << Java9Parser.TRY) | (1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or (
-                                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                    (1 << (Java9Parser.LPAREN - 70)) | (
-                                                    1 << (Java9Parser.LBRACE - 70)) | (1 << (Java9Parser.SEMI - 70)) | (
-                                            1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0)):
+                                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                                     1 << Java9Parser.ASSERT) | (
+                                                                                     1 << Java9Parser.BREAK) | (
+                                                                                     1 << Java9Parser.CLASS) | (
+                                                                                     1 << Java9Parser.CONTINUE) | (
+                                                                                     1 << Java9Parser.DO) | (
+                                                                                     1 << Java9Parser.ENUM) | (
+                                                                                     1 << Java9Parser.FINAL) | (
+                                                                                     1 << Java9Parser.FOR) | (
+                                                                                     1 << Java9Parser.IF) | (
+                                                                                     1 << Java9Parser.NEW) | (
+                                                                                     1 << Java9Parser.PRIVATE) | (
+                                                                                     1 << Java9Parser.PROTECTED) | (
+                                                                                     1 << Java9Parser.PUBLIC) | (
+                                                                                     1 << Java9Parser.RETURN) | (
+                                                                                     1 << Java9Parser.STATIC) | (
+                                                                                     1 << Java9Parser.STRICTFP) | (
+                                                                                     1 << Java9Parser.SUPER) | (
+                                                                                     1 << Java9Parser.SWITCH) | (
+                                                                                     1 << Java9Parser.SYNCHRONIZED) | (
+                                                                                     1 << Java9Parser.THIS) | (
+                                                                                     1 << Java9Parser.THROW) | (
+                                                                                     1 << Java9Parser.TRY) | (
+                                                                                     1 << Java9Parser.VOID) | (
+                                                                                     1 << Java9Parser.WHILE))) != 0) or (
+                                            (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                                            (1 << (Java9Parser.LPAREN - 70)) | (
+                                            1 << (Java9Parser.LBRACE - 70)) | (
+                                                    1 << (Java9Parser.SEMI - 70)) | (
+                                                    1 << (Java9Parser.AT - 70)) | (
+                                                    1 << (Java9Parser.INC - 70)) | (
+                                                    1 << (Java9Parser.DEC - 70)) | (
+                                                    1 << (Java9Parser.Identifier - 70)))) != 0)):
                                 break
 
                     self.state = 1337
@@ -6775,7 +6802,7 @@ class Java9Parser(Parser):
                 self.state = 1344
                 self.match(Java9Parser.RBRACE)
                 pass
-            elif token in [Java9Parser.DO]:
+            elif token == Java9Parser.DO:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 1346
                 self.match(Java9Parser.DO)
@@ -6811,7 +6838,7 @@ class Java9Parser(Parser):
                 self.state = 1358
                 self.match(Java9Parser.SEMI)
                 pass
-            elif token in [Java9Parser.RETURN]:
+            elif token == Java9Parser.RETURN:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 1359
                 self.match(Java9Parser.RETURN)
@@ -6819,21 +6846,25 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                    1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                            1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                    1 << (Java9Parser.Identifier - 70)))) != 0):
+                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                        1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                1 << Java9Parser.THIS) | (
+                                1 << Java9Parser.VOID))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                        (1 << (Java9Parser.LPAREN - 70)) | (
+                        1 << (Java9Parser.AT - 70)) | (
+                                1 << (Java9Parser.BANG - 70)) | (
+                                1 << (Java9Parser.TILDE - 70)) | (
+                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 1360
                     self.expression()
 
                 self.state = 1363
                 self.match(Java9Parser.SEMI)
                 pass
-            elif token in [Java9Parser.THROW]:
+            elif token == Java9Parser.THROW:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 1364
                 self.match(Java9Parser.THROW)
@@ -6842,7 +6873,7 @@ class Java9Parser(Parser):
                 self.state = 1366
                 self.match(Java9Parser.SEMI)
                 pass
-            elif token in [Java9Parser.TRY]:
+            elif token == Java9Parser.TRY:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 1368
                 self.tryStatement()
@@ -6883,10 +6914,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_statementExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatementExpression"):
-                return visitor.visitStatementExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def statementExpression(self):
 
@@ -7037,7 +7065,7 @@ class Java9Parser(Parser):
             self.state = 1390
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.CASE]:
+            if token == Java9Parser.CASE:
                 self.state = 1384
                 self.match(Java9Parser.CASE)
                 self.state = 1387
@@ -7054,7 +7082,7 @@ class Java9Parser(Parser):
                     pass
 
                 pass
-            elif token in [Java9Parser.DEFAULT]:
+            elif token == Java9Parser.DEFAULT:
                 self.state = 1389
                 self.match(Java9Parser.DEFAULT)
                 pass
@@ -7096,10 +7124,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_forInit
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitForInit"):
-                return visitor.visitForInit(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def forInit(self):
 
@@ -7159,10 +7184,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_statementExpressionList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitStatementExpressionList"):
-                return visitor.visitStatementExpressionList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def statementExpressionList(self):
 
@@ -7238,25 +7260,43 @@ class Java9Parser(Parser):
             self.state = 1483
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.LBRACE]:
+            if token == Java9Parser.LBRACE:
                 self.state = 1415
                 self.match(Java9Parser.LBRACE)
                 self.state = 1419
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                    1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                    1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                    1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
-                    1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and (
-                    (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0):
+                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                       1 << Java9Parser.ASSERT) | (
+                                                                       1 << Java9Parser.BREAK) | (
+                                                                       1 << Java9Parser.CLASS) | (
+                                                                       1 << Java9Parser.CONTINUE) | (
+                                                                       1 << Java9Parser.DO) | (
+                                                                       1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
+                                                                       1 << Java9Parser.NEW) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.RETURN) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SUPER) | (
+                                                                       1 << Java9Parser.SWITCH) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.THIS) | (
+                                                                       1 << Java9Parser.THROW) | (
+                                                                       1 << Java9Parser.TRY) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.WHILE))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and (
+                        (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                                                     1 << (Java9Parser.INC - 70)) | (
+                                                     1 << (Java9Parser.DEC - 70)) | (
+                                                     1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 1416
                     self.blockStatement()
                     self.state = 1421
@@ -7302,20 +7342,38 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
-                        1 << Java9Parser.ASSERT) | (1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (
-                        1 << Java9Parser.CONTINUE) | (1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (
-                        1 << Java9Parser.FINAL) | (1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
-                        1 << Java9Parser.NEW) | (1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (
-                        1 << Java9Parser.PUBLIC) | (1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (
-                        1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (
-                        1 << Java9Parser.SYNCHRONIZED) | (1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (
-                        1 << Java9Parser.TRY) | (1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or (
+                            1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                           1 << Java9Parser.ASSERT) | (
+                                                                           1 << Java9Parser.BREAK) | (
+                                                                           1 << Java9Parser.CLASS) | (
+                                                                           1 << Java9Parser.CONTINUE) | (
+                                                                           1 << Java9Parser.DO) | (
+                                                                           1 << Java9Parser.ENUM) | (
+                                                                           1 << Java9Parser.FINAL) | (
+                                                                           1 << Java9Parser.FOR) | (
+                                                                           1 << Java9Parser.IF) | (
+                                                                           1 << Java9Parser.NEW) | (
+                                                                           1 << Java9Parser.PRIVATE) | (
+                                                                           1 << Java9Parser.PROTECTED) | (
+                                                                           1 << Java9Parser.PUBLIC) | (
+                                                                           1 << Java9Parser.RETURN) | (
+                                                                           1 << Java9Parser.STATIC) | (
+                                                                           1 << Java9Parser.STRICTFP) | (
+                                                                           1 << Java9Parser.SUPER) | (
+                                                                           1 << Java9Parser.SWITCH) | (
+                                                                           1 << Java9Parser.SYNCHRONIZED) | (
+                                                                           1 << Java9Parser.THIS) | (
+                                                                           1 << Java9Parser.THROW) | (
+                                                                           1 << Java9Parser.TRY) | (
+                                                                           1 << Java9Parser.VOID) | (
+                                                                           1 << Java9Parser.WHILE))) != 0) or (
                             (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << (Java9Parser.LPAREN - 70)) | (
+                            1 << (Java9Parser.LBRACE - 70)) | (
+                                    1 << (Java9Parser.SEMI - 70)) | (
+                                    1 << (Java9Parser.AT - 70)) | (
+                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1436
                         self.blockStatement()
                         self.state = 1441
@@ -7327,7 +7385,7 @@ class Java9Parser(Parser):
                     pass
 
                 pass
-            elif token in [Java9Parser.LPAREN]:
+            elif token == Java9Parser.LPAREN:
                 self.state = 1445
                 self.match(Java9Parser.LPAREN)
                 self.state = 1446
@@ -7360,18 +7418,36 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                    1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                    1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                    1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
-                    1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and (
-                    (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0):
+                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                       1 << Java9Parser.ASSERT) | (
+                                                                       1 << Java9Parser.BREAK) | (
+                                                                       1 << Java9Parser.CLASS) | (
+                                                                       1 << Java9Parser.CONTINUE) | (
+                                                                       1 << Java9Parser.DO) | (
+                                                                       1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
+                                                                       1 << Java9Parser.NEW) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.RETURN) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SUPER) | (
+                                                                       1 << Java9Parser.SWITCH) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.THIS) | (
+                                                                       1 << Java9Parser.THROW) | (
+                                                                       1 << Java9Parser.TRY) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.WHILE))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and (
+                        (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                                                     1 << (Java9Parser.INC - 70)) | (
+                                                     1 << (Java9Parser.DEC - 70)) | (
+                                                     1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 1459
                     self.blockStatement()
                     self.state = 1464
@@ -7402,20 +7478,38 @@ class Java9Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
-                        1 << Java9Parser.ASSERT) | (1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (
-                        1 << Java9Parser.CONTINUE) | (1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (
-                        1 << Java9Parser.FINAL) | (1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
-                        1 << Java9Parser.NEW) | (1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (
-                        1 << Java9Parser.PUBLIC) | (1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (
-                        1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (
-                        1 << Java9Parser.SYNCHRONIZED) | (1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (
-                        1 << Java9Parser.TRY) | (1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or (
+                            1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                           1 << Java9Parser.ASSERT) | (
+                                                                           1 << Java9Parser.BREAK) | (
+                                                                           1 << Java9Parser.CLASS) | (
+                                                                           1 << Java9Parser.CONTINUE) | (
+                                                                           1 << Java9Parser.DO) | (
+                                                                           1 << Java9Parser.ENUM) | (
+                                                                           1 << Java9Parser.FINAL) | (
+                                                                           1 << Java9Parser.FOR) | (
+                                                                           1 << Java9Parser.IF) | (
+                                                                           1 << Java9Parser.NEW) | (
+                                                                           1 << Java9Parser.PRIVATE) | (
+                                                                           1 << Java9Parser.PROTECTED) | (
+                                                                           1 << Java9Parser.PUBLIC) | (
+                                                                           1 << Java9Parser.RETURN) | (
+                                                                           1 << Java9Parser.STATIC) | (
+                                                                           1 << Java9Parser.STRICTFP) | (
+                                                                           1 << Java9Parser.SUPER) | (
+                                                                           1 << Java9Parser.SWITCH) | (
+                                                                           1 << Java9Parser.SYNCHRONIZED) | (
+                                                                           1 << Java9Parser.THIS) | (
+                                                                           1 << Java9Parser.THROW) | (
+                                                                           1 << Java9Parser.TRY) | (
+                                                                           1 << Java9Parser.VOID) | (
+                                                                           1 << Java9Parser.WHILE))) != 0) or (
                             (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.Identifier - 70)))) != 0):
+                            (1 << (Java9Parser.LPAREN - 70)) | (
+                            1 << (Java9Parser.LBRACE - 70)) | (
+                                    1 << (Java9Parser.SEMI - 70)) | (
+                                    1 << (Java9Parser.AT - 70)) | (
+                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                    1 << (Java9Parser.Identifier - 70)))) != 0):
                         self.state = 1474
                         self.blockStatement()
                         self.state = 1479
@@ -7531,19 +7625,33 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (1 << Java9Parser.FOR) | (
-                1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (1 << Java9Parser.PRIVATE) | (
-                1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (1 << Java9Parser.RETURN) | (
-                1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (1 << Java9Parser.SUPER) | (
-                1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (1 << Java9Parser.VOID) | (
-                1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                                1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                        1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                   1 << Java9Parser.ASSERT) | (
+                                                                   1 << Java9Parser.BREAK) | (
+                                                                   1 << Java9Parser.CLASS) | (
+                                                                   1 << Java9Parser.CONTINUE) | (
+                                                                   1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (
+                                                                   1 << Java9Parser.FINAL) | (
+                                                                   1 << Java9Parser.FOR) | (
+                                                                   1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
+                                                                   1 << Java9Parser.PRIVATE) | (
+                                                                   1 << Java9Parser.PROTECTED) | (
+                                                                   1 << Java9Parser.PUBLIC) | (
+                                                                   1 << Java9Parser.RETURN) | (
+                                                                   1 << Java9Parser.STATIC) | (
+                                                                   1 << Java9Parser.STRICTFP) | (
+                                                                   1 << Java9Parser.SUPER) | (
+                                                                   1 << Java9Parser.SWITCH) | (
+                                                                   1 << Java9Parser.SYNCHRONIZED) | (
+                                                                   1 << Java9Parser.THIS) | (
+                                                                   1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
+                                                                   1 << Java9Parser.VOID) | (
+                                                                   1 << Java9Parser.WHILE))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1507
                 self.blockStatement()
                 self.state = 1512
@@ -7594,10 +7702,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_resource
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitResource"):
-                return visitor.visitResource(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def resource(self):
 
@@ -7748,10 +7853,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_primary
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitPrimary"):
-                return visitor.visitPrimary(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def primary(self):
 
@@ -7790,11 +7892,11 @@ class Java9Parser(Parser):
                         self.state = 1564
                         self._errHandler.sync(self)
                         token = self._input.LA(1)
-                        if token in [Java9Parser.DOT]:
+                        if token == Java9Parser.DOT:
                             self.state = 1559
                             self.match(Java9Parser.DOT)
                             pass
-                        elif token in [Java9Parser.COLONCOLON]:
+                        elif token == Java9Parser.COLONCOLON:
                             self.state = 1560
                             self.match(Java9Parser.COLONCOLON)
                             self.state = 1562
@@ -7912,7 +8014,7 @@ class Java9Parser(Parser):
                 self.state = 1601
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [Java9Parser.Identifier]:
+                if token == Java9Parser.Identifier:
                     self.state = 1585
                     self.match(Java9Parser.Identifier)
                     self.state = 1590
@@ -7941,7 +8043,7 @@ class Java9Parser(Parser):
                         _la = self._input.LA(1)
 
                     pass
-                elif token in [Java9Parser.VOID]:
+                elif token == Java9Parser.VOID:
                     self.state = 1600
                     self.match(Java9Parser.VOID)
                     pass
@@ -8202,7 +8304,7 @@ class Java9Parser(Parser):
                     self.state = 1681
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [Java9Parser.Identifier]:
+                    if token == Java9Parser.Identifier:
                         self.state = 1672
                         self.match(Java9Parser.Identifier)
                         self.state = 1677
@@ -8219,7 +8321,7 @@ class Java9Parser(Parser):
                             _alt = self._interp.adaptivePredict(self._input, 245, self._ctx)
 
                         pass
-                    elif token in [Java9Parser.UnannPrimitiveType]:
+                    elif token == Java9Parser.UnannPrimitiveType:
                         self.state = 1680
                         self.match(Java9Parser.UnannPrimitiveType)
                         pass
@@ -8239,7 +8341,7 @@ class Java9Parser(Parser):
                         _la = self._input.LA(1)
 
                     pass
-                elif token in [Java9Parser.VOID]:
+                elif token == Java9Parser.VOID:
                     self.state = 1690
                     self.match(Java9Parser.VOID)
                     pass
@@ -8268,11 +8370,11 @@ class Java9Parser(Parser):
                 self.state = 1706
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [Java9Parser.THIS]:
+                if token == Java9Parser.THIS:
                     self.state = 1702
                     self.match(Java9Parser.THIS)
                     pass
-                elif token in [Java9Parser.SUPER]:
+                elif token == Java9Parser.SUPER:
                     self.state = 1703
                     self.match(Java9Parser.SUPER)
                     self.state = 1704
@@ -8598,14 +8700,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1826
                 self.argumentList()
 
@@ -8706,14 +8811,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1849
                 self.argumentList()
 
@@ -8784,7 +8892,7 @@ class Java9Parser(Parser):
             self.state = 1897
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.NEW]:
+            if token == Java9Parser.NEW:
                 self.state = 1856
                 self.match(Java9Parser.NEW)
                 self.state = 1858
@@ -8829,7 +8937,7 @@ class Java9Parser(Parser):
                     _la = self._input.LA(1)
 
                 pass
-            elif token in [Java9Parser.Identifier]:
+            elif token == Java9Parser.Identifier:
                 self.state = 1882
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -8882,14 +8990,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1903
                 self.argumentList()
 
@@ -8924,10 +9035,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_typeArgumentsOrDiamond
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitTypeArgumentsOrDiamond"):
-                return visitor.visitTypeArgumentsOrDiamond(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def typeArgumentsOrDiamond(self):
 
@@ -9071,14 +9179,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1943
                 self.argumentList()
 
@@ -9140,14 +9251,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1954
                 self.argumentList()
 
@@ -9255,14 +9369,17 @@ class Java9Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                            1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                            (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                        1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                        1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                1 << (Java9Parser.Identifier - 70)))) != 0):
+                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                    1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                            1 << Java9Parser.THIS) | (
+                            1 << Java9Parser.VOID))) != 0) or (
+                    (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                    (1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                    1 << (Java9Parser.BANG - 70)) | (
+                            1 << (Java9Parser.TILDE - 70)) | (
+                            1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                            1 << (Java9Parser.Identifier - 70)))) != 0):
                 self.state = 1983
                 self.argumentList()
 
@@ -9292,10 +9409,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_argumentList
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitArgumentList"):
-                return visitor.visitArgumentList(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def argumentList(self):
 
@@ -9447,15 +9561,19 @@ class Java9Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
-                                1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (1 << Java9Parser.THIS) | (
-                    1 << Java9Parser.VOID))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
-                                                    (1 << (Java9Parser.LPAREN - 70)) | (
-                                                    1 << (Java9Parser.LBRACE - 70)) | (1 << (Java9Parser.AT - 70)) | (
-                                            1 << (Java9Parser.BANG - 70)) | (1 << (Java9Parser.TILDE - 70)) | (
-                                    1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
-                            1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
-                    1 << (Java9Parser.Identifier - 70)))) != 0):
+                        (1 << Java9Parser.Literal) | (1 << Java9Parser.UnannPrimitiveType) | (
+                        1 << Java9Parser.NEW) | (1 << Java9Parser.SUPER) | (
+                                1 << Java9Parser.THIS) | (
+                                1 << Java9Parser.VOID))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                        (1 << (Java9Parser.LPAREN - 70)) | (
+                        1 << (Java9Parser.LBRACE - 70)) | (
+                                1 << (Java9Parser.AT - 70)) | (
+                                1 << (Java9Parser.BANG - 70)) | (
+                                1 << (Java9Parser.TILDE - 70)) | (
+                                1 << (Java9Parser.INC - 70)) | (1 << (Java9Parser.DEC - 70)) | (
+                                1 << (Java9Parser.ADD - 70)) | (1 << (Java9Parser.SUB - 70)) | (
+                                1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 2026
                     self.variableInitializerList()
 
@@ -9498,10 +9616,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_expression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitExpression"):
-                return visitor.visitExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def expression(self):
 
@@ -9566,10 +9681,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_lambdaExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitLambdaExpression"):
-                return visitor.visitLambdaExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def lambdaExpression(self):
 
@@ -9581,11 +9693,11 @@ class Java9Parser(Parser):
             self.state = 2057
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [Java9Parser.Identifier]:
+            if token == Java9Parser.Identifier:
                 self.state = 2041
                 self.match(Java9Parser.Identifier)
                 pass
-            elif token in [Java9Parser.LPAREN]:
+            elif token == Java9Parser.LPAREN:
                 self.state = 2042
                 self.match(Java9Parser.LPAREN)
                 self.state = 2054
@@ -9636,25 +9748,43 @@ class Java9Parser(Parser):
                 self.state = 2060
                 self.expression()
                 pass
-            elif token in [Java9Parser.LBRACE]:
+            elif token == Java9Parser.LBRACE:
                 self.state = 2061
                 self.match(Java9Parser.LBRACE)
                 self.state = 2065
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << Java9Parser.Literal) | (
-                    1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (1 << Java9Parser.ASSERT) | (
-                    1 << Java9Parser.BREAK) | (1 << Java9Parser.CLASS) | (1 << Java9Parser.CONTINUE) | (
-                    1 << Java9Parser.DO) | (1 << Java9Parser.ENUM) | (1 << Java9Parser.FINAL) | (
-                    1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (1 << Java9Parser.NEW) | (
-                    1 << Java9Parser.PRIVATE) | (1 << Java9Parser.PROTECTED) | (1 << Java9Parser.PUBLIC) | (
-                    1 << Java9Parser.RETURN) | (1 << Java9Parser.STATIC) | (1 << Java9Parser.STRICTFP) | (
-                    1 << Java9Parser.SUPER) | (1 << Java9Parser.SWITCH) | (1 << Java9Parser.SYNCHRONIZED) | (
-                    1 << Java9Parser.THIS) | (1 << Java9Parser.THROW) | (1 << Java9Parser.TRY) | (
-                    1 << Java9Parser.VOID) | (1 << Java9Parser.WHILE))) != 0) or ((((_la - 70)) & ~0x3f) == 0 and (
-                    (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
-                    1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (1 << (Java9Parser.INC - 70)) | (
-                    1 << (Java9Parser.DEC - 70)) | (1 << (Java9Parser.Identifier - 70)))) != 0):
+                        1 << Java9Parser.UnannPrimitiveType) | (1 << Java9Parser.ABSTRACT) | (
+                                                                       1 << Java9Parser.ASSERT) | (
+                                                                       1 << Java9Parser.BREAK) | (
+                                                                       1 << Java9Parser.CLASS) | (
+                                                                       1 << Java9Parser.CONTINUE) | (
+                                                                       1 << Java9Parser.DO) | (
+                                                                       1 << Java9Parser.ENUM) | (
+                                                                       1 << Java9Parser.FINAL) | (
+                                                                       1 << Java9Parser.FOR) | (1 << Java9Parser.IF) | (
+                                                                       1 << Java9Parser.NEW) | (
+                                                                       1 << Java9Parser.PRIVATE) | (
+                                                                       1 << Java9Parser.PROTECTED) | (
+                                                                       1 << Java9Parser.PUBLIC) | (
+                                                                       1 << Java9Parser.RETURN) | (
+                                                                       1 << Java9Parser.STATIC) | (
+                                                                       1 << Java9Parser.STRICTFP) | (
+                                                                       1 << Java9Parser.SUPER) | (
+                                                                       1 << Java9Parser.SWITCH) | (
+                                                                       1 << Java9Parser.SYNCHRONIZED) | (
+                                                                       1 << Java9Parser.THIS) | (
+                                                                       1 << Java9Parser.THROW) | (
+                                                                       1 << Java9Parser.TRY) | (
+                                                                       1 << Java9Parser.VOID) | (
+                                                                       1 << Java9Parser.WHILE))) != 0) or (
+                        (((_la - 70)) & ~0x3f) == 0 and (
+                        (1 << (_la - 70)) & ((1 << (Java9Parser.LPAREN - 70)) | (1 << (Java9Parser.LBRACE - 70)) | (
+                        1 << (Java9Parser.SEMI - 70)) | (1 << (Java9Parser.AT - 70)) | (
+                                                     1 << (Java9Parser.INC - 70)) | (
+                                                     1 << (Java9Parser.DEC - 70)) | (
+                                                     1 << (Java9Parser.Identifier - 70)))) != 0):
                     self.state = 2062
                     self.blockStatement()
                     self.state = 2067
@@ -9706,10 +9836,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_assignment
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitAssignment"):
-                return visitor.visitAssignment(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def assignment(self):
 
@@ -9842,12 +9969,25 @@ class Java9Parser(Parser):
             self.state = 2115
             _la = self._input.LA(1)
             if not (((((_la - 82)) & ~0x3f) == 0 and ((1 << (_la - 82)) & ((1 << (Java9Parser.ASSIGN - 82)) | (
-                1 << (Java9Parser.ADD_ASSIGN - 82)) | (1 << (Java9Parser.SUB_ASSIGN - 82)) | (
-                1 << (Java9Parser.MUL_ASSIGN - 82)) | (1 << (Java9Parser.DIV_ASSIGN - 82)) | (
-                1 << (Java9Parser.AND_ASSIGN - 82)) | (1 << (Java9Parser.OR_ASSIGN - 82)) | (
-                1 << (Java9Parser.XOR_ASSIGN - 82)) | (1 << (Java9Parser.MOD_ASSIGN - 82)) | (
-                1 << (Java9Parser.LSHIFT_ASSIGN - 82)) | (1 << (Java9Parser.RSHIFT_ASSIGN - 82)) | (
-                1 << (Java9Parser.URSHIFT_ASSIGN - 82)))) != 0)):
+                    1 << (Java9Parser.ADD_ASSIGN - 82)) | (1 << (Java9Parser.SUB_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.MUL_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.DIV_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.AND_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.OR_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.XOR_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.MOD_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.LSHIFT_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.RSHIFT_ASSIGN - 82)) | (
+                                                                                   1 << (
+                                                                                   Java9Parser.URSHIFT_ASSIGN - 82)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -9876,10 +10016,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_conditionalExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConditionalExpression"):
-                return visitor.visitConditionalExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def conditionalExpression(self):
 
@@ -9989,10 +10126,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_conditionalOrExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitConditionalOrExpression"):
-                return visitor.visitConditionalOrExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def conditionalOrExpression(self):
 
@@ -10011,9 +10145,9 @@ class Java9Parser(Parser):
                     self.state = 2130
                     _la = self._input.LA(1)
                     if not (((((_la - 94)) & ~0x3f) == 0 and ((1 << (_la - 94)) & (
-                                    (1 << (Java9Parser.AND - 94)) | (1 << (Java9Parser.OR - 94)) | (
-                                1 << (Java9Parser.BITAND - 94)) | (1 << (Java9Parser.BITOR - 94)) | (
-                        1 << (Java9Parser.CARET - 94)))) != 0)):
+                            (1 << (Java9Parser.AND - 94)) | (1 << (Java9Parser.OR - 94)) | (
+                            1 << (Java9Parser.BITAND - 94)) | (1 << (Java9Parser.BITOR - 94)) | (
+                                    1 << (Java9Parser.CARET - 94)))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -10117,10 +10251,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_relationalExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitRelationalExpression"):
-                return visitor.visitRelationalExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def relationalExpression(self):
 
@@ -10197,7 +10328,7 @@ class Java9Parser(Parser):
                 self.state = 2154
                 _la = self._input.LA(1)
                 if not (((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & (
-                            (1 << (Java9Parser.GT - 83)) | (1 << (Java9Parser.LT - 83)) | (
+                        (1 << (Java9Parser.GT - 83)) | (1 << (Java9Parser.LT - 83)) | (
                         1 << (Java9Parser.LE - 83)) | (1 << (Java9Parser.GE - 83)))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
@@ -10206,7 +10337,7 @@ class Java9Parser(Parser):
                 self.state = 2155
                 self.shiftExpression()
                 pass
-            elif token in [Java9Parser.INSTANCEOF]:
+            elif token == Java9Parser.INSTANCEOF:
                 self.state = 2156
                 self.match(Java9Parser.INSTANCEOF)
                 self.state = 2157
@@ -10237,7 +10368,7 @@ class Java9Parser(Parser):
                         self.state = 2161
                         _la = self._input.LA(1)
                         if not (((((_la - 83)) & ~0x3f) == 0 and ((1 << (_la - 83)) & (
-                                    (1 << (Java9Parser.GT - 83)) | (1 << (Java9Parser.LT - 83)) | (
+                                (1 << (Java9Parser.GT - 83)) | (1 << (Java9Parser.LT - 83)) | (
                                 1 << (Java9Parser.LE - 83)) | (1 << (Java9Parser.GE - 83)))) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
@@ -10246,7 +10377,7 @@ class Java9Parser(Parser):
                         self.state = 2162
                         self.shiftExpression()
                         pass
-                    elif token in [Java9Parser.INSTANCEOF]:
+                    elif token == Java9Parser.INSTANCEOF:
                         self.state = 2163
                         self.match(Java9Parser.INSTANCEOF)
                         self.state = 2164
@@ -10283,10 +10414,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_shiftExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitShiftExpression"):
-                return visitor.visitShiftExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def shiftExpression(self):
 
@@ -10305,13 +10433,13 @@ class Java9Parser(Parser):
                     self.state = 2185
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [Java9Parser.LT]:
+                    if token == Java9Parser.LT:
                         self.state = 2173
                         self.match(Java9Parser.LT)
                         self.state = 2174
                         self.match(Java9Parser.LT)
                         pass
-                    elif token in [Java9Parser.GT]:
+                    elif token == Java9Parser.GT:
                         self.state = 2175
                         self.match(Java9Parser.GT)
                         self.state = 2176
@@ -10324,23 +10452,23 @@ class Java9Parser(Parser):
                             self.match(Java9Parser.GT)
 
                         pass
-                    elif token in [Java9Parser.ADD]:
+                    elif token == Java9Parser.ADD:
                         self.state = 2180
                         self.match(Java9Parser.ADD)
                         pass
-                    elif token in [Java9Parser.SUB]:
+                    elif token == Java9Parser.SUB:
                         self.state = 2181
                         self.match(Java9Parser.SUB)
                         pass
-                    elif token in [Java9Parser.MUL]:
+                    elif token == Java9Parser.MUL:
                         self.state = 2182
                         self.match(Java9Parser.MUL)
                         pass
-                    elif token in [Java9Parser.DIV]:
+                    elif token == Java9Parser.DIV:
                         self.state = 2183
                         self.match(Java9Parser.DIV)
                         pass
-                    elif token in [Java9Parser.MOD]:
+                    elif token == Java9Parser.MOD:
                         self.state = 2184
                         self.match(Java9Parser.MOD)
                         pass
@@ -10380,10 +10508,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_unaryExpression
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnaryExpression"):
-                return visitor.visitUnaryExpression(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def unaryExpression(self):
 
@@ -10517,10 +10642,7 @@ class Java9Parser(Parser):
             return Java9Parser.RULE_unaryExpressionNotPlusMinus
 
         def accept(self, visitor: ParseTreeVisitor):
-            if hasattr(visitor, "visitUnaryExpressionNotPlusMinus"):
-                return visitor.visitUnaryExpressionNotPlusMinus(self)
-            else:
-                return visitor.visitChildren(self)
+            return visitor.visitChildren(self)
 
     def unaryExpressionNotPlusMinus(self):
 
@@ -10582,15 +10704,15 @@ class Java9Parser(Parser):
                 self.state = 2230
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [Java9Parser.TILDE]:
+                if token == Java9Parser.TILDE:
                     self.state = 2219
                     self.match(Java9Parser.TILDE)
                     pass
-                elif token in [Java9Parser.BANG]:
+                elif token == Java9Parser.BANG:
                     self.state = 2220
                     self.match(Java9Parser.BANG)
                     pass
-                elif token in [Java9Parser.LPAREN]:
+                elif token == Java9Parser.LPAREN:
                     self.state = 2221
                     self.match(Java9Parser.LPAREN)
                     self.state = 2225
