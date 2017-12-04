@@ -172,7 +172,7 @@ varargslist
 
 stmt
 :
-    small_stmt (';' small_stmt)* ';'? NEWLINE
+    small_stmt (';' small_stmt)* ';'? NEWLINE?
     | if_stmt
     | while_stmt
     | for_stmt
@@ -204,7 +204,6 @@ small_stmt
     )
     | (GLOBAL | NONLOCAL) NAME (',' NAME)*
     | ASSERT test (',' test)?
-    | // empty
 ;
 
 // used in ASSIGNMENTS

@@ -61,9 +61,6 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
     def visitComp_op(self, ctx: Python3Parser.Comp_opContext):
         return self.process(ctx)
 
-    def visitOr_test(self, ctx: Python3Parser.Or_testContext):
-        return self.process(ctx)
-
     def visitElse_suite(self, ctx: Python3Parser.Else_suiteContext):
         return self.process(ctx)
 
