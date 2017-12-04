@@ -1894,19 +1894,21 @@ class CPP14Parser(Parser):
             self.state = 117
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Asm) | (
-                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
-                1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                1 << CPP14Parser.Namespace) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
-                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (
-                1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.LeftParen) | (
-                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                1 << (CPP14Parser.Identifier - 66)))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (
+                    1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
+                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (
+                            1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (
+                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (
+                            1 << CPP14Parser.Struct) | (1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (
+                            1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                    1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                            1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                            1 << (CPP14Parser.Identifier - 66)))) != 0):
                 self.state = 114
                 self.declaration()
                 self.state = 119
@@ -2120,24 +2122,31 @@ class CPP14Parser(Parser):
                         self.state = 179
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                            1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                            1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                            1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                        1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                        1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                        1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                             1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                             1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                             1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                             1 << (CPP14Parser.Identifier - 66)) | (
+                                                             1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                             1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                             1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 165
                             self.templateargument()
                             self.state = 167
@@ -2263,23 +2272,28 @@ class CPP14Parser(Parser):
                     self.state = 225
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 211
                         self.templateargument()
                         self.state = 213
@@ -2386,23 +2400,28 @@ class CPP14Parser(Parser):
                     self.state = 248
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 234
                         self.templateargument()
                         self.state = 236
@@ -2502,24 +2521,31 @@ class CPP14Parser(Parser):
                         self.state = 290
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                            1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                            1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                            1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                        1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                        1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                        1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                             1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                             1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                             1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                             1 << (CPP14Parser.Identifier - 66)) | (
+                                                             1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                             1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                             1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 276
                             self.templateargument()
                             self.state = 278
@@ -2617,13 +2643,14 @@ class CPP14Parser(Parser):
             self.state = 314
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (
-                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
-                1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (
-                1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Specifier) | (
-                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Typename) | (
-                1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (
-                1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
+                            1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                            1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Specifier) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
+                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (
+                            1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
                 self.state = 303
                 self.parameterdeclaration()
                 self.state = 308
@@ -2714,12 +2741,11 @@ class CPP14Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
-                        1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                    1 << (CPP14Parser.Identifier - 66)))) != 0):
+                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 344
                     self.abstractdeclarator()
 
@@ -2861,32 +2887,32 @@ class CPP14Parser(Parser):
                                 self.state = 379
                                 self._errHandler.sync(self)
                                 _la = self._input.LA(1)
-                                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                    1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
-                                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
-                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                        (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
+                                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                                                1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
+                                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                                1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                                1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                                1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                                1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                                1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                                1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
                                         (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                                (1 << (CPP14Parser.And - 66)) | (
-                                                                                1 << (CPP14Parser.Or - 66)) | (
-                                                                            1 << (CPP14Parser.Tilde - 66)) | (
-                                                                        1 << (CPP14Parser.Not - 66)) | (
-                                                                    1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                                1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                            1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                        1 << (CPP14Parser.Identifier - 66)) | (
-                                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                1 << (CPP14Parser.Identifier - 66)) | (
+                                                1 << (CPP14Parser.Numberliteral - 66)) | (
                                                 1 << (CPP14Parser.Characterliteral - 66)) | (
-                                            1 << (CPP14Parser.Stringliteral - 66)) | (
-                                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                                                1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                     self.state = 365
                                     self.templateargument()
                                     self.state = 367
@@ -2935,24 +2961,31 @@ class CPP14Parser(Parser):
                         self.state = 405
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                            1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                            1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                            1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                        1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                        1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                        1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                             1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                             1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                             1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                             1 << (CPP14Parser.Identifier - 66)) | (
+                                                             1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                             1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                             1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 391
                             self.templateargument()
                             self.state = 393
@@ -3000,24 +3033,31 @@ class CPP14Parser(Parser):
                         self.state = 429
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                            1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                            1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                            1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                        1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                        1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                        1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                             1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                             1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                             1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                             1 << (CPP14Parser.Identifier - 66)) | (
+                                                             1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                             1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                             1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 415
                             self.templateargument()
                             self.state = 417
@@ -3141,22 +3181,28 @@ class CPP14Parser(Parser):
                     self.state = 486
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                        1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                            1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                                    1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                    1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                    1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (
+                                    1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
+                                    1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                    1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                            (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                         1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                         1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                         1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                         1 << (CPP14Parser.Identifier - 66)) | (
+                                                         1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                         1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                         1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                         1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                         1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 468
                         self._errHandler.sync(self)
                         token = self._input.LA(1)
@@ -3396,12 +3442,10 @@ class CPP14Parser(Parser):
                     _la = self._input.LA(1)
                     if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
                             (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Nullptr) | (
-                        1 << CPP14Parser.This))) != 0) or ((((_la - 103)) & ~0x3f) == 0 and ((1 << (_la - 103)) & (
-                                    (1 << (CPP14Parser.Numberliteral - 103)) | (
-                                    1 << (CPP14Parser.Characterliteral - 103)) | (
-                                1 << (CPP14Parser.Stringliteral - 103)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 103)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 103)))) != 0)):
+                            1 << CPP14Parser.This))) != 0) or ((((_la - 103)) & ~0x3f) == 0 and ((1 << (_la - 103)) & (
+                            (1 << (CPP14Parser.Numberliteral - 103)) | (1 << (CPP14Parser.Characterliteral - 103)) | (
+                            1 << (CPP14Parser.Stringliteral - 103)) | (1 << (CPP14Parser.Userdefinedliteral - 103)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 103)))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -3473,7 +3517,7 @@ class CPP14Parser(Parser):
                             _la = self._input.LA(1)
                             if ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
                                     (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBrace - 54)) | (
-                                1 << (CPP14Parser.Assign - 54)))) != 0):
+                                    1 << (CPP14Parser.Assign - 54)))) != 0):
                                 self.state = 513
                                 self.initializer()
 
@@ -3516,7 +3560,7 @@ class CPP14Parser(Parser):
                                 _la = self._input.LA(1)
                                 if ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
                                         (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBrace - 54)) | (
-                                    1 << (CPP14Parser.Assign - 54)))) != 0):
+                                        1 << (CPP14Parser.Assign - 54)))) != 0):
                                     self.state = 527
                                     self.initializer()
 
@@ -3553,32 +3597,41 @@ class CPP14Parser(Parser):
                     self.state = 551
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (
-                        1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (1 << CPP14Parser.Class) | (
-                        1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (
-                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (
-                        1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (1 << CPP14Parser.If) | (
-                        1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                        1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
-                        1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
-                        1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
-                        1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (
-                        1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                        1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
-                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                        1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
-                        1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                        1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                        1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (
+                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
+                                    1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                                    1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (
+                                    1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (
+                                    1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                                    1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (
+                                    1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                                    1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Static_assert) | (
+                                    1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (1 << CPP14Parser.Typeid) | (
+                                    1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (
+                                    1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
+                                    1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                    1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                    1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                            (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                         1 << (CPP14Parser.AndAnd - 66)) | (
+                                                         1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                         1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                         1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                         1 << (CPP14Parser.Semi - 66)) | (
+                                                         1 << (CPP14Parser.Ellipsis - 66)) | (
+                                                         1 << (CPP14Parser.Identifier - 66)) | (
+                                                         1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                         1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                         1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                         1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                         1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 548
                         self.statement()
                         self.state = 553
@@ -3626,31 +3679,31 @@ class CPP14Parser(Parser):
                             self.state = 578
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
-                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                                1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                                1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                                1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                                1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                            (1 << (CPP14Parser.And - 66)) | (
-                                                                            1 << (CPP14Parser.Or - 66)) | (
-                                                                        1 << (CPP14Parser.Tilde - 66)) | (
-                                                                    1 << (CPP14Parser.Not - 66)) | (
-                                                                1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                            1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                        1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                    1 << (CPP14Parser.Identifier - 66)) | (
-                                                1 << (CPP14Parser.Numberliteral - 66)) | (
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                            1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                            1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                            1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
+                                            1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                            1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                    (1 << (_la - 66)) & (
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                    1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)) | (
+                                            1 << (CPP14Parser.Numberliteral - 66)) | (
                                             1 << (CPP14Parser.Characterliteral - 66)) | (
-                                        1 << (CPP14Parser.Stringliteral - 66)) | (
-                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                                            1 << (CPP14Parser.Stringliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                 self.state = 564
                                 self.templateargument()
                                 self.state = 566
@@ -3696,23 +3749,28 @@ class CPP14Parser(Parser):
                         self.state = 606
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                            1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                            1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                            1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                        1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                        1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
+                                        1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (
+                                        1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                        1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                        1 << (CPP14Parser.Numberliteral - 66)) | (
+                                        1 << (CPP14Parser.Characterliteral - 66)) | (
+                                        1 << (CPP14Parser.Stringliteral - 66)) | (
+                                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 588
                             self._errHandler.sync(self)
                             token = self._input.LA(1)
@@ -3837,12 +3895,12 @@ class CPP14Parser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                 1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                 (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                        1 << (CPP14Parser.Identifier - 66)))) != 0):
                             self.state = 625
                             self.abstractdeclarator()
 
@@ -3924,12 +3982,12 @@ class CPP14Parser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                 1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                 (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                        1 << (CPP14Parser.Identifier - 66)))) != 0):
                             self.state = 664
                             self.abstractdeclarator()
 
@@ -3999,21 +4057,23 @@ class CPP14Parser(Parser):
             self.state = 691
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
-                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                            1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
+                            1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                    1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
+                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
+                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
+                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                 self.state = 683
                 self.assignmentexpression()
                 self.state = 688
@@ -4136,10 +4196,10 @@ class CPP14Parser(Parser):
                     self.state = 698
                     _la = self._input.LA(1)
                     if not (((((_la - 60)) & ~0x3f) == 0 and ((1 << (_la - 60)) & (
-                                            (1 << (CPP14Parser.Plus - 60)) | (1 << (CPP14Parser.Minus - 60)) | (
-                                        1 << (CPP14Parser.Star - 60)) | (1 << (CPP14Parser.And - 60)) | (
-                                1 << (CPP14Parser.Or - 60)) | (1 << (CPP14Parser.Tilde - 60)) | (
-                        1 << (CPP14Parser.Not - 60)))) != 0)):
+                            (1 << (CPP14Parser.Plus - 60)) | (1 << (CPP14Parser.Minus - 60)) | (
+                            1 << (CPP14Parser.Star - 60)) | (1 << (CPP14Parser.And - 60)) | (
+                                    1 << (CPP14Parser.Or - 60)) | (1 << (CPP14Parser.Tilde - 60)) | (
+                                    1 << (CPP14Parser.Not - 60)))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -4180,12 +4240,12 @@ class CPP14Parser(Parser):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                     1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                     (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                                1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)))) != 0):
                                 self.state = 711
                                 self.abstractdeclarator()
 
@@ -4257,12 +4317,11 @@ class CPP14Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
-                        1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                    1 << (CPP14Parser.Identifier - 66)))) != 0):
+                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 742
                     self.abstractdeclarator()
 
@@ -4408,12 +4467,12 @@ class CPP14Parser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                 1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                 (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                        1 << (CPP14Parser.Identifier - 66)))) != 0):
                             self.state = 776
                             self.abstractdeclarator()
 
@@ -4509,7 +4568,7 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
-                                (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBracket - 54)) | (
+                            (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBracket - 54)) | (
                             1 << (CPP14Parser.Arrow - 54)) | (1 << (CPP14Parser.Dot - 54)))) != 0):
                         self.state = 795
                         self.postoperation()
@@ -4751,12 +4810,11 @@ class CPP14Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
-                        1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                    1 << (CPP14Parser.Identifier - 66)))) != 0):
+                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 862
                     self.abstractdeclarator()
 
@@ -4775,21 +4833,25 @@ class CPP14Parser(Parser):
                 self.state = 890
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                    1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                    1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                    1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                    1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                    1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                    1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (
+                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
+                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
+                                1 << (CPP14Parser.Stringliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                     self.state = 872
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -5168,12 +5230,12 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                             1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                             (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                    1 << (CPP14Parser.Identifier - 66)))) != 0):
                         self.state = 976
                         self.abstractdeclarator()
 
@@ -5287,12 +5349,12 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                             1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                             (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                    1 << (CPP14Parser.Identifier - 66)))) != 0):
                         self.state = 1001
                         self.abstractdeclarator()
 
@@ -5389,12 +5451,12 @@ class CPP14Parser(Parser):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                     1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                     (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                                1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)))) != 0):
                                 self.state = 1036
                                 self.abstractdeclarator()
 
@@ -5428,7 +5490,7 @@ class CPP14Parser(Parser):
                     self.state = 1053
                     _la = self._input.LA(1)
                     if not (((((_la - 71)) & ~0x3f) == 0 and ((1 << (_la - 71)) & (
-                                (1 << (CPP14Parser.Less - 71)) | (1 << (CPP14Parser.Greater - 71)) | (
+                            (1 << (CPP14Parser.Less - 71)) | (1 << (CPP14Parser.Greater - 71)) | (
                             1 << (CPP14Parser.LessEqual - 71)) | (1 << (CPP14Parser.GreaterEqual - 71)))) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
@@ -5470,12 +5532,12 @@ class CPP14Parser(Parser):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                     1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                     (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                                1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)))) != 0):
                                 self.state = 1066
                                 self.abstractdeclarator()
 
@@ -5572,13 +5634,13 @@ class CPP14Parser(Parser):
                                     self._errHandler.sync(self)
                                     _la = self._input.LA(1)
                                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                             1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                             (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                                1 << (CPP14Parser.Doublecolon - 66)) | (
-                                            1 << (CPP14Parser.Ellipsis - 66)) | (
-                                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                    1 << (CPP14Parser.Ellipsis - 66)) | (
+                                                    1 << (CPP14Parser.Identifier - 66)))) != 0):
                                         self.state = 1101
                                         self.abstractdeclarator()
 
@@ -5808,15 +5870,14 @@ class CPP14Parser(Parser):
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & (
-                            (1 << (CPP14Parser.Caret - 65)) | (1 << (CPP14Parser.And - 65)) | (
-                        1 << (CPP14Parser.Or - 65)) | (1 << (CPP14Parser.AndAnd - 65)) | (
-                1 << (CPP14Parser.OrOr - 65)))) != 0):
+                    (1 << (CPP14Parser.Caret - 65)) | (1 << (CPP14Parser.And - 65)) | (1 << (CPP14Parser.Or - 65)) | (
+                    1 << (CPP14Parser.AndAnd - 65)) | (1 << (CPP14Parser.OrOr - 65)))) != 0):
                 self.state = 1151
                 _la = self._input.LA(1)
                 if not (((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & (
-                                (1 << (CPP14Parser.Caret - 65)) | (1 << (CPP14Parser.And - 65)) | (
-                            1 << (CPP14Parser.Or - 65)) | (1 << (CPP14Parser.AndAnd - 65)) | (
-                    1 << (CPP14Parser.OrOr - 65)))) != 0)):
+                        (1 << (CPP14Parser.Caret - 65)) | (1 << (CPP14Parser.And - 65)) | (
+                        1 << (CPP14Parser.Or - 65)) | (1 << (CPP14Parser.AndAnd - 65)) | (
+                                1 << (CPP14Parser.OrOr - 65)))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6037,12 +6098,12 @@ class CPP14Parser(Parser):
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1180
                 _la = self._input.LA(1)
-                if not (((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & ((1 << (CPP14Parser.Assign - 70)) | (
-                    1 << (CPP14Parser.PlusAssign - 70)) | (1 << (CPP14Parser.MinusAssign - 70)) | (
-                    1 << (CPP14Parser.StarAssign - 70)) | (1 << (CPP14Parser.DivAssign - 70)) | (
-                    1 << (CPP14Parser.ModAssign - 70)) | (1 << (CPP14Parser.XorAssign - 70)) | (
-                    1 << (CPP14Parser.AndAssign - 70)) | (1 << (CPP14Parser.OrAssign - 70)) | (
-                    1 << (CPP14Parser.LeftShiftAssign - 70)))) != 0)):
+                if not (((((_la - 70)) & ~0x3f) == 0 and ((1 << (_la - 70)) & (
+                        (1 << (CPP14Parser.Assign - 70)) | (1 << (CPP14Parser.PlusAssign - 70)) | (
+                        1 << (CPP14Parser.MinusAssign - 70)) | (1 << (CPP14Parser.StarAssign - 70)) | (
+                                1 << (CPP14Parser.DivAssign - 70)) | (1 << (CPP14Parser.ModAssign - 70)) | (
+                                1 << (CPP14Parser.XorAssign - 70)) | (1 << (CPP14Parser.AndAssign - 70)) | (
+                                1 << (CPP14Parser.OrAssign - 70)) | (1 << (CPP14Parser.LeftShiftAssign - 70)))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6224,21 +6285,26 @@ class CPP14Parser(Parser):
                     self.state = 1211
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                        1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                        1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                        (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
-                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                        1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                        1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                        1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                            1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                                    1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                    1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                    1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (
+                                    1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 1203
                         self.assignmentexpression()
                         self.state = 1208
@@ -6263,32 +6329,41 @@ class CPP14Parser(Parser):
                     self.state = 1218
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (
-                        1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (1 << CPP14Parser.Class) | (
-                        1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (
-                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (
-                        1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (1 << CPP14Parser.If) | (
-                        1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                        1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
-                        1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
-                        1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
-                        1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (
-                        1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                        1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
-                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                        1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
-                        1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                        1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                        1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (
+                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
+                                    1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                                    1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (
+                                    1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (
+                                    1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                                    1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (
+                                    1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                                    1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Static_assert) | (
+                                    1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (1 << CPP14Parser.Typeid) | (
+                                    1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (
+                                    1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
+                                    1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                    1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                    1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                            (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                         1 << (CPP14Parser.AndAnd - 66)) | (
+                                                         1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                         1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                         1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                         1 << (CPP14Parser.Semi - 66)) | (
+                                                         1 << (CPP14Parser.Ellipsis - 66)) | (
+                                                         1 << (CPP14Parser.Identifier - 66)) | (
+                                                         1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                         1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                         1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                         1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                         1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 1215
                         self.statement()
                         self.state = 1220
@@ -6364,29 +6439,29 @@ class CPP14Parser(Parser):
                             self.state = 1255
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
-                                1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                            (1 << (CPP14Parser.And - 66)) | (
-                                                                            1 << (CPP14Parser.Or - 66)) | (
-                                                                        1 << (CPP14Parser.Tilde - 66)) | (
-                                                                    1 << (CPP14Parser.Not - 66)) | (
-                                                                1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                            1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                        1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                    1 << (CPP14Parser.Identifier - 66)) | (
-                                                1 << (CPP14Parser.Numberliteral - 66)) | (
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                            1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
+                                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                            1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                    (1 << (_la - 66)) & (
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                    1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)) | (
+                                            1 << (CPP14Parser.Numberliteral - 66)) | (
                                             1 << (CPP14Parser.Characterliteral - 66)) | (
-                                        1 << (CPP14Parser.Stringliteral - 66)) | (
-                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                                            1 << (CPP14Parser.Stringliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                 self.state = 1247
                                 self.assignmentexpression()
                                 self.state = 1252
@@ -6413,32 +6488,33 @@ class CPP14Parser(Parser):
                         self.state = 1262
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (
-                            1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
-                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                            1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                            1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Inline) | (
-                            1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.New) | (
-                            1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                            1 << CPP14Parser.Specifier) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                            1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                            1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.LeftParen) | (
-                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                        (1 << (CPP14Parser.And - 66)) | (
-                                                                        1 << (CPP14Parser.Or - 66)) | (
-                                                                    1 << (CPP14Parser.Tilde - 66)) | (
-                                                                1 << (CPP14Parser.Not - 66)) | (
-                                                            1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                        1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                    1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                1 << (CPP14Parser.Identifier - 66)) | (
-                                            1 << (CPP14Parser.Numberliteral - 66)) | (
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
+                                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                                        1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
+                                        1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                        1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (
+                                        1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                                        1 << CPP14Parser.Mutable) | (1 << CPP14Parser.New) | (
+                                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                        1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                        1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                        1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                        1 << CPP14Parser.Virtual) | (1 << CPP14Parser.LeftParen) | (
+                                        1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                        1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                        1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                        1 << (CPP14Parser.Numberliteral - 66)) | (
                                         1 << (CPP14Parser.Characterliteral - 66)) | (
-                                    1 << (CPP14Parser.Stringliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                                        1 << (CPP14Parser.Stringliteral - 66)) | (
+                                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 1261
                             self.condition()
 
@@ -6447,28 +6523,29 @@ class CPP14Parser(Parser):
                         self.state = 1273
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                            1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                        (1 << (CPP14Parser.And - 66)) | (
-                                                                        1 << (CPP14Parser.Or - 66)) | (
-                                                                    1 << (CPP14Parser.Tilde - 66)) | (
-                                                                1 << (CPP14Parser.Not - 66)) | (
-                                                            1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                        1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                    1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                1 << (CPP14Parser.Identifier - 66)) | (
-                                            1 << (CPP14Parser.Numberliteral - 66)) | (
-                                        1 << (CPP14Parser.Characterliteral - 66)) | (
-                                    1 << (CPP14Parser.Stringliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                        1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                        1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
+                                        1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                             1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                             1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                             1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                             1 << (CPP14Parser.Identifier - 66)) | (
+                                                             1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                             1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                             1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 1265
                             self.assignmentexpression()
                             self.state = 1270
@@ -6601,29 +6678,29 @@ class CPP14Parser(Parser):
                             self.state = 1319
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
-                                1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                            (1 << (CPP14Parser.And - 66)) | (
-                                                                            1 << (CPP14Parser.Or - 66)) | (
-                                                                        1 << (CPP14Parser.Tilde - 66)) | (
-                                                                    1 << (CPP14Parser.Not - 66)) | (
-                                                                1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                            1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                        1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                    1 << (CPP14Parser.Identifier - 66)) | (
-                                                1 << (CPP14Parser.Numberliteral - 66)) | (
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                            1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
+                                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                            1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                    (1 << (_la - 66)) & (
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                    1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)) | (
+                                            1 << (CPP14Parser.Numberliteral - 66)) | (
                                             1 << (CPP14Parser.Characterliteral - 66)) | (
-                                        1 << (CPP14Parser.Stringliteral - 66)) | (
-                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                                            1 << (CPP14Parser.Stringliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                 self.state = 1311
                                 self.assignmentexpression()
                                 self.state = 1316
@@ -7150,14 +7227,16 @@ class CPP14Parser(Parser):
                         self.state = 1427
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                            1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
-                            1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                            1 << CPP14Parser.Specifier) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Struct) | (1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (
-                            1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (
-                            1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
+                                        1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                                        1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Specifier) | (
+                                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (
+                                        1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (
+                                        1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
                             self.state = 1419
                             self.templateparameter()
                             self.state = 1424
@@ -7231,20 +7310,22 @@ class CPP14Parser(Parser):
                 self.state = 1452
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Asm) | (
-                    1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
-                    1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                    1 << CPP14Parser.Namespace) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
-                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (
-                    1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                    1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.LeftParen) | (
-                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                                    1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                    1 << (CPP14Parser.Identifier - 66)))) != 0):
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (
+                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
+                                1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (
+                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (
+                                1 << CPP14Parser.Struct) | (1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (
+                                1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (
+                                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                        (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                        1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                     1 << (CPP14Parser.Semi - 66)) | (
+                                                     1 << (CPP14Parser.Ellipsis - 66)) | (
+                                                     1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 1449
                     self.declaration()
                     self.state = 1454
@@ -7484,12 +7565,12 @@ class CPP14Parser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                                 1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                                 (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)))) != 0):
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                        1 << (CPP14Parser.Identifier - 66)))) != 0):
                             self.state = 1508
                             self.abstractdeclarator()
 
@@ -7555,12 +7636,12 @@ class CPP14Parser(Parser):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                                (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
-                                                            1 << CPP14Parser.ConstOrVolatile) | (
-                                                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
-                                                1 << CPP14Parser.Types) | (1 << CPP14Parser.SignedUnsigned) | (
-                                        1 << CPP14Parser.Struct) | (1 << CPP14Parser.Typename) | (
-                                1 << CPP14Parser.Union))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier):
+                                    (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
+                                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.Types) | (
+                                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
+                                            1 << CPP14Parser.Typename) | (
+                                            1 << CPP14Parser.Union))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier):
                                 break
 
                         self.state = 1540
@@ -7673,11 +7754,11 @@ class CPP14Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.LeftParen) | (
-                    1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                                1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
+                        (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.LeftParen) | (
+                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                        1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                                1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 1563
                     self.declarator()
                     self.state = 1565
@@ -7685,7 +7766,7 @@ class CPP14Parser(Parser):
                     _la = self._input.LA(1)
                     if ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
                             (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBrace - 54)) | (
-                        1 << (CPP14Parser.Assign - 54)))) != 0):
+                            1 << (CPP14Parser.Assign - 54)))) != 0):
                         self.state = 1564
                         self.initializer()
 
@@ -7702,7 +7783,7 @@ class CPP14Parser(Parser):
                         _la = self._input.LA(1)
                         if ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
                                 (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBrace - 54)) | (
-                            1 << (CPP14Parser.Assign - 54)))) != 0):
+                                1 << (CPP14Parser.Assign - 54)))) != 0):
                             self.state = 1569
                             self.initializer()
 
@@ -7762,7 +7843,7 @@ class CPP14Parser(Parser):
                 _la = self._input.LA(1)
                 if ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
                         (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBrace - 54)) | (
-                    1 << (CPP14Parser.Assign - 54)))) != 0):
+                        1 << (CPP14Parser.Assign - 54)))) != 0):
                     self.state = 1599
                     self.initializer()
 
@@ -7779,7 +7860,7 @@ class CPP14Parser(Parser):
                     _la = self._input.LA(1)
                     if ((((_la - 54)) & ~0x3f) == 0 and ((1 << (_la - 54)) & (
                             (1 << (CPP14Parser.LeftParen - 54)) | (1 << (CPP14Parser.LeftBrace - 54)) | (
-                        1 << (CPP14Parser.Assign - 54)))) != 0):
+                            1 << (CPP14Parser.Assign - 54)))) != 0):
                         self.state = 1604
                         self.initializer()
 
@@ -7846,7 +7927,7 @@ class CPP14Parser(Parser):
                 self.state = 1616
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Mutable) | (
+                        (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Mutable) | (
                         1 << CPP14Parser.Specifier) | (1 << CPP14Parser.Virtual))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
@@ -8000,24 +8081,31 @@ class CPP14Parser(Parser):
                         self.state = 1647
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
-                            1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                            1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
-                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                            1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                            1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                        1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                        1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                        1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                                        1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                        1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                             1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                             1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                             1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                             1 << (CPP14Parser.Identifier - 66)) | (
+                                                             1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                             1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                             1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                             1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 1633
                             self.templateargument()
                             self.state = 1635
@@ -8062,8 +8150,8 @@ class CPP14Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Decltype) | (
-                    1 << CPP14Parser.PrivateProtectedPublic) | (1 << CPP14Parser.Virtual) | (
-                    1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
+                        1 << CPP14Parser.PrivateProtectedPublic) | (1 << CPP14Parser.Virtual) | (
+                                                                    1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
                     self.state = 1658
                     self.basespecifier()
                     self.state = 1660
@@ -8097,20 +8185,23 @@ class CPP14Parser(Parser):
                 self.state = 1676
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
-                    1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (
-                    1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Operator) | (
-                    1 << CPP14Parser.PrivateProtectedPublic) | (1 << CPP14Parser.Specifier) | (
-                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (
-                    1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                    1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.LeftParen) | (
-                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                                        1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Colon - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
-                        1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                        1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
+                                1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                                1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Operator) | (
+                                1 << CPP14Parser.PrivateProtectedPublic) | (1 << CPP14Parser.Specifier) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (
+                                1 << CPP14Parser.Struct) | (1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (
+                                1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (
+                                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                        (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                        1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Colon - 66)) | (
+                                                     1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                     1 << (CPP14Parser.Semi - 66)) | (
+                                                     1 << (CPP14Parser.Ellipsis - 66)) | (
+                                                     1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 1675
                     self.memberspecification()
 
@@ -8180,12 +8271,12 @@ class CPP14Parser(Parser):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                                            (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
-                                                        1 << CPP14Parser.ConstOrVolatile) | (
-                                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
-                                            1 << CPP14Parser.Types) | (1 << CPP14Parser.SignedUnsigned) | (
-                                    1 << CPP14Parser.Struct) | (1 << CPP14Parser.Typename) | (
-                            1 << CPP14Parser.Union))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier):
+                                (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                                1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
+                                        1 << CPP14Parser.Enum) | (1 << CPP14Parser.Types) | (
+                                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
+                                        1 << CPP14Parser.Typename) | (
+                                        1 << CPP14Parser.Union))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier):
                             break
 
                     self.state = 1706
@@ -8382,23 +8473,28 @@ class CPP14Parser(Parser):
                     self.state = 1770
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 1756
                         self.templateargument()
                         self.state = 1758
@@ -8475,23 +8571,28 @@ class CPP14Parser(Parser):
                     self.state = 1802
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 1788
                         self.templateargument()
                         self.state = 1790
@@ -8615,23 +8716,28 @@ class CPP14Parser(Parser):
                     self.state = 1829
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 1815
                         self.templateargument()
                         self.state = 1817
@@ -8678,22 +8784,28 @@ class CPP14Parser(Parser):
                 self.state = 1852
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                    1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                    1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                    1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                    1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                    1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                        1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
+                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.TrueFalse) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                        (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                                     1 << (CPP14Parser.PlusPlus - 66)) | (
+                                                     1 << (CPP14Parser.MinusMinus - 66)) | (
+                                                     1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                     1 << (CPP14Parser.Identifier - 66)) | (
+                                                     1 << (CPP14Parser.Numberliteral - 66)) | (
+                                                     1 << (CPP14Parser.Characterliteral - 66)) | (
+                                                     1 << (CPP14Parser.Stringliteral - 66)) | (
+                                                     1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                                     1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                     self.state = 1838
                     self.templateargument()
                     self.state = 1840
@@ -8868,7 +8980,7 @@ class CPP14Parser(Parser):
                         _la = self._input.LA(1)
                         while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
                                 (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                            1 << CPP14Parser.LeftBrace))) != 0):
+                                1 << CPP14Parser.LeftBrace))) != 0):
                             self.state = 1881
                             self.balancedtoken()
                             self.state = 1886
@@ -8917,7 +9029,7 @@ class CPP14Parser(Parser):
                             _la = self._input.LA(1)
                             while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
                                     (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                                1 << CPP14Parser.LeftBrace))) != 0):
+                                    1 << CPP14Parser.LeftBrace))) != 0):
                                 self.state = 1902
                                 self.balancedtoken()
                                 self.state = 1907
@@ -9049,7 +9161,7 @@ class CPP14Parser(Parser):
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
                         (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                    1 << CPP14Parser.LeftBrace))) != 0):
+                        1 << CPP14Parser.LeftBrace))) != 0):
                     self.state = 1950
                     self.balancedtoken()
                     self.state = 1955
@@ -9068,7 +9180,7 @@ class CPP14Parser(Parser):
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
                         (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                    1 << CPP14Parser.LeftBrace))) != 0):
+                        1 << CPP14Parser.LeftBrace))) != 0):
                     self.state = 1958
                     self.balancedtoken()
                     self.state = 1963
@@ -9087,7 +9199,7 @@ class CPP14Parser(Parser):
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
                         (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                    1 << CPP14Parser.LeftBrace))) != 0):
+                        1 << CPP14Parser.LeftBrace))) != 0):
                     self.state = 1966
                     self.balancedtoken()
                     self.state = 1971
@@ -9244,23 +9356,28 @@ class CPP14Parser(Parser):
                             self.state = 2001
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
-                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
-                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                                1 << (CPP14Parser.Stringliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                            1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                    1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)) | (
+                                            1 << (CPP14Parser.Numberliteral - 66)) | (
+                                            1 << (CPP14Parser.Characterliteral - 66)) | (
+                                            1 << (CPP14Parser.Stringliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                 self.state = 2000
                                 self.conditionalexpression()
 
@@ -9459,23 +9576,28 @@ class CPP14Parser(Parser):
                             self.state = 2058
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
-                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
-                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                                1 << (CPP14Parser.Stringliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                            1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                    1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)) | (
+                                            1 << (CPP14Parser.Numberliteral - 66)) | (
+                                            1 << (CPP14Parser.Characterliteral - 66)) | (
+                                            1 << (CPP14Parser.Stringliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                 self.state = 2057
                                 self.conditionalexpression()
 
@@ -9618,13 +9740,14 @@ class CPP14Parser(Parser):
             self.state = 2112
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (
-                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
-                1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (
-                1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Specifier) | (
-                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Typename) | (
-                1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (
-                1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
+                            1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                            1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Specifier) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
+                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.Virtual) | (
+                            1 << CPP14Parser.LeftBracket))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
                 self.state = 2101
                 self.parameterdeclaration()
                 self.state = 2106
@@ -9830,8 +9953,8 @@ class CPP14Parser(Parser):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la == CPP14Parser.Decltype or _la == CPP14Parser.Star or ((((_la - 66)) & ~0x3f) == 0 and (
-                    (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
+                        (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
                     self.state = 2179
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -9913,23 +10036,28 @@ class CPP14Parser(Parser):
                             self.state = 2188
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
-                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                                1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
-                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
-                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                                1 << (CPP14Parser.Stringliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                            1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                    1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                            1 << (CPP14Parser.Doublecolon - 66)) | (
+                                            1 << (CPP14Parser.Identifier - 66)) | (
+                                            1 << (CPP14Parser.Numberliteral - 66)) | (
+                                            1 << (CPP14Parser.Characterliteral - 66)) | (
+                                            1 << (CPP14Parser.Stringliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                                 self.state = 2187
                                 self.conditionalexpression()
 
@@ -10146,26 +10274,24 @@ class CPP14Parser(Parser):
                 self.state = 2239
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                    1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                (1 << (CPP14Parser.And - 66)) | (
-                                                                1 << (CPP14Parser.Or - 66)) | (
-                                                            1 << (CPP14Parser.Tilde - 66)) | (
-                                                        1 << (CPP14Parser.Not - 66)) | (
-                                                    1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                1 << (CPP14Parser.MinusMinus - 66)) | (
-                                            1 << (CPP14Parser.Doublecolon - 66)) | (
-                                        1 << (CPP14Parser.Identifier - 66)) | (
-                                    1 << (CPP14Parser.Numberliteral - 66)) | (
-                                1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
+                                1 << (CPP14Parser.Stringliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                     self.state = 2238
                     self.conditionalexpression()
 
@@ -10221,28 +10347,27 @@ class CPP14Parser(Parser):
                         self.state = 2258
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (
-                            1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (
-                            1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
-                            1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
-                            1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
-                            1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
-                            1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
-                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                        (1 << (CPP14Parser.And - 66)) | (
-                                                                        1 << (CPP14Parser.Or - 66)) | (
-                                                                    1 << (CPP14Parser.Tilde - 66)) | (
-                                                                1 << (CPP14Parser.Not - 66)) | (
-                                                            1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                        1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                    1 << (CPP14Parser.Doublecolon - 66)) | (
-                                                1 << (CPP14Parser.Identifier - 66)) | (
-                                            1 << (CPP14Parser.Numberliteral - 66)) | (
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                                (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                                1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (
+                                        1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                        1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (
+                                        1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                        1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                        1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                                (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                                (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                                1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                        1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                        1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                        1 << (CPP14Parser.Numberliteral - 66)) | (
                                         1 << (CPP14Parser.Characterliteral - 66)) | (
-                                    1 << (CPP14Parser.Stringliteral - 66)) | (
-                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                                        1 << (CPP14Parser.Stringliteral - 66)) | (
+                                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                             self.state = 2257
                             self.conditionalexpression()
 
@@ -10489,32 +10614,35 @@ class CPP14Parser(Parser):
                 self.state = 2323
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (
-                    1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (1 << CPP14Parser.Class) | (
-                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (
-                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (
-                    1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (
-                    1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (1 << CPP14Parser.If) | (
-                    1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                    1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
-                    1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
-                    1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
-                    1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (
-                    1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (
-                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                    1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
-                    1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                    1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                    1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                    1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                    1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                    1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                    1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                    1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (
+                        1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
+                                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                                1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (1 << CPP14Parser.Decltype) | (
+                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (1 << CPP14Parser.Enum) | (
+                                1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (
+                                1 << CPP14Parser.Goto) | (1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (
+                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                                1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (
+                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Static_assert) | (
+                                1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (1 << CPP14Parser.This) | (
+                                1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (1 << CPP14Parser.Typeid) | (
+                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (
+                                1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (1 << CPP14Parser.LeftParen) | (
+                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
+                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
+                                1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                                1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
+                                1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                     self.state = 2320
                     self.statement()
                     self.state = 2325
@@ -10567,32 +10695,35 @@ class CPP14Parser(Parser):
                 self.state = 2349
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (
-                    1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (1 << CPP14Parser.Class) | (
-                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (
-                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (
-                    1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (
-                    1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (1 << CPP14Parser.If) | (
-                    1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (
-                    1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
-                    1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
-                    1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
-                    1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (
-                    1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (
-                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                    1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
-                    1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                    1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                    1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                    1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                    1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                    1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                    1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                    1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (
+                        1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
+                                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                                1 << CPP14Parser.Cast) | (1 << CPP14Parser.Continue) | (1 << CPP14Parser.Decltype) | (
+                                1 << CPP14Parser.Delete) | (1 << CPP14Parser.Do) | (1 << CPP14Parser.Enum) | (
+                                1 << CPP14Parser.Extern) | (1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (
+                                1 << CPP14Parser.Goto) | (1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (
+                                1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                1 << CPP14Parser.Operator) | (1 << CPP14Parser.Specifier) | (
+                                1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (
+                                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Static_assert) | (
+                                1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (1 << CPP14Parser.This) | (
+                                1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (1 << CPP14Parser.Typeid) | (
+                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (
+                                1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (1 << CPP14Parser.LeftParen) | (
+                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
+                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
+                                1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                                1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
+                                1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                     self.state = 2346
                     self.statement()
                     self.state = 2351
@@ -10820,21 +10951,23 @@ class CPP14Parser(Parser):
             self.state = 2418
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                    (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                            1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                            1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
+                            1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                            1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                    1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
+                            1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
+                            1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
+                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
+                            1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                 self.state = 2397
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -11082,14 +11215,14 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                        (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Decltype) | (
-                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.LeftParen) | (
-                            1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                                        1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Colon - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                            (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Operator) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                                    1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
+                            (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                            1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Colon - 66)) | (
+                                                         1 << (CPP14Parser.Doublecolon - 66)) | (
+                                                         1 << (CPP14Parser.Ellipsis - 66)) | (
+                                                         1 << (CPP14Parser.Identifier - 66)))) != 0):
                         self.state = 2441
                         self.memberdeclarator()
 
@@ -11243,12 +11376,12 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                             1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                             (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                    1 << (CPP14Parser.Identifier - 66)))) != 0):
                         self.state = 2508
                         self.abstractdeclarator()
 
@@ -11273,19 +11406,21 @@ class CPP14Parser(Parser):
             self.state = 2521
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (
-                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (
-                1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (
-                1 << CPP14Parser.Types) | (1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Operator) | (
-                1 << CPP14Parser.PrivateProtectedPublic) | (1 << CPP14Parser.Specifier) | (
-                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (
-                1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
-                1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.LeftParen) | (
-                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and (
-                (1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Colon - 66)) | (
-                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
-                1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
+                            1 << CPP14Parser.Extern) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                            1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Operator) | (
+                            1 << CPP14Parser.PrivateProtectedPublic) | (1 << CPP14Parser.Specifier) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Static_assert) | (
+                            1 << CPP14Parser.Struct) | (1 << CPP14Parser.Template) | (1 << CPP14Parser.Typename) | (
+                            1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                    1 << (CPP14Parser.AndAnd - 66)) | (1 << (CPP14Parser.Colon - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
+                            1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)))) != 0):
                 self.state = 2520
                 self.memberspecification()
 
@@ -11633,23 +11768,28 @@ class CPP14Parser(Parser):
                     self.state = 2597
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                        1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
-                        1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                        1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                        1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (
-                        1 << CPP14Parser.This) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                        1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                        1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                        1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
-                        1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.PlusPlus - 66)) | (
-                        1 << (CPP14Parser.MinusMinus - 66)) | (1 << (CPP14Parser.Doublecolon - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                        1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                        1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                            (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
+                            1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                                    1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.Enum) | (
+                                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
+                                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (
+                                    1 << CPP14Parser.Operator) | (1 << CPP14Parser.SignedUnsigned) | (
+                                    1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.This) | (
+                                    1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
+                                    1 << CPP14Parser.Union) | (1 << CPP14Parser.LeftParen) | (
+                                    1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Plus) | (
+                                    1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                            (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                            1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                    1 << (CPP14Parser.Numberliteral - 66)) | (
+                                    1 << (CPP14Parser.Characterliteral - 66)) | (
+                                    1 << (CPP14Parser.Stringliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                         self.state = 2583
                         self.templateargument()
                         self.state = 2585
@@ -11786,21 +11926,25 @@ class CPP14Parser(Parser):
                 self.state = 2643
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (
-                    1 << CPP14Parser.Cast) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                    1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (
-                    1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                    1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.This) | (
-                    1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                    1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
-                    1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
-                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & ((1 << (CPP14Parser.And - 66)) | (
-                    1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
-                    1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
-                    1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
-                    1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
-                    1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Cast) | (
+                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (1 << CPP14Parser.TrueFalse) | (
+                                1 << CPP14Parser.Types) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Noexcept) | (
+                                1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                                1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Typeid) | (
+                                1 << CPP14Parser.Typename) | (1 << CPP14Parser.LeftParen) | (
+                                1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.LeftBrace) | (
+                                1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star))) != 0) or (
+                        (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                        (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (
+                        1 << (CPP14Parser.Tilde - 66)) | (1 << (CPP14Parser.Not - 66)) | (
+                                1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                                1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
+                                1 << (CPP14Parser.Stringliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                     self.state = 2625
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -12025,12 +12169,12 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                             1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                             (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                    1 << (CPP14Parser.Identifier - 66)))) != 0):
                         self.state = 2671
                         self.abstractdeclarator()
 
@@ -12288,36 +12432,33 @@ class CPP14Parser(Parser):
             self.state = 2739
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (
-                1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
-                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                1 << CPP14Parser.Continue) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                1 << CPP14Parser.Do) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
-                1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (
-                1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
-                1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (
-                1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                1 << CPP14Parser.Specifier) | (1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (
-                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (
-                1 << CPP14Parser.Switch) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
-                1 << CPP14Parser.Try) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (
-                1 << CPP14Parser.While) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                        (1 << (CPP14Parser.And - 66)) | (
-                                                                        1 << (CPP14Parser.Or - 66)) | (
-                                                                    1 << (CPP14Parser.Tilde - 66)) | (
-                                                                1 << (CPP14Parser.Not - 66)) | (
-                                                            1 << (CPP14Parser.AndAnd - 66)) | (
-                                                        1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                    1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                1 << (CPP14Parser.Doublecolon - 66)) | (
-                                            1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                                    1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (
+                    1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
+                            1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                            1 << CPP14Parser.Continue) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                            1 << CPP14Parser.Do) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
+                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (
+                            1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                            1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (
+                            1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                            1 << CPP14Parser.Specifier) | (1 << CPP14Parser.Return) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                            1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (
+                            1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (
+                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                            1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                            1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                    1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
+                            1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                            1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
+                            1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                 self.state = 2736
                 self.statement()
                 self.state = 2741
@@ -12454,12 +12595,12 @@ class CPP14Parser(Parser):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
+                            (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.LeftParen) | (
                             1 << CPP14Parser.LeftBracket) | (1 << CPP14Parser.Star))) != 0) or (
                             (((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
-                                1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                        1 << (CPP14Parser.Identifier - 66)))) != 0):
+                            (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
+                                    1 << (CPP14Parser.Identifier - 66)))) != 0):
                         self.state = 2768
                         self.abstractdeclarator()
 
@@ -12480,36 +12621,33 @@ class CPP14Parser(Parser):
             self.state = 2781
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (
-                1 << CPP14Parser.Asm) | (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
-                1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
-                1 << CPP14Parser.Continue) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
-                1 << CPP14Parser.Do) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
-                1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (
-                1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
-                1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (
-                1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
-                1 << CPP14Parser.Specifier) | (1 << CPP14Parser.Return) | (1 << CPP14Parser.SignedUnsigned) | (
-                1 << CPP14Parser.Sizeof) | (1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (
-                1 << CPP14Parser.Switch) | (1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (
-                1 << CPP14Parser.Try) | (1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (
-                1 << CPP14Parser.Union) | (1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (
-                1 << CPP14Parser.While) | (1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
-                1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
-                1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
-                                                                        (1 << (CPP14Parser.And - 66)) | (
-                                                                        1 << (CPP14Parser.Or - 66)) | (
-                                                                    1 << (CPP14Parser.Tilde - 66)) | (
-                                                                1 << (CPP14Parser.Not - 66)) | (
-                                                            1 << (CPP14Parser.AndAnd - 66)) | (
-                                                        1 << (CPP14Parser.PlusPlus - 66)) | (
-                                                    1 << (CPP14Parser.MinusMinus - 66)) | (
-                                                1 << (CPP14Parser.Doublecolon - 66)) | (
-                                            1 << (CPP14Parser.Semi - 66)) | (1 << (CPP14Parser.Ellipsis - 66)) | (
-                                    1 << (CPP14Parser.Identifier - 66)) | (1 << (CPP14Parser.Numberliteral - 66)) | (
-                            1 << (CPP14Parser.Characterliteral - 66)) | (1 << (CPP14Parser.Stringliteral - 66)) | (
-                    1 << (CPP14Parser.Userdefinedliteral - 66)) | (
-                1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                    (1 << CPP14Parser.Alignas) | (1 << CPP14Parser.Alignof) | (1 << CPP14Parser.Asm) | (
+                    1 << CPP14Parser.Auto) | (1 << CPP14Parser.Break) | (1 << CPP14Parser.Case) | (
+                            1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Cast) | (
+                            1 << CPP14Parser.Continue) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Delete) | (
+                            1 << CPP14Parser.Do) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Extern) | (
+                            1 << CPP14Parser.TrueFalse) | (1 << CPP14Parser.For) | (1 << CPP14Parser.Goto) | (
+                            1 << CPP14Parser.If) | (1 << CPP14Parser.Inline) | (1 << CPP14Parser.Types) | (
+                            1 << CPP14Parser.Mutable) | (1 << CPP14Parser.Namespace) | (1 << CPP14Parser.New) | (
+                            1 << CPP14Parser.Noexcept) | (1 << CPP14Parser.Nullptr) | (1 << CPP14Parser.Operator) | (
+                            1 << CPP14Parser.Specifier) | (1 << CPP14Parser.Return) | (
+                            1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Sizeof) | (
+                            1 << CPP14Parser.Static_assert) | (1 << CPP14Parser.Struct) | (1 << CPP14Parser.Switch) | (
+                            1 << CPP14Parser.This) | (1 << CPP14Parser.Throw) | (1 << CPP14Parser.Try) | (
+                            1 << CPP14Parser.Typeid) | (1 << CPP14Parser.Typename) | (1 << CPP14Parser.Union) | (
+                            1 << CPP14Parser.Using) | (1 << CPP14Parser.Virtual) | (1 << CPP14Parser.While) | (
+                            1 << CPP14Parser.LeftParen) | (1 << CPP14Parser.LeftBracket) | (
+                            1 << CPP14Parser.LeftBrace) | (1 << CPP14Parser.Plus) | (1 << CPP14Parser.Minus) | (
+                            1 << CPP14Parser.Star))) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & (
+                    (1 << (CPP14Parser.And - 66)) | (1 << (CPP14Parser.Or - 66)) | (1 << (CPP14Parser.Tilde - 66)) | (
+                    1 << (CPP14Parser.Not - 66)) | (1 << (CPP14Parser.AndAnd - 66)) | (
+                            1 << (CPP14Parser.PlusPlus - 66)) | (1 << (CPP14Parser.MinusMinus - 66)) | (
+                            1 << (CPP14Parser.Doublecolon - 66)) | (1 << (CPP14Parser.Semi - 66)) | (
+                            1 << (CPP14Parser.Ellipsis - 66)) | (1 << (CPP14Parser.Identifier - 66)) | (
+                            1 << (CPP14Parser.Numberliteral - 66)) | (1 << (CPP14Parser.Characterliteral - 66)) | (
+                            1 << (CPP14Parser.Stringliteral - 66)) | (1 << (CPP14Parser.Userdefinedliteral - 66)) | (
+                            1 << (CPP14Parser.Userdefinedstringliteral - 66)))) != 0):
                 self.state = 2778
                 self.statement()
                 self.state = 2783
@@ -12583,11 +12721,12 @@ class CPP14Parser(Parser):
                 self.state = 2828
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (
-                    1 << CPP14Parser.ConstOrVolatile) | (1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (
-                    1 << CPP14Parser.Types) | (1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
-                    1 << CPP14Parser.Typename) | (
-                    1 << CPP14Parser.Union))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & (
+                        (1 << CPP14Parser.Auto) | (1 << CPP14Parser.Class) | (1 << CPP14Parser.ConstOrVolatile) | (
+                        1 << CPP14Parser.Decltype) | (1 << CPP14Parser.Enum) | (1 << CPP14Parser.Types) | (
+                                1 << CPP14Parser.SignedUnsigned) | (1 << CPP14Parser.Struct) | (
+                                1 << CPP14Parser.Typename) | (
+                                1 << CPP14Parser.Union))) != 0) or _la == CPP14Parser.Doublecolon or _la == CPP14Parser.Identifier:
                     self.state = 2789
                     self._errHandler.sync(self)
                     _alt = 1
@@ -12747,24 +12886,25 @@ class CPP14Parser(Parser):
                 self.state = 2840
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & (
-                                    (1 << CPP14Parser.Delete) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Plus) | (
-                            1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star) | (1 << CPP14Parser.Div))) != 0) or (
-                        (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (CPP14Parser.Mod - 64)) | (
-                    1 << (CPP14Parser.Caret - 64)) | (1 << (CPP14Parser.And - 64)) | (1 << (CPP14Parser.Or - 64)) | (
-                    1 << (CPP14Parser.Tilde - 64)) | (1 << (CPP14Parser.Not - 64)) | (
-                    1 << (CPP14Parser.Assign - 64)) | (1 << (CPP14Parser.Less - 64)) | (
-                    1 << (CPP14Parser.Greater - 64)) | (1 << (CPP14Parser.PlusAssign - 64)) | (
-                    1 << (CPP14Parser.MinusAssign - 64)) | (1 << (CPP14Parser.StarAssign - 64)) | (
-                    1 << (CPP14Parser.DivAssign - 64)) | (1 << (CPP14Parser.ModAssign - 64)) | (
-                    1 << (CPP14Parser.XorAssign - 64)) | (1 << (CPP14Parser.AndAssign - 64)) | (
-                    1 << (CPP14Parser.OrAssign - 64)) | (1 << (CPP14Parser.LeftShift - 64)) | (
-                    1 << (CPP14Parser.LeftShiftAssign - 64)) | (1 << (CPP14Parser.Equal - 64)) | (
-                    1 << (CPP14Parser.NotEqual - 64)) | (1 << (CPP14Parser.LessEqual - 64)) | (
-                    1 << (CPP14Parser.GreaterEqual - 64)) | (1 << (CPP14Parser.AndAnd - 64)) | (
-                    1 << (CPP14Parser.OrOr - 64)) | (1 << (CPP14Parser.PlusPlus - 64)) | (
-                    1 << (CPP14Parser.MinusMinus - 64)) | (1 << (CPP14Parser.UnaryCondition - 64)) | (
-                    1 << (CPP14Parser.Comma - 64)) | (1 << (CPP14Parser.ArrowStar - 64)) | (
-                    1 << (CPP14Parser.Arrow - 64)))) != 0)):
+                        (1 << CPP14Parser.Delete) | (1 << CPP14Parser.New) | (1 << CPP14Parser.Plus) | (
+                        1 << CPP14Parser.Minus) | (1 << CPP14Parser.Star) | (1 << CPP14Parser.Div))) != 0) or (
+                                (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & (
+                                (1 << (CPP14Parser.Mod - 64)) | (1 << (CPP14Parser.Caret - 64)) | (
+                                1 << (CPP14Parser.And - 64)) | (1 << (CPP14Parser.Or - 64)) | (
+                                        1 << (CPP14Parser.Tilde - 64)) | (1 << (CPP14Parser.Not - 64)) | (
+                                        1 << (CPP14Parser.Assign - 64)) | (1 << (CPP14Parser.Less - 64)) | (
+                                        1 << (CPP14Parser.Greater - 64)) | (1 << (CPP14Parser.PlusAssign - 64)) | (
+                                        1 << (CPP14Parser.MinusAssign - 64)) | (1 << (CPP14Parser.StarAssign - 64)) | (
+                                        1 << (CPP14Parser.DivAssign - 64)) | (1 << (CPP14Parser.ModAssign - 64)) | (
+                                        1 << (CPP14Parser.XorAssign - 64)) | (1 << (CPP14Parser.AndAssign - 64)) | (
+                                        1 << (CPP14Parser.OrAssign - 64)) | (1 << (CPP14Parser.LeftShift - 64)) | (
+                                        1 << (CPP14Parser.LeftShiftAssign - 64)) | (1 << (CPP14Parser.Equal - 64)) | (
+                                        1 << (CPP14Parser.NotEqual - 64)) | (1 << (CPP14Parser.LessEqual - 64)) | (
+                                        1 << (CPP14Parser.GreaterEqual - 64)) | (1 << (CPP14Parser.AndAnd - 64)) | (
+                                        1 << (CPP14Parser.OrOr - 64)) | (1 << (CPP14Parser.PlusPlus - 64)) | (
+                                        1 << (CPP14Parser.MinusMinus - 64)) | (
+                                        1 << (CPP14Parser.UnaryCondition - 64)) | (1 << (CPP14Parser.Comma - 64)) | (
+                                        1 << (CPP14Parser.ArrowStar - 64)) | (1 << (CPP14Parser.Arrow - 64)))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
