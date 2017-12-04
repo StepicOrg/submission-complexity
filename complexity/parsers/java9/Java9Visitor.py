@@ -1,4 +1,4 @@
-# Generated from /home/meanmail/StepikProjects/submission-complexity/complexity/grammars/Java9.g4 by ANTLR 4.7
+# Generated from complexity/grammars/Java9.g4 by ANTLR 4.7
 from antlr4 import *
 
 if __name__ is not None and "." in __name__:
@@ -202,12 +202,64 @@ class Java9Visitor(ParseTreeVisitor):
     def visitStatement(self, ctx: Java9Parser.StatementContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by Java9Parser#ifStatement.
+    def visitIfStatement(self, ctx: Java9Parser.IfStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#whileStatement.
+    def visitWhileStatement(self, ctx: Java9Parser.WhileStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#forStatement.
+    def visitForStatement(self, ctx: Java9Parser.ForStatementContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by Java9Parser#statementNoShortIf.
     def visitStatementNoShortIf(self, ctx: Java9Parser.StatementNoShortIfContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by Java9Parser#ifStatementNoShortIf.
+    def visitIfStatementNoShortIf(self, ctx: Java9Parser.IfStatementNoShortIfContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#whileStatementNoShortIf.
+    def visitWhileStatementNoShortIf(self, ctx: Java9Parser.WhileStatementNoShortIfContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#forStatementNoShortIf.
+    def visitForStatementNoShortIf(self, ctx: Java9Parser.ForStatementNoShortIfContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by Java9Parser#statementWithoutTrailingSubstatement.
     def visitStatementWithoutTrailingSubstatement(self, ctx: Java9Parser.StatementWithoutTrailingSubstatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#synchronizedStatement.
+    def visitSynchronizedStatement(self, ctx: Java9Parser.SynchronizedStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#assertStatement.
+    def visitAssertStatement(self, ctx: Java9Parser.AssertStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#switchStatement.
+    def visitSwitchStatement(self, ctx: Java9Parser.SwitchStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#doStatement.
+    def visitDoStatement(self, ctx: Java9Parser.DoStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#breakAndContinueStatement.
+    def visitBreakAndContinueStatement(self, ctx: Java9Parser.BreakAndContinueStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#returnStatement.
+    def visitReturnStatement(self, ctx: Java9Parser.ReturnStatementContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Java9Parser#throwStatement.
+    def visitThrowStatement(self, ctx: Java9Parser.ThrowStatementContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Java9Parser#statementExpression.

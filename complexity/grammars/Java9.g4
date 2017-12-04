@@ -450,10 +450,24 @@ statement
 :
     statementWithoutTrailingSubstatement
     | Identifier ':' statement
-    | 'if' '(' expression ')' statement
+    | ifStatement
+    | whileStatement
+    | forStatement
+;
+
+ifStatement:
+      'if' '(' expression ')' statement
     | 'if' '(' expression ')' statementNoShortIf elseStatement
-    | 'while' '(' expression ')' statement
-    | 'for' '(' (
+;
+
+// used in BRANCHES
+whileStatement:
+    'while' '(' expression ')' statement
+;
+
+// used in BRANCHES
+forStatement:
+    'for' '(' (
         forInit? ';' expression? ';' statementExpressionList?
         | variableModifier* unannType Identifier dims? ':' expression
     ) ')' statement
@@ -463,9 +477,23 @@ statementNoShortIf
 :
     statementWithoutTrailingSubstatement
     | Identifier ':' statementNoShortIf
-    | 'if' '(' expression ')' statementNoShortIf elseStatementNoShortIf
-    | 'while' '(' expression ')' statementNoShortIf
-    | 'for' '(' (
+    | ifStatementNoShortIf
+    | whileStatementNoShortIf
+    | forStatementNoShortIf
+;
+
+ifStatementNoShortIf:
+    'if' '(' expression ')' statementNoShortIf elseStatementNoShortIf
+;
+
+// used in BRANCHES
+whileStatementNoShortIf:
+    'while' '(' expression ')' statementNoShortIf
+;
+
+// used in BRANCHES
+forStatementNoShortIf:
+    'for' '(' (
         forInit? ';' expression? ';' statementExpressionList? ')'
         | variableModifier* unannType Identifier dims? ':' expression
     ) ')' statementNoShortIf
@@ -473,16 +501,51 @@ statementNoShortIf
 
 statementWithoutTrailingSubstatement
 :
-    ('synchronized' '(' expression ')')? '{' blockStatement* '}'
+    synchronizedStatement
     | ';'
     | statementExpression ';'
-    | 'assert' expression (':' expression)? ';'
-    | 'switch' '(' expression ')' '{' (switchLabel+ blockStatement+)* switchLabel* '}'
-    | 'do' statement 'while' '(' expression ')' ';'
-    | ('break' | 'continue') Identifier? ';'
-    | 'return' expression? ';'
-    | 'throw' expression ';'
+    | assertStatement
+    | switchStatement
+    | doStatement
+    | breakAndContinueStatement
+    | returnStatement
+    | throwStatement
     | tryStatement
+;
+
+// used in BRANCHES
+synchronizedStatement:
+    ('synchronized' '(' expression ')')? '{' blockStatement* '}'
+;
+
+// used in BRANCHES
+assertStatement:
+    'assert' expression (':' expression)? ';'
+;
+
+// used in CONDITIONALS
+switchStatement:
+    'switch' '(' expression ')' '{' (switchLabel+ blockStatement+)* switchLabel* '}'
+;
+
+// used in BRANCHES
+doStatement:
+    'do' statement 'while' '(' expression ')' ';'
+;
+
+// used in BRANCHES
+breakAndContinueStatement:
+    ('break' | 'continue') Identifier? ';'
+;
+
+// used in BRANCHES
+returnStatement:
+    'return' expression? ';'
+;
+
+// used in BRANCHES
+throwStatement:
+    'throw' expression ';'
 ;
 
 statementExpression
