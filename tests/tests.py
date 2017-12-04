@@ -98,9 +98,9 @@ tests = {
         {
             'file': 'code/python3/base_subprocess.py',
             'a': 47,
-            'b': 61,
+            'b': 63,
             'c': 43,
-            'score': 88.2
+            'score': 89.59
         },
         {
             'file': 'code/python3/base_tasks.py',

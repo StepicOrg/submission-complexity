@@ -366,8 +366,8 @@ factor
 // used in BRANCHES
 call
 :
-    NAME ('(' arglist? ')')
-    | call ('(' arglist? ')')
+    '.'? NAME ('(' arglist? ')')
+    | call ('.' NAME)? ('(' arglist? ')')
 ;
 
 atom
