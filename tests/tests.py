@@ -39,10 +39,10 @@ tests = {
         },
         {
             'file': 'code/c/bt.c',
-            'a': 7,
+            'a': 8,
             'b': 8,
             'c': 76,
-            'score': 76.74
+            'score': 76.84
         },
         {
             'file': 'code/c/dialog.c',
@@ -67,10 +67,10 @@ tests = {
         },
         {
             'file': 'code/c/ll.c',
-            'a': 8,
+            'a': 9,
             'b': 2,
             'c': 33,
-            'score': 34.01
+            'score': 34.26
         },
         {
             'file': 'code/c/pr403.c',
@@ -210,9 +210,9 @@ tests = {
         {
             'file': 'code/python3/tasks.py',
             'a': 84,
-            'b': 123,
+            'b': 124,
             'c': 67,
-            'score': 163.32
+            'score': 164.08
         },
         {
             'file': 'code/python3/test_utils.py',
@@ -260,10 +260,10 @@ tests = {
         },
         {
             'file': 'code/java9/method.java',
-            'a': 0,
+            'a': 1,
             'b': 2,
             'c': 2,
-            'score': 2.83
+            'score': 3.0
         },
         {
             'file': 'code/java9/module-info.java',
@@ -274,10 +274,10 @@ tests = {
         },
         {
             'file': 'code/java9/TryWithResourceDemo.java',
-            'a': 0,
+            'a': 1,
             'b': 4,
             'c': 4,
-            'score': 5.66
+            'score': 5.74
         },
     )
 }
