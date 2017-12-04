@@ -259,6 +259,13 @@ tests = {
             'score': 1.41
         },
         {
+            'file': 'code/java9/method.java',
+            'a': 0,
+            'b': 2,
+            'c': 2,
+            'score': 2.83
+        },
+        {
             'file': 'code/java9/module-info.java',
             'a': 0,
             'b': 0,

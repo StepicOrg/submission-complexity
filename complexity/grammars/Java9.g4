@@ -131,8 +131,11 @@ typeArgument
 
 compilationUnit
 :
-    packageDeclaration? importDeclaration* typeDeclaration* EOF
-    | importDeclaration* annotation* 'open'? 'module'  Identifier ('.' Identifier)* '{' moduleDirective* '}'
+    (
+        packageDeclaration? importDeclaration* typeDeclaration*
+        | classBodyDeclaration*
+        | importDeclaration* annotation* 'open'? 'module'  Identifier ('.' Identifier)* '{' moduleDirective* '}'
+    ) EOF
 ;
 
 packageDeclaration
