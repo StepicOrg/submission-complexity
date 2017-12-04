@@ -184,15 +184,15 @@ stmt
 small_stmt
 :
     (test | '*'? expr) (',' (test |  '*'? expr))* ','? (
-        augassign (YIELD (FROM test | testlist)? | testlist)
+        augassign (YIELD (FROM test | test (',' test)* ','?)? | test (',' test)* ','?)
         | assign*
     )
     | DEL '*'? expr (',' '*'? expr)* ','?
     | (PASS | CONTINUE)
     | break_stmt
-    | RETURN testlist?
+    | RETURN (test (',' test)* ','?)?
     | raise_stmt
-    | YIELD (FROM test | testlist)?
+    | YIELD (FROM test | test (',' test)* ','?)?
     | IMPORT NAME ('.' NAME)* (AS NAME)? (',' NAME ('.' NAME)* (AS NAME)?)*
     | FROM (
         ('.' | '...')* NAME ('.' NAME)*
@@ -210,7 +210,7 @@ small_stmt
 // used in ASSIGNMENTS
 assign
 :
-    '=' (YIELD (FROM test | testlist)? | (test | '*'? expr) (',' (test |  '*'? expr))* ','?)
+    '=' (YIELD (FROM test | test (',' test)* ','?)? | (test | '*'? expr) (',' (test |  '*'? expr))* ','?)
 ;
 
 // used in ASSIGNMENTS
@@ -264,7 +264,7 @@ while_stmt
 // used in BRANCHES
 for_stmt
 :
-    FOR '*'? expr (',' '*'? expr)* ','? IN testlist ':' suite else_suite?
+    FOR '*'? expr (',' '*'? expr)* ','? IN test (',' test)* ','? ':' suite else_suite?
 ;
 
 // used in CONDITIONALS
@@ -348,8 +348,8 @@ call
 
 atom
 :
-    '(' (YIELD (FROM test | testlist)? | testlist_comp)? ')'
-    | '[' testlist_comp? ']'
+    '(' (YIELD (FROM test | test (',' test)* ','?)? | test (comp_for | (',' test)* ','?))? ')'
+    | '[' (test (comp_for | (',' test)* ','?))? ']'
     | '{' dictorsetmaker? '}'
     | (
         NAME
@@ -367,14 +367,6 @@ atom
     )
 ;
 
-testlist_comp
-:
-    test (
-        comp_for
-        | (',' test)* ','?
-    )
-;
-
 trailer
 :
     '(' arglist? ')'
@@ -386,11 +378,6 @@ subscript
 :
     test
     | test? ':' test? (':' test?)?
-;
-
-testlist
-:
-    test (',' test)* ','?
 ;
 
 dictorsetmaker

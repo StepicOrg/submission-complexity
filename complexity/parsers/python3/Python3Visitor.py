@@ -111,20 +111,12 @@ class Python3Visitor(ParseTreeVisitor):
     def visitAtom(self, ctx: Python3Parser.AtomContext):
         return self.visitChildren(ctx)
 
-    # Visit a parse tree produced by Python3Parser#testlist_comp.
-    def visitTestlist_comp(self, ctx: Python3Parser.Testlist_compContext):
-        return self.visitChildren(ctx)
-
     # Visit a parse tree produced by Python3Parser#trailer.
     def visitTrailer(self, ctx: Python3Parser.TrailerContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#subscript.
     def visitSubscript(self, ctx: Python3Parser.SubscriptContext):
-        return self.visitChildren(ctx)
-
-    # Visit a parse tree produced by Python3Parser#testlist.
-    def visitTestlist(self, ctx: Python3Parser.TestlistContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#dictorsetmaker.
