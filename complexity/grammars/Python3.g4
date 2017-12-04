@@ -188,11 +188,12 @@ small_stmt
         | assign*
     )
     | DEL '*'? expr (',' '*'? expr)* ','?
-    | (PASS | CONTINUE)
+    | PASS
     | break_stmt
-    | RETURN (test (',' test)* ','?)?
+    | continue_stmt
+    | return_stmt
     | raise_stmt
-    | YIELD (FROM test | test (',' test)* ','?)?
+    | yield_stmt
     | IMPORT NAME ('.' NAME)* (AS NAME)? (',' NAME ('.' NAME)* (AS NAME)?)*
     | FROM (
         ('.' | '...')* NAME ('.' NAME)*
@@ -203,7 +204,13 @@ small_stmt
         | NAME (AS NAME)? (',' NAME (AS NAME)?)* ','?
     )
     | (GLOBAL | NONLOCAL) NAME (',' NAME)*
-    | ASSERT test (',' test)?
+    | assert_stmt
+;
+
+// used in BRANCHES
+assert_stmt
+:
+    ASSERT test (',' test)?
 ;
 
 // used in ASSIGNMENTS
@@ -237,9 +244,27 @@ break_stmt
 ;
 
 // used in BRANCHES
+continue_stmt
+:
+    CONTINUE
+;
+
+// used in BRANCHES
+return_stmt
+:
+    RETURN (test (',' test)* ','?)?
+;
+
+// used in BRANCHES
 raise_stmt
 :
     RAISE (test (FROM test)?)?
+;
+
+// used in BRANCHES
+yield_stmt
+:
+    YIELD (FROM test | test (',' test)* ','?)?
 ;
 
 // used in BRANCHES

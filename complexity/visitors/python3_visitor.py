@@ -19,7 +19,11 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
         Python3Parser.RULE_for_stmt,
         Python3Parser.RULE_raise_stmt,
         Python3Parser.RULE_break_stmt,
+        Python3Parser.RULE_continue_stmt,
         Python3Parser.RULE_comp_iter,
+        Python3Parser.RULE_assert_stmt,
+        Python3Parser.RULE_return_stmt,
+        Python3Parser.RULE_yield_stmt,
     )
 
     CONDITIONALS = (
@@ -55,7 +59,19 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
     def visitBreak_stmt(self, ctx: Python3Parser.Break_stmtContext):
         return self.process(ctx)
 
+    def visitContinue_stmt(self, ctx: Python3Parser.Continue_stmtContext):
+        return self.process(ctx)
+
     def visitComp_iter(self, ctx: Python3Parser.Comp_iterContext):
+        return self.process(ctx)
+
+    def visitAssert_stmt(self, ctx: Python3Parser.Assert_stmtContext):
+        return self.process(ctx)
+
+    def visitReturn_stmt(self, ctx: Python3Parser.Return_stmtContext):
+        return self.process(ctx)
+
+    def visitYield_stmt(self, ctx: Python3Parser.Yield_stmtContext):
         return self.process(ctx)
 
     def visitComp_op(self, ctx: Python3Parser.Comp_opContext):

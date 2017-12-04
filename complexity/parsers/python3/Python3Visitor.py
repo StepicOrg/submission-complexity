@@ -31,6 +31,10 @@ class Python3Visitor(ParseTreeVisitor):
     def visitSmall_stmt(self, ctx: Python3Parser.Small_stmtContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by Python3Parser#assert_stmt.
+    def visitAssert_stmt(self, ctx: Python3Parser.Assert_stmtContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by Python3Parser#assign.
     def visitAssign(self, ctx: Python3Parser.AssignContext):
         return self.visitChildren(ctx)
@@ -43,8 +47,20 @@ class Python3Visitor(ParseTreeVisitor):
     def visitBreak_stmt(self, ctx: Python3Parser.Break_stmtContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by Python3Parser#continue_stmt.
+    def visitContinue_stmt(self, ctx: Python3Parser.Continue_stmtContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Python3Parser#return_stmt.
+    def visitReturn_stmt(self, ctx: Python3Parser.Return_stmtContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by Python3Parser#raise_stmt.
     def visitRaise_stmt(self, ctx: Python3Parser.Raise_stmtContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Python3Parser#yield_stmt.
+    def visitYield_stmt(self, ctx: Python3Parser.Yield_stmtContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#if_stmt.
