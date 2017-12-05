@@ -366,7 +366,7 @@ factor
 // used in BRANCHES
 call
 :
-    '.'? NAME ('(' arglist? ')')
+      NAME ('.' NAME)? ('(' arglist? ')')
     | call ('.' NAME)? ('(' arglist? ')')
 ;
 
