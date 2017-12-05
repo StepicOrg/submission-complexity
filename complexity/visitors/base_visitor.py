@@ -23,10 +23,6 @@ class BaseVisitor(ParseTreeVisitor):
     def abc_score(self):
         return round(math.sqrt(self.a ** 2 + self.b ** 2 + self.c ** 2), 2)
 
-    @property
-    def abc_vector(self):
-        return self.a, self.b, self.c
-
     def check_time_over(self):
         if self.max_datetime and datetime.now() > self.max_datetime:
             self.success = False
