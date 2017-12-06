@@ -1,7 +1,6 @@
 """Abstract Protocol class."""
 
-__all__ = ['BaseProtocol', 'Protocol', 'DatagramProtocol',
-           'SubprocessProtocol']
+__all__ = ['BaseProtocol']
 
 
 class BaseProtocol:
@@ -57,78 +56,3 @@ class BaseProtocol:
 
         See pause_writing() for details.
         """
-
-
-class Protocol(BaseProtocol):
-    """Interface for stream protocol.
-
-    The user should implement this interface.  They can inherit from
-    this class but don't need to.  The implementations here do
-    nothing (they don't raise exceptions).
-
-    When the user wants to requests a transport, they pass a protocol
-    factory to a utility function (e.g., EventLoop.create_connection()).
-
-    When the connection is made successfully, connection_made() is
-    called with a suitable transport object.  Then data_received()
-    will be called 0 or more times with data (bytes) received from the
-    transport; finally, connection_lost() will be called exactly once
-    with either an exception object or None as an argument.
-
-    State machine of calls:
-
-      start -> CM [-> DR*] [-> ER?] -> CL -> end
-
-    * CM: connection_made()
-    * DR: data_received()
-    * ER: eof_received()
-    * CL: connection_lost()
-    """
-
-    def data_received(self, data):
-        """Called when some data is received.
-
-        The argument is a bytes object.
-        """
-
-    def eof_received(self):
-        """Called when the other end calls write_eof() or equivalent.
-
-        If this returns a false value (including None), the transport
-        will close itself.  If it returns a true value, closing the
-        transport is up to the protocol.
-        """
-
-
-class DatagramProtocol(BaseProtocol):
-    """Interface for datagram protocol."""
-
-    def datagram_received(self, data, addr):
-        """Called when some datagram is received."""
-
-    def error_received(self, exc):
-        """Called when a send or receive operation raises an OSError.
-
-        (Other than BlockingIOError or InterruptedError.)
-        """
-
-
-class SubprocessProtocol(BaseProtocol):
-    """Interface for protocol for subprocess calls."""
-
-    def pipe_data_received(self, fd, data):
-        """Called when the subprocess writes data into stdout/stderr pipe.
-
-        fd is int file descriptor.
-        data is bytes object.
-        """
-
-    def pipe_connection_lost(self, fd, exc):
-        """Called when a file descriptor associated with the child process is
-        closed.
-
-        fd is the int file descriptor that was closed.
-        """
-
-    def process_exited(self):
-        """Called when subprocess has exited."""
