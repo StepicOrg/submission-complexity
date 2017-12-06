@@ -84,30 +84,30 @@ tests = {
         {
             'file': 'code/python3/base_events.py',
             'a': 206,
-            'b': 434,
+            'b': 643,
             'c': 171,
-            'score': 509.93
+            'score': 696.51
         },
         {
             'file': 'code/python3/base_futures.py',
             'a': 15,
-            'b': 18,
+            'b': 24,
             'c': 7,
-            'score': 24.45
+            'score': 29.15
         },
         {
             'file': 'code/python3/base_subprocess.py',
             'a': 47,
-            'b': 63,
+            'b': 101,
             'c': 43,
-            'score': 89.59
+            'score': 119.41
         },
         {
             'file': 'code/python3/base_tasks.py',
             'a': 19,
-            'b': 23,
+            'b': 37,
             'c': 15,
-            'score': 33.39
+            'score': 44.22
         },
         {
             'file': 'code/python3/compat.py',
@@ -126,44 +126,44 @@ tests = {
         {
             'file': 'code/python3/coroutines.py',
             'a': 77,
-            'b': 96,
+            'b': 111,
             'c': 43,
-            'score': 130.36
+            'score': 141.77
         },
         {
             'file': 'code/python3/events.py',
             'a': 54,
-            'b': 145,
+            'b': 186,
             'c': 23,
-            'score': 156.43
+            'score': 195.04
         },
         {
             'file': 'code/python3/futures.py',
             'a': 70,
-            'b': 101,
+            'b': 141,
             'c': 36,
-            'score': 128.05
+            'score': 161.48
         },
         {
             'file': 'code/python3/locks.py',
             'a': 52,
-            'b': 88,
+            'b': 133,
             'c': 26,
-            'score': 105.47
+            'score': 145.15
         },
         {
             'file': 'code/python3/log.py',
             'a': 1,
-            'b': 0,
+            'b': 1,
             'c': 0,
-            'score': 1.0
+            'score': 1.41
         },
         {
             'file': 'code/python3/proactor_events.py',
             'a': 71,
-            'b': 137,
+            'b': 218,
             'c': 61,
-            'score': 165.92
+            'score': 237.25
         },
         {
             'file': 'code/python3/protocols.py',
@@ -175,79 +175,79 @@ tests = {
         {
             'file': 'code/python3/queues.py',
             'a': 23,
-            'b': 50,
+            'b': 81,
             'c': 12,
-            'score': 56.33
+            'score': 85.05
         },
         {
             'file': 'code/python3/selector_events.py',
             'a': 135,
-            'b': 278,
+            'b': 457,
             'c': 156,
-            'score': 346.19
+            'score': 501.41
         },
         {
             'file': 'code/python3/sslproto.py',
             'a': 98,
-            'b': 147,
+            'b': 189,
             'c': 64,
-            'score': 187.91
+            'score': 222.31
         },
         {
             'file': 'code/python3/streams.py',
             'a': 91,
-            'b': 173,
+            'b': 228,
             'c': 56,
-            'score': 203.34
+            'score': 251.8
         },
         {
             'file': 'code/python3/subprocess.py',
             'a': 52,
-            'b': 42,
+            'b': 78,
             'c': 33,
-            'score': 74.55
+            'score': 99.38
         },
         {
             'file': 'code/python3/tasks.py',
             'a': 84,
-            'b': 163,
+            'b': 277,
             'c': 67,
-            'score': 195.23
+            'score': 297.11
         },
         {
             'file': 'code/python3/test_utils.py',
             'a': 63,
-            'b': 89,
+            'b': 162,
             'c': 36,
-            'score': 114.83
+            'score': 177.51
         },
         {
             'file': 'code/python3/transports.py',
             'a': 14,
-            'b': 35,
+            'b': 44,
             'c': 14,
-            'score': 40.21
+            'score': 48.25
         },
         {
             'file': 'code/python3/unix_events.py',
             'a': 110,
-            'b': 247,
+            'b': 395,
             'c': 137,
-            'score': 303.11
+            'score': 432.31
         },
         {
             'file': 'code/python3/windows_events.py',
             'a': 124,
-            'b': 145,
+            'b': 305,
             'c': 75,
-            'score': 205.0
+            'score': 337.68
         },
         {
             'file': 'code/python3/windows_utils.py',
             'a': 51,
-            'b': 55,
+            'b': 88,
             'c': 41,
-            'score': 85.48
+            'score': 109.66
         },
     ),
     Java9ABCVisitor: (
