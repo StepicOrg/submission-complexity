@@ -21,6 +21,7 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
         Python3Parser.RULE_break_stmt,
         Python3Parser.RULE_continue_stmt,
         Python3Parser.RULE_comp_iter,
+        Python3Parser.RULE_comp_for,
         Python3Parser.RULE_assert_stmt,
         Python3Parser.RULE_return_stmt,
         Python3Parser.RULE_yield_stmt,
@@ -63,6 +64,9 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
         return self.process(ctx)
 
     def visitComp_iter(self, ctx: Python3Parser.Comp_iterContext):
+        return self.process(ctx)
+
+    def visitComp_for(self, ctx: Python3Parser.Comp_forContext):
         return self.process(ctx)
 
     def visitAssert_stmt(self, ctx: Python3Parser.Assert_stmtContext):

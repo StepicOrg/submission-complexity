@@ -10,7 +10,7 @@ from typing.io import TextIO
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3_")
-        buf.write("\u0448\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u044c\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
@@ -104,40 +104,40 @@ def serializedATN():
         buf.write("\36\7\36\u0368\n\36\f\36\16\36\u036b\13\36\3\36\5\36\u036e")
         buf.write("\n\36\5\36\u0370\n\36\3\36\3\36\3\36\3\36\7\36\u0376\n")
         buf.write("\36\f\36\16\36\u0379\13\36\3\36\5\36\u037c\n\36\5\36\u037e")
-        buf.write("\n\36\5\36\u0380\n\36\3\36\3\36\3\36\3\36\3\36\3\36\7")
-        buf.write("\36\u0388\n\36\f\36\16\36\u038b\13\36\3\36\5\36\u038e")
-        buf.write("\n\36\5\36\u0390\n\36\5\36\u0392\n\36\3\36\3\36\3\36\5")
-        buf.write("\36\u0397\n\36\3\36\3\36\3\36\3\36\3\36\3\36\3\36\3\36")
-        buf.write("\3\36\6\36\u03a2\n\36\r\36\16\36\u03a3\3\36\3\36\3\36")
-        buf.write("\3\36\5\36\u03aa\n\36\5\36\u03ac\n\36\3\37\3\37\5\37\u03b0")
-        buf.write("\n\37\3\37\3\37\3\37\3\37\3\37\7\37\u03b7\n\37\f\37\16")
-        buf.write("\37\u03ba\13\37\3\37\5\37\u03bd\n\37\3\37\3\37\3\37\3")
-        buf.write("\37\5\37\u03c3\n\37\3 \3 \5 \u03c7\n \3 \3 \5 \u03cb\n")
-        buf.write(" \3 \3 \5 \u03cf\n \5 \u03d1\n \5 \u03d3\n \3!\3!\3!\5")
-        buf.write("!\u03d8\n!\3!\3!\3!\3!\3!\3!\3!\3!\7!\u03e2\n!\f!\16!")
-        buf.write("\u03e5\13!\3!\5!\u03e8\n!\3!\3!\7!\u03ec\n!\f!\16!\u03ef")
-        buf.write("\13!\3!\5!\u03f2\n!\5!\u03f4\n!\3\"\3\"\5\"\u03f8\n\"")
-        buf.write("\3\"\3\"\5\"\u03fc\n\"\3\"\3\"\7\"\u0400\n\"\f\"\16\"")
-        buf.write("\u0403\13\"\3\"\3\"\5\"\u0407\n\"\3\"\3\"\5\"\u040b\n")
-        buf.write("\"\3\"\5\"\u040e\n\"\3\"\3\"\3\"\3\"\3\"\5\"\u0415\n\"")
-        buf.write("\3\"\3\"\5\"\u0419\n\"\7\"\u041b\n\"\f\"\16\"\u041e\13")
-        buf.write("\"\3\"\3\"\3\"\5\"\u0423\n\"\3\"\3\"\5\"\u0427\n\"\3#")
-        buf.write("\3#\3#\3#\5#\u042d\n#\5#\u042f\n#\3$\3$\5$\u0433\n$\3")
-        buf.write("$\3$\3$\5$\u0438\n$\3$\7$\u043b\n$\f$\16$\u043e\13$\3")
-        buf.write("$\5$\u0441\n$\3$\3$\3$\5$\u0446\n$\3$\2\38%\2\4\6\b\n")
-        buf.write("\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<")
-        buf.write(">@BDF\2\b\3\2-.\3\2\t\n\3\2O[\3\2\27\30\5\2//9BMM\4\2")
-        buf.write(">?CC\2\u051f\2L\3\2\2\2\4\u00ba\3\2\2\2\6\u00fd\3\2\2")
-        buf.write("\2\b\u0153\3\2\2\2\n\u0215\3\2\2\2\f\u0217\3\2\2\2\16")
+        buf.write("\n\36\5\36\u0380\n\36\3\36\3\36\3\36\3\36\3\36\3\36\3")
+        buf.write("\36\3\36\3\36\3\36\7\36\u038c\n\36\f\36\16\36\u038f\13")
+        buf.write("\36\3\36\5\36\u0392\n\36\5\36\u0394\n\36\5\36\u0396\n")
+        buf.write("\36\3\36\3\36\3\36\5\36\u039b\n\36\3\36\3\36\3\36\3\36")
+        buf.write("\3\36\3\36\3\36\3\36\3\36\6\36\u03a6\n\36\r\36\16\36\u03a7")
+        buf.write("\3\36\3\36\3\36\3\36\5\36\u03ae\n\36\5\36\u03b0\n\36\3")
+        buf.write("\37\3\37\5\37\u03b4\n\37\3\37\3\37\3\37\3\37\3\37\7\37")
+        buf.write("\u03bb\n\37\f\37\16\37\u03be\13\37\3\37\5\37\u03c1\n\37")
+        buf.write("\3\37\3\37\3\37\3\37\5\37\u03c7\n\37\3 \3 \5 \u03cb\n")
+        buf.write(" \3 \3 \5 \u03cf\n \3 \3 \5 \u03d3\n \5 \u03d5\n \5 \u03d7")
+        buf.write("\n \3!\3!\3!\5!\u03dc\n!\3!\3!\3!\3!\3!\3!\3!\3!\7!\u03e6")
+        buf.write("\n!\f!\16!\u03e9\13!\3!\5!\u03ec\n!\3!\3!\7!\u03f0\n!")
+        buf.write("\f!\16!\u03f3\13!\3!\5!\u03f6\n!\5!\u03f8\n!\3\"\3\"\5")
+        buf.write("\"\u03fc\n\"\3\"\3\"\5\"\u0400\n\"\3\"\3\"\7\"\u0404\n")
+        buf.write("\"\f\"\16\"\u0407\13\"\3\"\3\"\5\"\u040b\n\"\3\"\3\"\5")
+        buf.write("\"\u040f\n\"\3\"\5\"\u0412\n\"\3\"\3\"\3\"\3\"\3\"\5\"")
+        buf.write("\u0419\n\"\3\"\3\"\5\"\u041d\n\"\7\"\u041f\n\"\f\"\16")
+        buf.write("\"\u0422\13\"\3\"\3\"\3\"\5\"\u0427\n\"\3\"\3\"\5\"\u042b")
+        buf.write("\n\"\3#\3#\3#\3#\5#\u0431\n#\5#\u0433\n#\3$\3$\5$\u0437")
+        buf.write("\n$\3$\3$\3$\5$\u043c\n$\3$\7$\u043f\n$\f$\16$\u0442\13")
+        buf.write("$\3$\5$\u0445\n$\3$\3$\3$\5$\u044a\n$\3$\2\38%\2\4\6\b")
+        buf.write("\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668")
+        buf.write(":<>@BDF\2\b\3\2-.\3\2\t\n\3\2O[\3\2\27\30\5\2//9BMM\4")
+        buf.write("\2>?CC\2\u0524\2L\3\2\2\2\4\u00ba\3\2\2\2\6\u00fd\3\2")
+        buf.write("\2\2\b\u0153\3\2\2\2\n\u0215\3\2\2\2\f\u0217\3\2\2\2\16")
         buf.write("\u021d\3\2\2\2\20\u0247\3\2\2\2\22\u0249\3\2\2\2\24\u024b")
         buf.write("\3\2\2\2\26\u024d\3\2\2\2\30\u025b\3\2\2\2\32\u0263\3")
         buf.write("\2\2\2\34\u0273\3\2\2\2\36\u0284\3\2\2\2 \u0288\3\2\2")
         buf.write("\2\"\u028f\3\2\2\2$\u02b2\3\2\2\2&\u02ca\3\2\2\2(\u02e8")
         buf.write("\3\2\2\2*\u02f8\3\2\2\2,\u0301\3\2\2\2.\u0303\3\2\2\2")
         buf.write("\60\u031c\3\2\2\2\62\u032b\3\2\2\2\64\u032d\3\2\2\2\66")
-        buf.write("\u0343\3\2\2\28\u0345\3\2\2\2:\u03ab\3\2\2\2<\u03c2\3")
-        buf.write("\2\2\2>\u03d2\3\2\2\2@\u03d4\3\2\2\2B\u0401\3\2\2\2D\u042e")
-        buf.write("\3\2\2\2F\u0430\3\2\2\2HK\7$\2\2IK\5\b\5\2JH\3\2\2\2J")
+        buf.write("\u0343\3\2\2\28\u0345\3\2\2\2:\u03af\3\2\2\2<\u03c6\3")
+        buf.write("\2\2\2>\u03d6\3\2\2\2@\u03d8\3\2\2\2B\u0405\3\2\2\2D\u0432")
+        buf.write("\3\2\2\2F\u0434\3\2\2\2HK\7$\2\2IK\5\b\5\2JH\3\2\2\2J")
         buf.write("I\3\2\2\2KN\3\2\2\2LJ\3\2\2\2LM\3\2\2\2MO\3\2\2\2NL\3")
         buf.write("\2\2\2OP\7\2\2\3P\3\3\2\2\2QT\7%\2\2RS\7\63\2\2SU\5*\26")
         buf.write("\2TR\3\2\2\2TU\3\2\2\2UX\3\2\2\2VW\7\66\2\2WY\5*\26\2")
@@ -500,99 +500,101 @@ def serializedATN():
         buf.write("\u037c\3\2\2\2\u037c\u037e\3\2\2\2\u037d\u0372\3\2\2\2")
         buf.write("\u037d\u0377\3\2\2\2\u037e\u0380\3\2\2\2\u037f\u0361\3")
         buf.write("\2\2\2\u037f\u0371\3\2\2\2\u037f\u0380\3\2\2\2\u0380\u0381")
-        buf.write("\3\2\2\2\u0381\u03ac\7\61\2\2\u0382\u0391\7\67\2\2\u0383")
-        buf.write("\u038f\5*\26\2\u0384\u0390\5F$\2\u0385\u0386\7\62\2\2")
-        buf.write("\u0386\u0388\5*\26\2\u0387\u0385\3\2\2\2\u0388\u038b\3")
-        buf.write("\2\2\2\u0389\u0387\3\2\2\2\u0389\u038a\3\2\2\2\u038a\u038d")
-        buf.write("\3\2\2\2\u038b\u0389\3\2\2\2\u038c\u038e\7\62\2\2\u038d")
-        buf.write("\u038c\3\2\2\2\u038d\u038e\3\2\2\2\u038e\u0390\3\2\2\2")
-        buf.write("\u038f\u0384\3\2\2\2\u038f\u0389\3\2\2\2\u0390\u0392\3")
-        buf.write("\2\2\2\u0391\u0383\3\2\2\2\u0391\u0392\3\2\2\2\u0392\u0393")
-        buf.write("\3\2\2\2\u0393\u03ac\78\2\2\u0394\u0396\7D\2\2\u0395\u0397")
-        buf.write("\5@!\2\u0396\u0395\3\2\2\2\u0396\u0397\3\2\2\2\u0397\u0398")
-        buf.write("\3\2\2\2\u0398\u03ac\7E\2\2\u0399\u03aa\7%\2\2\u039a\u03aa")
-        buf.write("\7\'\2\2\u039b\u03aa\7(\2\2\u039c\u03aa\7)\2\2\u039d\u03aa")
-        buf.write("\7*\2\2\u039e\u03aa\7+\2\2\u039f\u03aa\7,\2\2\u03a0\u03a2")
-        buf.write("\7&\2\2\u03a1\u03a0\3\2\2\2\u03a2\u03a3\3\2\2\2\u03a3")
-        buf.write("\u03a1\3\2\2\2\u03a3\u03a4\3\2\2\2\u03a4\u03aa\3\2\2\2")
-        buf.write("\u03a5\u03aa\7.\2\2\u03a6\u03aa\7\33\2\2\u03a7\u03aa\7")
-        buf.write("\34\2\2\u03a8\u03aa\7\35\2\2\u03a9\u0399\3\2\2\2\u03a9")
-        buf.write("\u039a\3\2\2\2\u03a9\u039b\3\2\2\2\u03a9\u039c\3\2\2\2")
-        buf.write("\u03a9\u039d\3\2\2\2\u03a9\u039e\3\2\2\2\u03a9\u039f\3")
-        buf.write("\2\2\2\u03a9\u03a1\3\2\2\2\u03a9\u03a5\3\2\2\2\u03a9\u03a6")
-        buf.write("\3\2\2\2\u03a9\u03a7\3\2\2\2\u03a9\u03a8\3\2\2\2\u03aa")
-        buf.write("\u03ac\3\2\2\2\u03ab\u0360\3\2\2\2\u03ab\u0382\3\2\2\2")
-        buf.write("\u03ab\u0394\3\2\2\2\u03ab\u03a9\3\2\2\2\u03ac;\3\2\2")
-        buf.write("\2\u03ad\u03af\7\60\2\2\u03ae\u03b0\5B\"\2\u03af\u03ae")
-        buf.write("\3\2\2\2\u03af\u03b0\3\2\2\2\u03b0\u03b1\3\2\2\2\u03b1")
-        buf.write("\u03c3\7\61\2\2\u03b2\u03b3\7\67\2\2\u03b3\u03b8\5> \2")
-        buf.write("\u03b4\u03b5\7\62\2\2\u03b5\u03b7\5> \2\u03b6\u03b4\3")
-        buf.write("\2\2\2\u03b7\u03ba\3\2\2\2\u03b8\u03b6\3\2\2\2\u03b8\u03b9")
-        buf.write("\3\2\2\2\u03b9\u03bc\3\2\2\2\u03ba\u03b8\3\2\2\2\u03bb")
-        buf.write("\u03bd\7\62\2\2\u03bc\u03bb\3\2\2\2\u03bc\u03bd\3\2\2")
-        buf.write("\2\u03bd\u03be\3\2\2\2\u03be\u03bf\78\2\2\u03bf\u03c3")
-        buf.write("\3\2\2\2\u03c0\u03c1\7-\2\2\u03c1\u03c3\7%\2\2\u03c2\u03ad")
-        buf.write("\3\2\2\2\u03c2\u03b2\3\2\2\2\u03c2\u03c0\3\2\2\2\u03c3")
-        buf.write("=\3\2\2\2\u03c4\u03d3\5*\26\2\u03c5\u03c7\5*\26\2\u03c6")
-        buf.write("\u03c5\3\2\2\2\u03c6\u03c7\3\2\2\2\u03c7\u03c8\3\2\2\2")
-        buf.write("\u03c8\u03ca\7\63\2\2\u03c9\u03cb\5*\26\2\u03ca\u03c9")
-        buf.write("\3\2\2\2\u03ca\u03cb\3\2\2\2\u03cb\u03d0\3\2\2\2\u03cc")
-        buf.write("\u03ce\7\63\2\2\u03cd\u03cf\5*\26\2\u03ce\u03cd\3\2\2")
-        buf.write("\2\u03ce\u03cf\3\2\2\2\u03cf\u03d1\3\2\2\2\u03d0\u03cc")
-        buf.write("\3\2\2\2\u03d0\u03d1\3\2\2\2\u03d1\u03d3\3\2\2\2\u03d2")
-        buf.write("\u03c4\3\2\2\2\u03d2\u03c6\3\2\2\2\u03d3?\3\2\2\2\u03d4")
-        buf.write("\u03f3\5*\26\2\u03d5\u03d6\7\63\2\2\u03d6\u03d8\5*\26")
-        buf.write("\2\u03d7\u03d5\3\2\2\2\u03d7\u03d8\3\2\2\2\u03d8\u03d9")
-        buf.write("\3\2\2\2\u03d9\u03f4\5F$\2\u03da\u03db\7\63\2\2\u03db")
-        buf.write("\u03e3\5*\26\2\u03dc\u03dd\7\62\2\2\u03dd\u03de\5*\26")
-        buf.write("\2\u03de\u03df\7\63\2\2\u03df\u03e0\5*\26\2\u03e0\u03e2")
-        buf.write("\3\2\2\2\u03e1\u03dc\3\2\2\2\u03e2\u03e5\3\2\2\2\u03e3")
-        buf.write("\u03e1\3\2\2\2\u03e3\u03e4\3\2\2\2\u03e4\u03e7\3\2\2\2")
-        buf.write("\u03e5\u03e3\3\2\2\2\u03e6\u03e8\7\62\2\2\u03e7\u03e6")
-        buf.write("\3\2\2\2\u03e7\u03e8\3\2\2\2\u03e8\u03f4\3\2\2\2\u03e9")
-        buf.write("\u03ea\7\62\2\2\u03ea\u03ec\5*\26\2\u03eb\u03e9\3\2\2")
-        buf.write("\2\u03ec\u03ef\3\2\2\2\u03ed\u03eb\3\2\2\2\u03ed\u03ee")
-        buf.write("\3\2\2\2\u03ee\u03f1\3\2\2\2\u03ef\u03ed\3\2\2\2\u03f0")
-        buf.write("\u03f2\7\62\2\2\u03f1\u03f0\3\2\2\2\u03f1\u03f2\3\2\2")
-        buf.write("\2\u03f2\u03f4\3\2\2\2\u03f3\u03d7\3\2\2\2\u03f3\u03da")
-        buf.write("\3\2\2\2\u03f3\u03ed\3\2\2\2\u03f4A\3\2\2\2\u03f5\u03fb")
-        buf.write("\5*\26\2\u03f6\u03f8\5F$\2\u03f7\u03f6\3\2\2\2\u03f7\u03f8")
-        buf.write("\3\2\2\2\u03f8\u03fc\3\2\2\2\u03f9\u03fa\7\66\2\2\u03fa")
-        buf.write("\u03fc\5*\26\2\u03fb\u03f7\3\2\2\2\u03fb\u03f9\3\2\2\2")
-        buf.write("\u03fc\u03fd\3\2\2\2\u03fd\u03fe\7\62\2\2\u03fe\u0400")
-        buf.write("\3\2\2\2\u03ff\u03f5\3\2\2\2\u0400\u0403\3\2\2\2\u0401")
-        buf.write("\u03ff\3\2\2\2\u0401\u0402\3\2\2\2\u0402\u0426\3\2\2\2")
-        buf.write("\u0403\u0401\3\2\2\2\u0404\u040a\5*\26\2\u0405\u0407\5")
-        buf.write("F$\2\u0406\u0405\3\2\2\2\u0406\u0407\3\2\2\2\u0407\u040b")
-        buf.write("\3\2\2\2\u0408\u0409\7\66\2\2\u0409\u040b\5*\26\2\u040a")
-        buf.write("\u0406\3\2\2\2\u040a\u0408\3\2\2\2\u040b\u040d\3\2\2\2")
-        buf.write("\u040c\u040e\7\62\2\2\u040d\u040c\3\2\2\2\u040d\u040e")
-        buf.write("\3\2\2\2\u040e\u0427\3\2\2\2\u040f\u0410\7/\2\2\u0410")
-        buf.write("\u041c\5*\26\2\u0411\u0412\7\62\2\2\u0412\u0418\5*\26")
-        buf.write("\2\u0413\u0415\5F$\2\u0414\u0413\3\2\2\2\u0414\u0415\3")
-        buf.write("\2\2\2\u0415\u0419\3\2\2\2\u0416\u0417\7\66\2\2\u0417")
-        buf.write("\u0419\5*\26\2\u0418\u0414\3\2\2\2\u0418\u0416\3\2\2\2")
-        buf.write("\u0419\u041b\3\2\2\2\u041a\u0411\3\2\2\2\u041b\u041e\3")
-        buf.write("\2\2\2\u041c\u041a\3\2\2\2\u041c\u041d\3\2\2\2\u041d\u0422")
-        buf.write("\3\2\2\2\u041e\u041c\3\2\2\2\u041f\u0420\7\62\2\2\u0420")
-        buf.write("\u0421\7\65\2\2\u0421\u0423\5*\26\2\u0422\u041f\3\2\2")
-        buf.write("\2\u0422\u0423\3\2\2\2\u0423\u0427\3\2\2\2\u0424\u0425")
-        buf.write("\7\65\2\2\u0425\u0427\5*\26\2\u0426\u0404\3\2\2\2\u0426")
-        buf.write("\u040f\3\2\2\2\u0426\u0424\3\2\2\2\u0427C\3\2\2\2\u0428")
-        buf.write("\u042f\5F$\2\u0429\u042a\7\f\2\2\u042a\u042c\5,\27\2\u042b")
-        buf.write("\u042d\5D#\2\u042c\u042b\3\2\2\2\u042c\u042d\3\2\2\2\u042d")
-        buf.write("\u042f\3\2\2\2\u042e\u0428\3\2\2\2\u042e\u0429\3\2\2\2")
-        buf.write("\u042fE\3\2\2\2\u0430\u0432\7\20\2\2\u0431\u0433\7/\2")
-        buf.write("\2\u0432\u0431\3\2\2\2\u0432\u0433\3\2\2\2\u0433\u0434")
-        buf.write("\3\2\2\2\u0434\u043c\5\64\33\2\u0435\u0437\7\62\2\2\u0436")
-        buf.write("\u0438\7/\2\2\u0437\u0436\3\2\2\2\u0437\u0438\3\2\2\2")
-        buf.write("\u0438\u0439\3\2\2\2\u0439\u043b\5\64\33\2\u043a\u0435")
-        buf.write("\3\2\2\2\u043b\u043e\3\2\2\2\u043c\u043a\3\2\2\2\u043c")
-        buf.write("\u043d\3\2\2\2\u043d\u0440\3\2\2\2\u043e\u043c\3\2\2\2")
-        buf.write("\u043f\u0441\7\62\2\2\u0440\u043f\3\2\2\2\u0440\u0441")
-        buf.write("\3\2\2\2\u0441\u0442\3\2\2\2\u0442\u0443\7\21\2\2\u0443")
-        buf.write("\u0445\5.\30\2\u0444\u0446\5D#\2\u0445\u0444\3\2\2\2\u0445")
-        buf.write("\u0446\3\2\2\2\u0446G\3\2\2\2\u00cbJLTX^bfnpvz~\u0086")
+        buf.write("\3\2\2\2\u0381\u03b0\7\61\2\2\u0382\u0383\7\67\2\2\u0383")
+        buf.write("\u0384\5F$\2\u0384\u0385\78\2\2\u0385\u03b0\3\2\2\2\u0386")
+        buf.write("\u0395\7\67\2\2\u0387\u0393\5*\26\2\u0388\u0394\5F$\2")
+        buf.write("\u0389\u038a\7\62\2\2\u038a\u038c\5*\26\2\u038b\u0389")
+        buf.write("\3\2\2\2\u038c\u038f\3\2\2\2\u038d\u038b\3\2\2\2\u038d")
+        buf.write("\u038e\3\2\2\2\u038e\u0391\3\2\2\2\u038f\u038d\3\2\2\2")
+        buf.write("\u0390\u0392\7\62\2\2\u0391\u0390\3\2\2\2\u0391\u0392")
+        buf.write("\3\2\2\2\u0392\u0394\3\2\2\2\u0393\u0388\3\2\2\2\u0393")
+        buf.write("\u038d\3\2\2\2\u0394\u0396\3\2\2\2\u0395\u0387\3\2\2\2")
+        buf.write("\u0395\u0396\3\2\2\2\u0396\u0397\3\2\2\2\u0397\u03b0\7")
+        buf.write("8\2\2\u0398\u039a\7D\2\2\u0399\u039b\5@!\2\u039a\u0399")
+        buf.write("\3\2\2\2\u039a\u039b\3\2\2\2\u039b\u039c\3\2\2\2\u039c")
+        buf.write("\u03b0\7E\2\2\u039d\u03ae\7%\2\2\u039e\u03ae\7\'\2\2\u039f")
+        buf.write("\u03ae\7(\2\2\u03a0\u03ae\7)\2\2\u03a1\u03ae\7*\2\2\u03a2")
+        buf.write("\u03ae\7+\2\2\u03a3\u03ae\7,\2\2\u03a4\u03a6\7&\2\2\u03a5")
+        buf.write("\u03a4\3\2\2\2\u03a6\u03a7\3\2\2\2\u03a7\u03a5\3\2\2\2")
+        buf.write("\u03a7\u03a8\3\2\2\2\u03a8\u03ae\3\2\2\2\u03a9\u03ae\7")
+        buf.write(".\2\2\u03aa\u03ae\7\33\2\2\u03ab\u03ae\7\34\2\2\u03ac")
+        buf.write("\u03ae\7\35\2\2\u03ad\u039d\3\2\2\2\u03ad\u039e\3\2\2")
+        buf.write("\2\u03ad\u039f\3\2\2\2\u03ad\u03a0\3\2\2\2\u03ad\u03a1")
+        buf.write("\3\2\2\2\u03ad\u03a2\3\2\2\2\u03ad\u03a3\3\2\2\2\u03ad")
+        buf.write("\u03a5\3\2\2\2\u03ad\u03a9\3\2\2\2\u03ad\u03aa\3\2\2\2")
+        buf.write("\u03ad\u03ab\3\2\2\2\u03ad\u03ac\3\2\2\2\u03ae\u03b0\3")
+        buf.write("\2\2\2\u03af\u0360\3\2\2\2\u03af\u0382\3\2\2\2\u03af\u0386")
+        buf.write("\3\2\2\2\u03af\u0398\3\2\2\2\u03af\u03ad\3\2\2\2\u03b0")
+        buf.write(";\3\2\2\2\u03b1\u03b3\7\60\2\2\u03b2\u03b4\5B\"\2\u03b3")
+        buf.write("\u03b2\3\2\2\2\u03b3\u03b4\3\2\2\2\u03b4\u03b5\3\2\2\2")
+        buf.write("\u03b5\u03c7\7\61\2\2\u03b6\u03b7\7\67\2\2\u03b7\u03bc")
+        buf.write("\5> \2\u03b8\u03b9\7\62\2\2\u03b9\u03bb\5> \2\u03ba\u03b8")
+        buf.write("\3\2\2\2\u03bb\u03be\3\2\2\2\u03bc\u03ba\3\2\2\2\u03bc")
+        buf.write("\u03bd\3\2\2\2\u03bd\u03c0\3\2\2\2\u03be\u03bc\3\2\2\2")
+        buf.write("\u03bf\u03c1\7\62\2\2\u03c0\u03bf\3\2\2\2\u03c0\u03c1")
+        buf.write("\3\2\2\2\u03c1\u03c2\3\2\2\2\u03c2\u03c3\78\2\2\u03c3")
+        buf.write("\u03c7\3\2\2\2\u03c4\u03c5\7-\2\2\u03c5\u03c7\7%\2\2\u03c6")
+        buf.write("\u03b1\3\2\2\2\u03c6\u03b6\3\2\2\2\u03c6\u03c4\3\2\2\2")
+        buf.write("\u03c7=\3\2\2\2\u03c8\u03d7\5*\26\2\u03c9\u03cb\5*\26")
+        buf.write("\2\u03ca\u03c9\3\2\2\2\u03ca\u03cb\3\2\2\2\u03cb\u03cc")
+        buf.write("\3\2\2\2\u03cc\u03ce\7\63\2\2\u03cd\u03cf\5*\26\2\u03ce")
+        buf.write("\u03cd\3\2\2\2\u03ce\u03cf\3\2\2\2\u03cf\u03d4\3\2\2\2")
+        buf.write("\u03d0\u03d2\7\63\2\2\u03d1\u03d3\5*\26\2\u03d2\u03d1")
+        buf.write("\3\2\2\2\u03d2\u03d3\3\2\2\2\u03d3\u03d5\3\2\2\2\u03d4")
+        buf.write("\u03d0\3\2\2\2\u03d4\u03d5\3\2\2\2\u03d5\u03d7\3\2\2\2")
+        buf.write("\u03d6\u03c8\3\2\2\2\u03d6\u03ca\3\2\2\2\u03d7?\3\2\2")
+        buf.write("\2\u03d8\u03f7\5*\26\2\u03d9\u03da\7\63\2\2\u03da\u03dc")
+        buf.write("\5*\26\2\u03db\u03d9\3\2\2\2\u03db\u03dc\3\2\2\2\u03dc")
+        buf.write("\u03dd\3\2\2\2\u03dd\u03f8\5F$\2\u03de\u03df\7\63\2\2")
+        buf.write("\u03df\u03e7\5*\26\2\u03e0\u03e1\7\62\2\2\u03e1\u03e2")
+        buf.write("\5*\26\2\u03e2\u03e3\7\63\2\2\u03e3\u03e4\5*\26\2\u03e4")
+        buf.write("\u03e6\3\2\2\2\u03e5\u03e0\3\2\2\2\u03e6\u03e9\3\2\2\2")
+        buf.write("\u03e7\u03e5\3\2\2\2\u03e7\u03e8\3\2\2\2\u03e8\u03eb\3")
+        buf.write("\2\2\2\u03e9\u03e7\3\2\2\2\u03ea\u03ec\7\62\2\2\u03eb")
+        buf.write("\u03ea\3\2\2\2\u03eb\u03ec\3\2\2\2\u03ec\u03f8\3\2\2\2")
+        buf.write("\u03ed\u03ee\7\62\2\2\u03ee\u03f0\5*\26\2\u03ef\u03ed")
+        buf.write("\3\2\2\2\u03f0\u03f3\3\2\2\2\u03f1\u03ef\3\2\2\2\u03f1")
+        buf.write("\u03f2\3\2\2\2\u03f2\u03f5\3\2\2\2\u03f3\u03f1\3\2\2\2")
+        buf.write("\u03f4\u03f6\7\62\2\2\u03f5\u03f4\3\2\2\2\u03f5\u03f6")
+        buf.write("\3\2\2\2\u03f6\u03f8\3\2\2\2\u03f7\u03db\3\2\2\2\u03f7")
+        buf.write("\u03de\3\2\2\2\u03f7\u03f1\3\2\2\2\u03f8A\3\2\2\2\u03f9")
+        buf.write("\u03ff\5*\26\2\u03fa\u03fc\5F$\2\u03fb\u03fa\3\2\2\2\u03fb")
+        buf.write("\u03fc\3\2\2\2\u03fc\u0400\3\2\2\2\u03fd\u03fe\7\66\2")
+        buf.write("\2\u03fe\u0400\5*\26\2\u03ff\u03fb\3\2\2\2\u03ff\u03fd")
+        buf.write("\3\2\2\2\u0400\u0401\3\2\2\2\u0401\u0402\7\62\2\2\u0402")
+        buf.write("\u0404\3\2\2\2\u0403\u03f9\3\2\2\2\u0404\u0407\3\2\2\2")
+        buf.write("\u0405\u0403\3\2\2\2\u0405\u0406\3\2\2\2\u0406\u042a\3")
+        buf.write("\2\2\2\u0407\u0405\3\2\2\2\u0408\u040e\5*\26\2\u0409\u040b")
+        buf.write("\5F$\2\u040a\u0409\3\2\2\2\u040a\u040b\3\2\2\2\u040b\u040f")
+        buf.write("\3\2\2\2\u040c\u040d\7\66\2\2\u040d\u040f\5*\26\2\u040e")
+        buf.write("\u040a\3\2\2\2\u040e\u040c\3\2\2\2\u040f\u0411\3\2\2\2")
+        buf.write("\u0410\u0412\7\62\2\2\u0411\u0410\3\2\2\2\u0411\u0412")
+        buf.write("\3\2\2\2\u0412\u042b\3\2\2\2\u0413\u0414\7/\2\2\u0414")
+        buf.write("\u0420\5*\26\2\u0415\u0416\7\62\2\2\u0416\u041c\5*\26")
+        buf.write("\2\u0417\u0419\5F$\2\u0418\u0417\3\2\2\2\u0418\u0419\3")
+        buf.write("\2\2\2\u0419\u041d\3\2\2\2\u041a\u041b\7\66\2\2\u041b")
+        buf.write("\u041d\5*\26\2\u041c\u0418\3\2\2\2\u041c\u041a\3\2\2\2")
+        buf.write("\u041d\u041f\3\2\2\2\u041e\u0415\3\2\2\2\u041f\u0422\3")
+        buf.write("\2\2\2\u0420\u041e\3\2\2\2\u0420\u0421\3\2\2\2\u0421\u0426")
+        buf.write("\3\2\2\2\u0422\u0420\3\2\2\2\u0423\u0424\7\62\2\2\u0424")
+        buf.write("\u0425\7\65\2\2\u0425\u0427\5*\26\2\u0426\u0423\3\2\2")
+        buf.write("\2\u0426\u0427\3\2\2\2\u0427\u042b\3\2\2\2\u0428\u0429")
+        buf.write("\7\65\2\2\u0429\u042b\5*\26\2\u042a\u0408\3\2\2\2\u042a")
+        buf.write("\u0413\3\2\2\2\u042a\u0428\3\2\2\2\u042bC\3\2\2\2\u042c")
+        buf.write("\u0433\5F$\2\u042d\u042e\7\f\2\2\u042e\u0430\5,\27\2\u042f")
+        buf.write("\u0431\5D#\2\u0430\u042f\3\2\2\2\u0430\u0431\3\2\2\2\u0431")
+        buf.write("\u0433\3\2\2\2\u0432\u042c\3\2\2\2\u0432\u042d\3\2\2\2")
+        buf.write("\u0433E\3\2\2\2\u0434\u0436\7\20\2\2\u0435\u0437\7/\2")
+        buf.write("\2\u0436\u0435\3\2\2\2\u0436\u0437\3\2\2\2\u0437\u0438")
+        buf.write("\3\2\2\2\u0438\u0440\5\64\33\2\u0439\u043b\7\62\2\2\u043a")
+        buf.write("\u043c\7/\2\2\u043b\u043a\3\2\2\2\u043b\u043c\3\2\2\2")
+        buf.write("\u043c\u043d\3\2\2\2\u043d\u043f\5\64\33\2\u043e\u0439")
+        buf.write("\3\2\2\2\u043f\u0442\3\2\2\2\u0440\u043e\3\2\2\2\u0440")
+        buf.write("\u0441\3\2\2\2\u0441\u0444\3\2\2\2\u0442\u0440\3\2\2\2")
+        buf.write("\u0443\u0445\7\62\2\2\u0444\u0443\3\2\2\2\u0444\u0445")
+        buf.write("\3\2\2\2\u0445\u0446\3\2\2\2\u0446\u0447\7\21\2\2\u0447")
+        buf.write("\u0449\5.\30\2\u0448\u044a\5D#\2\u0449\u0448\3\2\2\2\u0449")
+        buf.write("\u044a\3\2\2\2\u044aG\3\2\2\2\u00cbJLTX^bfnpvz~\u0086")
         buf.write("\u0088\u008e\u0090\u0092\u0098\u009a\u00a0\u00a4\u00a8")
         buf.write("\u00b0\u00b2\u00b8\u00ba\u00bf\u00c5\u00c9\u00cf\u00d5")
         buf.write("\u00d9\u00df\u00e3\u00e5\u00e9\u00ef\u00f3\u00f9\u00fd")
@@ -609,11 +611,11 @@ def serializedATN():
         buf.write("\u02db\u02e4\u02e8\u02f0\u02f4\u02f8\u02fd\u0301\u0308")
         buf.write("\u030e\u0313\u0319\u031c\u032b\u0332\u033c\u0341\u0343")
         buf.write("\u0349\u034d\u0354\u0358\u035d\u0369\u036d\u036f\u0377")
-        buf.write("\u037b\u037d\u037f\u0389\u038d\u038f\u0391\u0396\u03a3")
-        buf.write("\u03a9\u03ab\u03af\u03b8\u03bc\u03c2\u03c6\u03ca\u03ce")
-        buf.write("\u03d0\u03d2\u03d7\u03e3\u03e7\u03ed\u03f1\u03f3\u03f7")
-        buf.write("\u03fb\u0401\u0406\u040a\u040d\u0414\u0418\u041c\u0422")
-        buf.write("\u0426\u042c\u042e\u0432\u0437\u043c\u0440\u0445")
+        buf.write("\u037b\u037d\u037f\u038d\u0391\u0393\u0395\u039a\u03a7")
+        buf.write("\u03ad\u03af\u03b3\u03bc\u03c0\u03c6\u03ca\u03ce\u03d2")
+        buf.write("\u03d4\u03d6\u03db\u03e7\u03eb\u03f1\u03f5\u03f7\u03fb")
+        buf.write("\u03ff\u0405\u040a\u040e\u0411\u0418\u041c\u0420\u0426")
+        buf.write("\u042a\u0430\u0432\u0436\u043b\u0440\u0444\u0449")
         return buf.getvalue()
 
 
@@ -4276,10 +4278,10 @@ class Python3Parser(Parser):
         self.enterRule(localctx, 56, self.RULE_atom)
         self._la = 0  # Token type
         try:
-            self.state = 937
+            self.state = 941
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token == Python3Parser.OPEN_PAREN:
+            la_ = self._interp.adaptivePredict(self._input, 167, self._ctx)
+            if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 862
                 self.match(Python3Parser.OPEN_PAREN)
@@ -4382,11 +4384,22 @@ class Python3Parser(Parser):
                 self.state = 895
                 self.match(Python3Parser.CLOSE_PAREN)
                 pass
-            elif token == Python3Parser.OPEN_BRACK:
+
+            elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 896
                 self.match(Python3Parser.OPEN_BRACK)
-                self.state = 911
+                self.state = 897
+                self.comp_for()
+                self.state = 898
+                self.match(Python3Parser.CLOSE_BRACK)
+                pass
+
+            elif la_ == 3:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 900
+                self.match(Python3Parser.OPEN_BRACK)
+                self.state = 915
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if ((((_la - 20)) & ~0x3f) == 0 and ((1 << (_la - 20)) & (
@@ -4401,48 +4414,49 @@ class Python3Parser(Parser):
                                 1 << (Python3Parser.OPEN_PAREN - 20)) | (1 << (Python3Parser.OPEN_BRACK - 20)) | (
                                 1 << (Python3Parser.ADD - 20)) | (1 << (Python3Parser.MINUS - 20)) | (
                                 1 << (Python3Parser.NOT_OP - 20)) | (1 << (Python3Parser.OPEN_BRACE - 20)))) != 0):
-                    self.state = 897
+                    self.state = 901
                     self.test()
-                    self.state = 909
+                    self.state = 913
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
                     if token == Python3Parser.FOR:
-                        self.state = 898
+                        self.state = 902
                         self.comp_for()
                         pass
                     elif token in [Python3Parser.COMMA, Python3Parser.CLOSE_BRACK]:
-                        self.state = 903
+                        self.state = 907
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input, 160, self._ctx)
                         while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                             if _alt == 1:
-                                self.state = 899
+                                self.state = 903
                                 self.match(Python3Parser.COMMA)
-                                self.state = 900
+                                self.state = 904
                                 self.test()
-                            self.state = 905
+                            self.state = 909
                             self._errHandler.sync(self)
                             _alt = self._interp.adaptivePredict(self._input, 160, self._ctx)
 
-                        self.state = 907
+                        self.state = 911
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if _la == Python3Parser.COMMA:
-                            self.state = 906
+                            self.state = 910
                             self.match(Python3Parser.COMMA)
 
                         pass
                     else:
                         raise NoViableAltException(self)
 
-                self.state = 913
+                self.state = 917
                 self.match(Python3Parser.CLOSE_BRACK)
                 pass
-            elif token == Python3Parser.OPEN_BRACE:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 914
+
+            elif la_ == 4:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 918
                 self.match(Python3Parser.OPEN_BRACE)
-                self.state = 916
+                self.state = 920
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if ((((_la - 20)) & ~0x3f) == 0 and ((1 << (_la - 20)) & (
@@ -4457,86 +4471,83 @@ class Python3Parser(Parser):
                                 1 << (Python3Parser.OPEN_PAREN - 20)) | (1 << (Python3Parser.OPEN_BRACK - 20)) | (
                                 1 << (Python3Parser.ADD - 20)) | (1 << (Python3Parser.MINUS - 20)) | (
                                 1 << (Python3Parser.NOT_OP - 20)) | (1 << (Python3Parser.OPEN_BRACE - 20)))) != 0):
-                    self.state = 915
+                    self.state = 919
                     self.dictorsetmaker()
 
-                self.state = 918
+                self.state = 922
                 self.match(Python3Parser.CLOSE_BRACE)
                 pass
-            elif token in [Python3Parser.NONE, Python3Parser.TRUE, Python3Parser.FALSE, Python3Parser.NAME,
-                           Python3Parser.STRING_BYTES_LITERAL, Python3Parser.DECIMAL_INTEGER, Python3Parser.OCT_INTEGER,
-                           Python3Parser.HEX_INTEGER, Python3Parser.BIN_INTEGER, Python3Parser.FLOAT_NUMBER,
-                           Python3Parser.IMAG_NUMBER, Python3Parser.ELLIPSIS]:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 935
+
+            elif la_ == 5:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 939
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token == Python3Parser.NAME:
-                    self.state = 919
+                    self.state = 923
                     self.match(Python3Parser.NAME)
                     pass
                 elif token == Python3Parser.DECIMAL_INTEGER:
-                    self.state = 920
+                    self.state = 924
                     self.match(Python3Parser.DECIMAL_INTEGER)
                     pass
                 elif token == Python3Parser.OCT_INTEGER:
-                    self.state = 921
+                    self.state = 925
                     self.match(Python3Parser.OCT_INTEGER)
                     pass
                 elif token == Python3Parser.HEX_INTEGER:
-                    self.state = 922
+                    self.state = 926
                     self.match(Python3Parser.HEX_INTEGER)
                     pass
                 elif token == Python3Parser.BIN_INTEGER:
-                    self.state = 923
+                    self.state = 927
                     self.match(Python3Parser.BIN_INTEGER)
                     pass
                 elif token == Python3Parser.FLOAT_NUMBER:
-                    self.state = 924
+                    self.state = 928
                     self.match(Python3Parser.FLOAT_NUMBER)
                     pass
                 elif token == Python3Parser.IMAG_NUMBER:
-                    self.state = 925
+                    self.state = 929
                     self.match(Python3Parser.IMAG_NUMBER)
                     pass
                 elif token == Python3Parser.STRING_BYTES_LITERAL:
-                    self.state = 927
+                    self.state = 931
                     self._errHandler.sync(self)
                     _alt = 1
                     while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                         if _alt == 1:
-                            self.state = 926
+                            self.state = 930
                             self.match(Python3Parser.STRING_BYTES_LITERAL)
 
                         else:
                             raise NoViableAltException(self)
-                        self.state = 929
+                        self.state = 933
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input, 165, self._ctx)
 
                     pass
                 elif token == Python3Parser.ELLIPSIS:
-                    self.state = 931
+                    self.state = 935
                     self.match(Python3Parser.ELLIPSIS)
                     pass
                 elif token == Python3Parser.NONE:
-                    self.state = 932
+                    self.state = 936
                     self.match(Python3Parser.NONE)
                     pass
                 elif token == Python3Parser.TRUE:
-                    self.state = 933
+                    self.state = 937
                     self.match(Python3Parser.TRUE)
                     pass
                 elif token == Python3Parser.FALSE:
-                    self.state = 934
+                    self.state = 938
                     self.match(Python3Parser.FALSE)
                     pass
                 else:
                     raise NoViableAltException(self)
 
                 pass
-            else:
-                raise NoViableAltException(self)
+
 
         except RecognitionException as re:
             localctx.exception = re
@@ -4576,14 +4587,14 @@ class Python3Parser(Parser):
         self.enterRule(localctx, 58, self.RULE_trailer)
         self._la = 0  # Token type
         try:
-            self.state = 960
+            self.state = 964
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token == Python3Parser.OPEN_PAREN:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 939
+                self.state = 943
                 self.match(Python3Parser.OPEN_PAREN)
-                self.state = 941
+                self.state = 945
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if ((((_la - 20)) & ~0x3f) == 0 and ((1 << (_la - 20)) & (
@@ -4599,46 +4610,46 @@ class Python3Parser(Parser):
                                 1 << (Python3Parser.OPEN_BRACK - 20)) | (1 << (Python3Parser.ADD - 20)) | (
                                 1 << (Python3Parser.MINUS - 20)) | (1 << (Python3Parser.NOT_OP - 20)) | (
                                 1 << (Python3Parser.OPEN_BRACE - 20)))) != 0):
-                    self.state = 940
+                    self.state = 944
                     self.arglist()
 
-                self.state = 943
+                self.state = 947
                 self.match(Python3Parser.CLOSE_PAREN)
                 pass
             elif token == Python3Parser.OPEN_BRACK:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 944
+                self.state = 948
                 self.match(Python3Parser.OPEN_BRACK)
-                self.state = 945
+                self.state = 949
                 self.subscript()
-                self.state = 950
+                self.state = 954
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input, 169, self._ctx)
                 while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
-                        self.state = 946
+                        self.state = 950
                         self.match(Python3Parser.COMMA)
-                        self.state = 947
+                        self.state = 951
                         self.subscript()
-                    self.state = 952
+                    self.state = 956
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input, 169, self._ctx)
 
-                self.state = 954
+                self.state = 958
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COMMA:
-                    self.state = 953
+                    self.state = 957
                     self.match(Python3Parser.COMMA)
 
-                self.state = 956
+                self.state = 960
                 self.match(Python3Parser.CLOSE_BRACK)
                 pass
             elif token == Python3Parser.DOT:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 958
+                self.state = 962
                 self.match(Python3Parser.DOT)
-                self.state = 959
+                self.state = 963
                 self.match(Python3Parser.NAME)
                 pass
             else:
@@ -4676,37 +4687,17 @@ class Python3Parser(Parser):
         self.enterRule(localctx, 60, self.RULE_subscript)
         self._la = 0  # Token type
         try:
-            self.state = 976
+            self.state = 980
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input, 176, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 962
+                self.state = 966
                 self.test()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 964
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if ((((_la - 20)) & ~0x3f) == 0 and ((1 << (_la - 20)) & (
-                        (1 << (Python3Parser.LAMBDA - 20)) | (1 << (Python3Parser.NOT - 20)) | (
-                        1 << (Python3Parser.NONE - 20)) | (1 << (Python3Parser.TRUE - 20)) | (
-                                1 << (Python3Parser.FALSE - 20)) | (1 << (Python3Parser.NAME - 20)) | (
-                                1 << (Python3Parser.STRING_BYTES_LITERAL - 20)) | (
-                                1 << (Python3Parser.DECIMAL_INTEGER - 20)) | (1 << (Python3Parser.OCT_INTEGER - 20)) | (
-                                1 << (Python3Parser.HEX_INTEGER - 20)) | (1 << (Python3Parser.BIN_INTEGER - 20)) | (
-                                1 << (Python3Parser.FLOAT_NUMBER - 20)) | (1 << (Python3Parser.IMAG_NUMBER - 20)) | (
-                                1 << (Python3Parser.ELLIPSIS - 20)) | (1 << (Python3Parser.STAR - 20)) | (
-                                1 << (Python3Parser.OPEN_PAREN - 20)) | (1 << (Python3Parser.OPEN_BRACK - 20)) | (
-                                1 << (Python3Parser.ADD - 20)) | (1 << (Python3Parser.MINUS - 20)) | (
-                                1 << (Python3Parser.NOT_OP - 20)) | (1 << (Python3Parser.OPEN_BRACE - 20)))) != 0):
-                    self.state = 963
-                    self.test()
-
-                self.state = 966
-                self.match(Python3Parser.COLON)
                 self.state = 968
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4725,13 +4716,33 @@ class Python3Parser(Parser):
                     self.state = 967
                     self.test()
 
-                self.state = 974
+                self.state = 970
+                self.match(Python3Parser.COLON)
+                self.state = 972
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if ((((_la - 20)) & ~0x3f) == 0 and ((1 << (_la - 20)) & (
+                        (1 << (Python3Parser.LAMBDA - 20)) | (1 << (Python3Parser.NOT - 20)) | (
+                        1 << (Python3Parser.NONE - 20)) | (1 << (Python3Parser.TRUE - 20)) | (
+                                1 << (Python3Parser.FALSE - 20)) | (1 << (Python3Parser.NAME - 20)) | (
+                                1 << (Python3Parser.STRING_BYTES_LITERAL - 20)) | (
+                                1 << (Python3Parser.DECIMAL_INTEGER - 20)) | (1 << (Python3Parser.OCT_INTEGER - 20)) | (
+                                1 << (Python3Parser.HEX_INTEGER - 20)) | (1 << (Python3Parser.BIN_INTEGER - 20)) | (
+                                1 << (Python3Parser.FLOAT_NUMBER - 20)) | (1 << (Python3Parser.IMAG_NUMBER - 20)) | (
+                                1 << (Python3Parser.ELLIPSIS - 20)) | (1 << (Python3Parser.STAR - 20)) | (
+                                1 << (Python3Parser.OPEN_PAREN - 20)) | (1 << (Python3Parser.OPEN_BRACK - 20)) | (
+                                1 << (Python3Parser.ADD - 20)) | (1 << (Python3Parser.MINUS - 20)) | (
+                                1 << (Python3Parser.NOT_OP - 20)) | (1 << (Python3Parser.OPEN_BRACE - 20)))) != 0):
+                    self.state = 971
+                    self.test()
+
+                self.state = 978
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COLON:
-                    self.state = 970
+                    self.state = 974
                     self.match(Python3Parser.COLON)
-                    self.state = 972
+                    self.state = 976
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if ((((_la - 20)) & ~0x3f) == 0 and ((1 << (_la - 20)) & (
@@ -4748,7 +4759,7 @@ class Python3Parser(Parser):
                                     1 << (Python3Parser.OPEN_BRACK - 20)) | (1 << (Python3Parser.ADD - 20)) | (
                                     1 << (Python3Parser.MINUS - 20)) | (1 << (Python3Parser.NOT_OP - 20)) | (
                                     1 << (Python3Parser.OPEN_BRACE - 20)))) != 0):
-                        self.state = 971
+                        self.state = 975
                         self.test()
 
                 pass
@@ -4790,75 +4801,75 @@ class Python3Parser(Parser):
         self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 978
+            self.state = 982
             self.test()
-            self.state = 1009
+            self.state = 1013
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input, 182, self._ctx)
             if la_ == 1:
-                self.state = 981
+                self.state = 985
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COLON:
-                    self.state = 979
+                    self.state = 983
                     self.match(Python3Parser.COLON)
-                    self.state = 980
+                    self.state = 984
                     self.test()
 
-                self.state = 983
+                self.state = 987
                 self.comp_for()
                 pass
 
             elif la_ == 2:
-                self.state = 984
+                self.state = 988
                 self.match(Python3Parser.COLON)
-                self.state = 985
+                self.state = 989
                 self.test()
-                self.state = 993
+                self.state = 997
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input, 178, self._ctx)
                 while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
-                        self.state = 986
+                        self.state = 990
                         self.match(Python3Parser.COMMA)
-                        self.state = 987
+                        self.state = 991
                         self.test()
-                        self.state = 988
+                        self.state = 992
                         self.match(Python3Parser.COLON)
-                        self.state = 989
+                        self.state = 993
                         self.test()
-                    self.state = 995
+                    self.state = 999
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input, 178, self._ctx)
 
-                self.state = 997
+                self.state = 1001
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COMMA:
-                    self.state = 996
+                    self.state = 1000
                     self.match(Python3Parser.COMMA)
 
                 pass
 
             elif la_ == 3:
-                self.state = 1003
+                self.state = 1007
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input, 180, self._ctx)
                 while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
-                        self.state = 999
+                        self.state = 1003
                         self.match(Python3Parser.COMMA)
-                        self.state = 1000
+                        self.state = 1004
                         self.test()
-                    self.state = 1005
+                    self.state = 1009
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input, 180, self._ctx)
 
-                self.state = 1007
+                self.state = 1011
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COMMA:
-                    self.state = 1006
+                    self.state = 1010
                     self.match(Python3Parser.COMMA)
 
                 pass
@@ -4903,132 +4914,132 @@ class Python3Parser(Parser):
         self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 1023
+            self.state = 1027
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input, 185, self._ctx)
             while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
-                    self.state = 1011
+                    self.state = 1015
                     self.test()
-                    self.state = 1017
+                    self.state = 1021
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
                     if token in [Python3Parser.FOR, Python3Parser.COMMA]:
-                        self.state = 1013
+                        self.state = 1017
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         if _la == Python3Parser.FOR:
-                            self.state = 1012
+                            self.state = 1016
                             self.comp_for()
 
                         pass
                     elif token == Python3Parser.ASSIGN:
-                        self.state = 1015
+                        self.state = 1019
                         self.match(Python3Parser.ASSIGN)
-                        self.state = 1016
+                        self.state = 1020
                         self.test()
                         pass
                     else:
                         raise NoViableAltException(self)
 
-                    self.state = 1019
+                    self.state = 1023
                     self.match(Python3Parser.COMMA)
-                self.state = 1025
+                self.state = 1029
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input, 185, self._ctx)
 
-            self.state = 1060
+            self.state = 1064
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input, 193, self._ctx)
             if la_ == 1:
-                self.state = 1026
+                self.state = 1030
                 self.test()
-                self.state = 1032
+                self.state = 1036
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [Python3Parser.FOR, Python3Parser.CLOSE_PAREN, Python3Parser.COMMA]:
-                    self.state = 1028
+                    self.state = 1032
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la == Python3Parser.FOR:
-                        self.state = 1027
+                        self.state = 1031
                         self.comp_for()
 
                     pass
                 elif token == Python3Parser.ASSIGN:
-                    self.state = 1030
+                    self.state = 1034
                     self.match(Python3Parser.ASSIGN)
-                    self.state = 1031
+                    self.state = 1035
                     self.test()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 1035
+                self.state = 1039
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COMMA:
-                    self.state = 1034
+                    self.state = 1038
                     self.match(Python3Parser.COMMA)
 
                 pass
 
             elif la_ == 2:
-                self.state = 1037
+                self.state = 1041
                 self.match(Python3Parser.STAR)
-                self.state = 1038
+                self.state = 1042
                 self.test()
-                self.state = 1050
+                self.state = 1054
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input, 191, self._ctx)
                 while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
-                        self.state = 1039
+                        self.state = 1043
                         self.match(Python3Parser.COMMA)
-                        self.state = 1040
+                        self.state = 1044
                         self.test()
-                        self.state = 1046
+                        self.state = 1050
                         self._errHandler.sync(self)
                         token = self._input.LA(1)
                         if token in [Python3Parser.FOR, Python3Parser.CLOSE_PAREN, Python3Parser.COMMA]:
-                            self.state = 1042
+                            self.state = 1046
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if _la == Python3Parser.FOR:
-                                self.state = 1041
+                                self.state = 1045
                                 self.comp_for()
 
                             pass
                         elif token == Python3Parser.ASSIGN:
-                            self.state = 1044
+                            self.state = 1048
                             self.match(Python3Parser.ASSIGN)
-                            self.state = 1045
+                            self.state = 1049
                             self.test()
                             pass
                         else:
                             raise NoViableAltException(self)
 
-                    self.state = 1052
+                    self.state = 1056
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input, 191, self._ctx)
 
-                self.state = 1056
+                self.state = 1060
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.COMMA:
-                    self.state = 1053
+                    self.state = 1057
                     self.match(Python3Parser.COMMA)
-                    self.state = 1054
+                    self.state = 1058
                     self.match(Python3Parser.POWER)
-                    self.state = 1055
+                    self.state = 1059
                     self.test()
 
                 pass
 
             elif la_ == 3:
-                self.state = 1058
+                self.state = 1062
                 self.match(Python3Parser.POWER)
-                self.state = 1059
+                self.state = 1063
                 self.test()
                 pass
 
@@ -5074,25 +5085,25 @@ class Python3Parser(Parser):
         self.enterRule(localctx, 66, self.RULE_comp_iter)
         self._la = 0  # Token type
         try:
-            self.state = 1068
+            self.state = 1072
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token == Python3Parser.FOR:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 1062
+                self.state = 1066
                 self.comp_for()
                 pass
             elif token == Python3Parser.IF:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 1063
+                self.state = 1067
                 self.match(Python3Parser.IF)
-                self.state = 1064
+                self.state = 1068
                 self.test_nocond()
-                self.state = 1066
+                self.state = 1070
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la == Python3Parser.IF or _la == Python3Parser.FOR:
-                    self.state = 1065
+                    self.state = 1069
                     self.comp_iter()
 
                 pass
@@ -5147,53 +5158,53 @@ class Python3Parser(Parser):
         self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 1070
+            self.state = 1074
             self.match(Python3Parser.FOR)
-            self.state = 1072
+            self.state = 1076
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la == Python3Parser.STAR:
-                self.state = 1071
+                self.state = 1075
                 self.match(Python3Parser.STAR)
 
-            self.state = 1074
+            self.state = 1078
             self.expr()
-            self.state = 1082
+            self.state = 1086
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input, 198, self._ctx)
             while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
-                    self.state = 1075
+                    self.state = 1079
                     self.match(Python3Parser.COMMA)
-                    self.state = 1077
+                    self.state = 1081
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if _la == Python3Parser.STAR:
-                        self.state = 1076
+                        self.state = 1080
                         self.match(Python3Parser.STAR)
 
-                    self.state = 1079
+                    self.state = 1083
                     self.expr()
-                self.state = 1084
+                self.state = 1088
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input, 198, self._ctx)
 
-            self.state = 1086
+            self.state = 1090
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la == Python3Parser.COMMA:
-                self.state = 1085
+                self.state = 1089
                 self.match(Python3Parser.COMMA)
 
-            self.state = 1088
+            self.state = 1092
             self.match(Python3Parser.IN)
-            self.state = 1089
+            self.state = 1093
             self.or_test()
-            self.state = 1091
+            self.state = 1095
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la == Python3Parser.IF or _la == Python3Parser.FOR:
-                self.state = 1090
+                self.state = 1094
                 self.comp_iter()
 
 

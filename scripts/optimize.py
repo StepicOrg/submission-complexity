@@ -76,6 +76,7 @@ RULES = {
         'break_stmt',
         'continue_stmt',
         'comp_iter',
+        'comp_for',
         'assert_stmt',
         'return_stmt',
         'yield_stmt',

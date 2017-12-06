@@ -373,7 +373,8 @@ call
 atom
 :
     '(' (YIELD (FROM test | test (',' test)* ','?)? | test (comp_for | (',' test)* ','?))? ')'
-    | '[' (test (comp_for | (',' test)* ','?))? ']'
+    | '[' comp_for ']'
+    | '['(test (comp_for | (',' test)* ','?))?']'
     | '{' dictorsetmaker? '}'
     | (
         NAME
