@@ -270,7 +270,13 @@ yield_stmt
 // used in BRANCHES
 if_stmt
 :
-    IF test ':' suite (ELIF test ':' suite)* else_suite?
+    IF test ':' suite elif_stmt* else_suite?
+;
+
+// used in BRANCHES
+elif_stmt
+:
+    ELIF test ':' suite
 ;
 
 // used in CONDITIONALS
@@ -314,8 +320,20 @@ suite
 
 test
 :
-    or_test (IF or_test ELSE test)?
+    or_test if_stmt2?
     | LAMBDA varargslist? ':' test
+;
+
+// used in BRANCHES
+if_stmt2
+:
+    IF or_test else_stmt
+;
+
+// used in CONDITIONALS
+else_stmt
+:
+    ELSE test
 ;
 
 test_nocond
@@ -430,6 +448,7 @@ comp_iter
     | IF test_nocond comp_iter?
 ;
 
+// used in BRANCHES
 comp_for
 :
     FOR '*'? expr (',' '*'? expr)* ','? IN or_test comp_iter?

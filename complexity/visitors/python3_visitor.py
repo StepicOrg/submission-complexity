@@ -15,8 +15,10 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
         Python3Parser.RULE_call,
         # ('If', 'While', 'For', 'Raise', 'Break', 'cond', 'iter', 'In')
         Python3Parser.RULE_if_stmt,
+        Python3Parser.RULE_elif_stmt,
         Python3Parser.RULE_while_stmt,
         Python3Parser.RULE_for_stmt,
+        Python3Parser.RULE_if_stmt2,
         Python3Parser.RULE_raise_stmt,
         Python3Parser.RULE_break_stmt,
         Python3Parser.RULE_continue_stmt,
@@ -32,6 +34,7 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
         Python3Parser.RULE_comp_op,
         # Occurrence of the following keywords ('else', 'Try', 'ExceptHandler').
         Python3Parser.RULE_else_suite,
+        Python3Parser.RULE_else_stmt,
         Python3Parser.RULE_try_stmt,
         Python3Parser.RULE_except_clause,
     )
@@ -48,10 +51,16 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
     def visitIf_stmt(self, ctx: Python3Parser.If_stmtContext):
         return self.process(ctx)
 
+    def visitElif_stmt(self, ctx: Python3Parser.Elif_stmtContext):
+        return self.process(ctx)
+
     def visitWhile_stmt(self, ctx: Python3Parser.While_stmtContext):
         return self.process(ctx)
 
     def visitFor_stmt(self, ctx: Python3Parser.For_stmtContext):
+        return self.process(ctx)
+
+    def visitIf_stmt2(self, ctx: Python3Parser.If_stmt2Context):
         return self.process(ctx)
 
     def visitRaise_stmt(self, ctx: Python3Parser.Raise_stmtContext):
@@ -82,6 +91,9 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
         return self.process(ctx)
 
     def visitElse_suite(self, ctx: Python3Parser.Else_suiteContext):
+        return self.process(ctx)
+
+    def visitElse_stmt(self, ctx: Python3Parser.Else_stmtContext):
         return self.process(ctx)
 
     def visitTry_stmt(self, ctx: Python3Parser.Try_stmtContext):

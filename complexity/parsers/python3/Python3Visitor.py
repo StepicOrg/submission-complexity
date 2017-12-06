@@ -67,6 +67,10 @@ class Python3Visitor(ParseTreeVisitor):
     def visitIf_stmt(self, ctx: Python3Parser.If_stmtContext):
         return self.visitChildren(ctx)
 
+    # Visit a parse tree produced by Python3Parser#elif_stmt.
+    def visitElif_stmt(self, ctx: Python3Parser.Elif_stmtContext):
+        return self.visitChildren(ctx)
+
     # Visit a parse tree produced by Python3Parser#else_suite.
     def visitElse_suite(self, ctx: Python3Parser.Else_suiteContext):
         return self.visitChildren(ctx)
@@ -93,6 +97,14 @@ class Python3Visitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by Python3Parser#test.
     def visitTest(self, ctx: Python3Parser.TestContext):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Python3Parser#if_stmt2.
+    def visitIf_stmt2(self, ctx: Python3Parser.If_stmt2Context):
+        return self.visitChildren(ctx)
+
+    # Visit a parse tree produced by Python3Parser#else_stmt.
+    def visitElse_stmt(self, ctx: Python3Parser.Else_stmtContext):
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by Python3Parser#test_nocond.

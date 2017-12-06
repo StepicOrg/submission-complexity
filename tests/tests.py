@@ -97,10 +97,10 @@ tests = {
         },
         {
             'file': 'code/python3/compat.py',
-            'a': 4,
-            'b': 5,
-            'c': 3,
-            'score': 7.07
+            'a': 1,
+            'b': 4,
+            'c': 1,
+            'score': 4.24
         },
         {
             'file': 'code/python3/constants.py',
@@ -112,9 +112,9 @@ tests = {
         {
             'file': 'code/python3/locks.py',
             'a': 12,
-            'b': 24,
-            'c': 4,
-            'score': 27.13
+            'b': 25,
+            'c': 5,
+            'score': 28.18
         },
         {
             'file': 'code/python3/log.py',
@@ -183,14 +183,14 @@ class TestComplexity(unittest.TestCase):
             }, test, file)
             print('.', flush=True, end='')
 
-    # def test_cpp(self):
-    #     self._test(CPPABCVisitor)
-    #
-    # def test_c(self):
-    #     self._test(CABCVisitor)
+    def test_cpp(self):
+        self._test(CPPABCVisitor)
+
+    def test_c(self):
+        self._test(CABCVisitor)
 
     def test_python3(self):
         self._test(Python3ABCVisitor)
 
-    # def test_java9(self):
-    #     self._test(Java9ABCVisitor)
+    def test_java9(self):
+        self._test(Java9ABCVisitor)
