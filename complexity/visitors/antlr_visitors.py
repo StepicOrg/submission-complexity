@@ -1,6 +1,7 @@
-from datetime import datetime
+import threading
 
 from antlr4 import CommonTokenStream, PredictionMode, InputStream
+from antlr4.error.Errors import CancellationException
 
 from complexity.parsers.c.CLexer import CLexer
 from complexity.parsers.c.CParser import CParser
@@ -10,21 +11,28 @@ from complexity.parsers.java9.Java9Lexer import Java9Lexer
 from complexity.parsers.java9.Java9Parser import Java9Parser
 from complexity.parsers.python3.Python3Lexer import Python3Lexer
 from complexity.parsers.python3.Python3Parser import Python3Parser
-from complexity.visitors.base_visitor import BaseVisitor
+from complexity.visitors.base_visitor import BaseVisitor, EmptyVisitor
 from complexity.visitors.c_visitor import CCustomVisitor
 from complexity.visitors.cpp_visitor import CPP14CustomVisitor
 from complexity.visitors.java9_visitor import Java9CustomVisitor
 from complexity.visitors.python3_visitor import Python3CustomVisitor
 
 
-class ANTLRVisitor(object):
+class ANTLRVisitor(threading.Thread):
     Lexer = None
     Parser = None
     Visitor = None
     start_rule = None
 
+    def __init__(self, code: str, *args, **kwargs):
+        super(ANTLRVisitor, self).__init__(*args, **kwargs)
+        self.code = code
+        self.parser = None
+        self.visitor = EmptyVisitor()
+        self.need_stop = False
+
     @classmethod
-    def from_code(cls, code: str, time_limit: float = None, **kwargs) -> BaseVisitor:
+    def from_code(cls, code: str, time_limit: float = None, **kwargs):
         """
 
         :param code: Code for calculate ABC Score
@@ -32,26 +40,44 @@ class ANTLRVisitor(object):
         :param kwargs: other parameters
         :return: Visitor
         """
-        start_time = datetime.now()
-        input = InputStream(code)
-        lexer = cls.Lexer(input)
+        th = cls(code)
+        th.start()
+        th.join(time_limit)
+        if th.is_alive():
+            th.stop()
+            th.join()
+            return EmptyVisitor()
+
+        return th.visitor
+
+    def stop(self):
+        if self.parser:
+            self.parser.stop = True
+        self.need_stop = True
+
+    def run(self):
+        input = InputStream(self.code)
+        lexer = self.Lexer(input)
         tokens = CommonTokenStream(lexer)
 
-        parser = cls.Parser(tokens)
-        parser._interp.predictionMode = PredictionMode.SLL
+        self.parser = self.Parser(tokens)
+        self.parser._interp.predictionMode = PredictionMode.SLL
+
+        if self.need_stop:
+            return
 
         try:
-            tree = cls.start_rule(parser)
-        except:
-            tokens.reset()  # rewind
-            parser.reset()
-            parser._interp.predictionMode = PredictionMode.LL
-            tree = cls.start_rule(parser)
-
-        visitor = cls.Visitor(start_time, time_limit)
-        visitor.visit(tree)
-
-        return visitor
+            try:
+                tree = self.__class__.start_rule(self.parser)
+            except:
+                tokens.reset()  # rewind
+                self.parser.reset()
+                self.parser._interp.predictionMode = PredictionMode.LL
+                tree = self.__class__.start_rule(self.parser)
+        except CancellationException:
+            return
+        self.visitor = self.Visitor()
+        self.visitor.visit(tree)
 
 
 class CPPABCVisitor(ANTLRVisitor):
