@@ -6,8 +6,6 @@ from io import StringIO
 from antlr4 import *
 from typing.io import TextIO
 
-from complexity.parsers.ParserWithTimeLimit import ParserWithTimeLimit
-
 
 def serializedATN():
     with StringIO() as buf:
@@ -621,7 +619,7 @@ def serializedATN():
         return buf.getvalue()
 
 
-class Python3Parser(ParserWithTimeLimit):
+class Python3Parser(Parser):
     grammarFileName = "Python3.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())

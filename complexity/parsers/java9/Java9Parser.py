@@ -6,8 +6,6 @@ from io import StringIO
 from antlr4 import *
 from typing.io import TextIO
 
-from complexity.parsers.ParserWithTimeLimit import ParserWithTimeLimit
-
 
 def serializedATN():
     with StringIO() as buf:
@@ -1249,7 +1247,7 @@ def serializedATN():
         return buf.getvalue()
 
 
-class Java9Parser(ParserWithTimeLimit):
+class Java9Parser(Parser):
     grammarFileName = "Java9.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
