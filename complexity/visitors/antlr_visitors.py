@@ -1,4 +1,5 @@
-from datetime import datetime
+from multiprocessing import Process, Queue
+from queue import Empty
 
 from antlr4 import CommonTokenStream, PredictionMode, InputStream
 
@@ -10,7 +11,7 @@ from complexity.parsers.java9.Java9Lexer import Java9Lexer
 from complexity.parsers.java9.Java9Parser import Java9Parser
 from complexity.parsers.python3.Python3Lexer import Python3Lexer
 from complexity.parsers.python3.Python3Parser import Python3Parser
-from complexity.visitors.base_visitor import BaseVisitor
+from complexity.visitors.base_visitor import EmptyVisitor, BaseVisitor
 from complexity.visitors.c_visitor import CCustomVisitor
 from complexity.visitors.cpp_visitor import CPP14CustomVisitor
 from complexity.visitors.java9_visitor import Java9CustomVisitor
@@ -24,7 +25,7 @@ class ANTLRVisitor(object):
     start_rule = None
 
     @classmethod
-    def from_code(cls, code: str, time_limit: float = None, **kwargs) -> BaseVisitor:
+    def from_code(cls, code: str, time_limit: float = None, **kwargs):
         """
 
         :param code: Code for calculate ABC Score
@@ -32,26 +33,54 @@ class ANTLRVisitor(object):
         :param kwargs: other parameters
         :return: Visitor
         """
-        start_time = datetime.now()
+        q = Queue()
+        process = Process(target=run, args=(q, code, cls.Lexer, cls.Parser,
+                                            cls.Visitor, cls.start_rule))
+        process.daemon = True
+        process.start()
+        process.join(time_limit)
+        if process.is_alive():
+            process.terminate()
+            process.join()
+            return EmptyVisitor()
+
+        try:
+            result = q.get(block=False)
+        except Empty:
+            return EmptyVisitor()
+
+        cls.check_exception(result)
+        if isinstance(result, BaseVisitor):
+            return result
+        return EmptyVisitor()
+
+    @classmethod
+    def check_exception(cls, exception):
+        if isinstance(exception, Exception):
+            raise exception
+
+
+def run(q, code, Lexer, Parser, Visitor, start_rule):
+    try:
         input = InputStream(code)
-        lexer = cls.Lexer(input)
+        lexer = Lexer(input)
         tokens = CommonTokenStream(lexer)
 
-        parser = cls.Parser(tokens)
+        parser = Parser(tokens)
         parser._interp.predictionMode = PredictionMode.SLL
 
         try:
-            tree = cls.start_rule(parser)
+            tree = start_rule(parser)
         except:
             tokens.reset()  # rewind
             parser.reset()
             parser._interp.predictionMode = PredictionMode.LL
-            tree = cls.start_rule(parser)
-
-        visitor = cls.Visitor(start_time, time_limit)
+            tree = start_rule(parser)
+        visitor = Visitor()
         visitor.visit(tree)
-
-        return visitor
+        q.put(visitor, block=False)
+    except Exception as e:
+        q.put(e, block=False)
 
 
 class CPPABCVisitor(ANTLRVisitor):
