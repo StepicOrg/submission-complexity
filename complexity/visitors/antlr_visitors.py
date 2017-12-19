@@ -11,7 +11,7 @@ from complexity.parsers.java9.Java9Lexer import Java9Lexer
 from complexity.parsers.java9.Java9Parser import Java9Parser
 from complexity.parsers.python3.Python3Lexer import Python3Lexer
 from complexity.parsers.python3.Python3Parser import Python3Parser
-from complexity.visitors.base_visitor import BaseVisitor, EmptyVisitor
+from complexity.visitors.base_visitor import EmptyVisitor
 from complexity.visitors.c_visitor import CCustomVisitor
 from complexity.visitors.cpp_visitor import CPP14CustomVisitor
 from complexity.visitors.java9_visitor import Java9CustomVisitor
@@ -30,6 +30,7 @@ class ANTLRVisitor(threading.Thread):
         self.parser = None
         self.visitor = EmptyVisitor()
         self.need_stop = False
+        self.exception = None
 
     @classmethod
     def from_code(cls, code: str, time_limit: float = None, **kwargs):
@@ -46,9 +47,15 @@ class ANTLRVisitor(threading.Thread):
         if th.is_alive():
             th.stop()
             th.join()
+            th.check_exception()
             return EmptyVisitor()
 
+        th.check_exception()
         return th.visitor
+
+    def check_exception(self):
+        if self.exception:
+            raise self.exception
 
     def stop(self):
         if self.parser:
@@ -56,28 +63,31 @@ class ANTLRVisitor(threading.Thread):
         self.need_stop = True
 
     def run(self):
-        input = InputStream(self.code)
-        lexer = self.Lexer(input)
-        tokens = CommonTokenStream(lexer)
-
-        self.parser = self.Parser(tokens)
-        self.parser._interp.predictionMode = PredictionMode.SLL
-
-        if self.need_stop:
-            return
-
         try:
+            input = InputStream(self.code)
+            lexer = self.Lexer(input)
+            tokens = CommonTokenStream(lexer)
+
+            self.parser = self.Parser(tokens)
+            self.parser._interp.predictionMode = PredictionMode.SLL
+
+            if self.need_stop:
+                return
+
             try:
-                tree = self.__class__.start_rule(self.parser)
-            except:
-                tokens.reset()  # rewind
-                self.parser.reset()
-                self.parser._interp.predictionMode = PredictionMode.LL
-                tree = self.__class__.start_rule(self.parser)
-        except CancellationException:
-            return
-        self.visitor = self.Visitor()
-        self.visitor.visit(tree)
+                try:
+                    tree = self.__class__.start_rule(self.parser)
+                except:
+                    tokens.reset()  # rewind
+                    self.parser.reset()
+                    self.parser._interp.predictionMode = PredictionMode.LL
+                    tree = self.__class__.start_rule(self.parser)
+            except CancellationException:
+                return
+            self.visitor = self.Visitor()
+            self.visitor.visit(tree)
+        except Exception as e:
+            self.exception = e
 
 
 class CPPABCVisitor(ANTLRVisitor):
