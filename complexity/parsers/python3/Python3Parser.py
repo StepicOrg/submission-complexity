@@ -628,8 +628,6 @@ class Python3Parser(ParserWithTimeLimit):
 
     decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
-    sharedContextCache = PredictionContextCache()
-
     literalNames = ["<INVALID>", "'def'", "'return'", "'raise'", "'from'",
                     "'import'", "'as'", "'global'", "'nonlocal'", "'assert'",
                     "'if'", "'elif'", "'else'", "'while'", "'for'", "'in'",
@@ -813,7 +811,7 @@ class Python3Parser(ParserWithTimeLimit):
     def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7")
-        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._predicates = None
 
     class File_inputContext(ParserRuleContext):

@@ -562,8 +562,6 @@ class CParser(ParserWithTimeLimit):
 
     decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
-    sharedContextCache = PredictionContextCache()
-
     literalNames = ["<INVALID>", "'__extension__'", "'__builtin_va_arg'",
                     "'__builtin_offsetof'", "'__m128'", "'__m128d'", "'__m128i'",
                     "'__typeof__'", "'__inline__'", "'__stdcall'", "'__declspec'",
@@ -825,7 +823,7 @@ class CParser(ParserWithTimeLimit):
     def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7")
-        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._predicates = None
 
     class PrimaryExpressionContext(ParserRuleContext):
