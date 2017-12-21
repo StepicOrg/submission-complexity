@@ -6,7 +6,7 @@ from io import StringIO
 from antlr4 import *
 from typing.io import TextIO
 
-from complexity.parsers.parsers import ParserWithTimeLimit
+from complexity.parsers.parsers import InterruptibleParser
 
 
 def serializedATN():
@@ -1610,7 +1610,7 @@ def serializedATN():
         return buf.getvalue()
 
 
-class CPP14Parser(ParserWithTimeLimit):
+class CPP14Parser(InterruptibleParser):
     grammarFileName = "CPP14.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())

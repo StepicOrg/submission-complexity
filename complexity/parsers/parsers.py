@@ -5,12 +5,12 @@ from typing import TextIO
 from antlr4.error.Errors import CancellationException
 
 
-class ParserWithTimeLimit(Parser):
+class InterruptibleParser(Parser):
     def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.stop = False
 
     def enterRule(self, localctx:ParserRuleContext , state:int , ruleIndex:int):
         if self.stop:
-            raise CancellationException("The calculation is interrupted")
-        super(ParserWithTimeLimit, self).enterRule(localctx , state , ruleIndex)
+            raise CancellationException("Parsing is interrupted")
+        super(InterruptibleParser, self).enterRule(localctx, state, ruleIndex)
