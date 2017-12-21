@@ -1254,8 +1254,6 @@ class Java9Parser(Parser):
 
     decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
-    sharedContextCache = PredictionContextCache()
-
     literalNames = ["<INVALID>", "'open'", "'module'", "'requires'", "'transitive'",
                     "'uses'", "'exports'", "'opens'", "'to'", "'provides'",
                     "'with'", "<INVALID>", "<INVALID>", "'abstract'", "'assert'",
@@ -1564,7 +1562,7 @@ class Java9Parser(Parser):
     def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.7")
-        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._predicates = None
 
     class ReferenceTypeContext(ParserRuleContext):

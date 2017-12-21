@@ -125,6 +125,11 @@ def optimize(parsers_path):
             # Common optimize
             data = re.sub(r'(if .*) in \[(\w*\.\w*)\]', r'\g<1> == \g<2>', data)
 
+            # Disable use cache
+            data = re.sub(r'sharedContextCache = PredictionContextCache\(\)\n', '', data)
+            data = re.sub(r'self\.sharedContextCache',
+                          'PredictionContextCache()', data)
+
         with open(file_name, 'w') as file:
             file.write(data)
 
