@@ -30,6 +30,7 @@ class ParsingTask(threading.Thread):
         self.visitor = EmptyVisitor()
         self.need_stop = False
         self.exception = None
+        self.daemon = True
 
     def check_exception(self):
         if self.exception:
