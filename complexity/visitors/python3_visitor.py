@@ -1,5 +1,7 @@
+from complexity.parsers.python3.Python3Lexer import Python3Lexer
 from complexity.parsers.python3.Python3Parser import Python3Parser
 from complexity.parsers.python3.Python3Visitor import Python3Visitor
+from complexity.visitors.antlr_visitor import ANTLRVisitor
 from complexity.visitors.base_visitor import BaseVisitor
 
 
@@ -101,3 +103,10 @@ class Python3CustomVisitor(Python3Visitor, BaseVisitor):
 
     def visitExcept_clause(self, ctx: Python3Parser.Except_clauseContext):
         return self.process(ctx)
+
+
+class Python3ABCVisitor(ANTLRVisitor):
+    Lexer = Python3Lexer
+    Parser = Python3Parser
+    Visitor = Python3CustomVisitor
+    start_rule = Python3Parser.file_input

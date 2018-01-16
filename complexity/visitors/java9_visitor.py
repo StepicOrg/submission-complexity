@@ -1,5 +1,7 @@
+from complexity.parsers.java9.Java9Lexer import Java9Lexer
 from complexity.parsers.java9.Java9Parser import Java9Parser
 from complexity.parsers.java9.Java9Visitor import Java9Visitor
+from complexity.visitors.antlr_visitor import ANTLRVisitor
 from complexity.visitors.base_visitor import BaseVisitor
 
 
@@ -149,3 +151,10 @@ class Java9CustomVisitor(Java9Visitor, BaseVisitor):
 
     def visitSwitchStatement(self, ctx: Java9Parser.SwitchStatementContext):
         return self.process(ctx)
+
+
+class Java9ABCVisitor(ANTLRVisitor):
+    Lexer = Java9Lexer
+    Parser = Java9Parser
+    Visitor = Java9CustomVisitor
+    start_rule = Java9Parser.compilationUnit

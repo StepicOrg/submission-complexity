@@ -2,12 +2,12 @@ from datetime import datetime
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import Python3ABCVisitor
+from complexity.visitors.cpp_visitor import CPPABCVisitor
 
 
 def profiling():
-    file_name = 'code/python3/compat.py'
-    ABCVisitor = Python3ABCVisitor
+    file_name = 'code/cpp/crazy.cpp'
+    ABCVisitor = CPPABCVisitor
     time_limit = 0.5  # seconds
 
     print(f'Profiling for {file_name}')

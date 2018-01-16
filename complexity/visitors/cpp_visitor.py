@@ -1,5 +1,7 @@
+from complexity.parsers.cpp.CPP14Lexer import CPP14Lexer
 from complexity.parsers.cpp.CPP14Parser import CPP14Parser
 from complexity.parsers.cpp.CPP14Visitor import CPP14Visitor
+from complexity.visitors.antlr_visitor import ANTLRVisitor
 from complexity.visitors.base_visitor import BaseVisitor
 
 
@@ -95,3 +97,10 @@ class CPP14CustomVisitor(CPP14Visitor, BaseVisitor):
     # Enter a parse tree produced by CPP14Parser#unaryconditionalexpression.
     def visitUnaryconditionalexpression(self, ctx: CPP14Parser.UnaryconditionalexpressionContext):
         return self.process(ctx)
+
+
+class CPPABCVisitor(ANTLRVisitor):
+    Lexer = CPP14Lexer
+    Parser = CPP14Parser
+    Visitor = CPP14CustomVisitor
+    start_rule = CPP14Parser.translationunit

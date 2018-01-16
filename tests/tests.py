@@ -3,7 +3,10 @@ import unittest
 
 from antlr4 import FileStream
 
-from complexity.visitors.antlr_visitors import CPPABCVisitor, CABCVisitor, Python3ABCVisitor, Java9ABCVisitor
+from complexity.visitors.c_visitor import CABCVisitor
+from complexity.visitors.cpp_visitor import CPPABCVisitor
+from complexity.visitors.java9_visitor import Java9ABCVisitor
+from complexity.visitors.python3_visitor import Python3ABCVisitor
 
 tests = {
     CPPABCVisitor: (

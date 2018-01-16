@@ -1,5 +1,7 @@
+from complexity.parsers.c.CLexer import CLexer
 from complexity.parsers.c.CParser import CParser
 from complexity.parsers.c.CVisitor import CVisitor
+from complexity.visitors.antlr_visitor import ANTLRVisitor
 from complexity.visitors.base_visitor import BaseVisitor
 
 
@@ -69,3 +71,10 @@ class CCustomVisitor(CVisitor, BaseVisitor):
     # Enter a parse tree produced by CParser#unaryConditionalExpression.
     def visitUnaryConditionalExpression(self, ctx: CParser.UnaryConditionalExpressionContext):
         return self.process(ctx)
+
+
+class CABCVisitor(ANTLRVisitor):
+    Lexer = CLexer
+    Parser = CParser
+    Visitor = CCustomVisitor
+    start_rule = CParser.compilationUnit

@@ -312,10 +312,8 @@ declaration
 :
     blockdeclaration
     | attributespecifier* ((declspecifier+ attributespecifier*)? declarator (Override | Final)* functionbody | ';')
-    | (
-        Template ('<' (templateparameter (',' templateparameter)*)? '>')?
-        | Extern (Template | Stringliteral)
-    ) declaration
+    | Template ('<' (templateparameter (',' templateparameter)*)? '>')? declaration
+    | Extern (Template | Stringliteral) declaration
     | (Extern Stringliteral | Inline? Namespace Identifier?) '{' declaration* '}'
 ;
 
